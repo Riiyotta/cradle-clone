@@ -29,12 +29,12 @@ export default function Lab() {
               Much like a self-driving car company: they wouldn’t just design algorithms and cross their fingers. They need to test real-world scenarios and collect data in order to fine-tune performance. We take the same approach, ensuring our models are performant even before seeing your data.
             </p>
           </div>
-          <Button href="./lab" className="hidden md:inline-flex">Get to know our wet lab</Button>
+          <Button href="/lab" className="hidden md:inline-flex">Get to know our wet lab</Button>
           {/* Phone: Secondary36, padding 0 24, text 13/600/15.6/-0.13 */}
           <Button
             variant="secondary"
             size={36}
-            href="./lab"
+            href="/lab"
             className="md:hidden !px-6 !text-[13px] !leading-[15.6px] !tracking-[-0.13px]"
           >
             Get to know our wet lab

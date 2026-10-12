@@ -53,8 +53,8 @@ export default function Modalities() {
             <p>Accelerate your journey from hit identification to lead optimization and beyond. If you can measure it, you can optimize it with Cradle.</p>
             <p>This makes Cradle fit-for-purpose for teams developing therapeutics, agricultural solutions, food ingredients, and more.</p>
           </div>
-          <Button href="./platform" className="w-full md:hidden">Explore Cradle Platform</Button>
-          <Button href="./platform" className="hidden md:inline-flex">Explore our platform</Button>
+          <Button href="/platform" className="w-full md:hidden">Explore Cradle Platform</Button>
+          <Button href="/platform" className="hidden md:inline-flex">Explore our platform</Button>
         </div>
         {/* Right: cards */}
         <div className="flex w-full flex-col gap-0 md:w-px md:flex-1 md:gap-5 lg:gap-6 lg:pt-[50px]">

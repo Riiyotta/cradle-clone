@@ -2,21 +2,22 @@
 
 Source: Local replica of https://www.cradle.bio (React/Vite clone in this folder)
 Status: **measured-from-codebase**
-99 routes · 25 templates · 97 unique sections
+101 routes · 26 templates · 98 unique sections
 
 > Generated from `ia.json` by `build.mjs`. Edit the JSON, not this file.
 
 ## Shape of the site
 
-The largest 3 templates (Blog post, Video page, Solution (biopharma / industrial)) account for 75 of 99 routes (76%). The remaining 24 routes span 22 templates.
+The largest 3 templates (Blog post, Video page, Solution (biopharma / industrial)) account for 75 of 101 routes (74%). The remaining 26 routes span 23 templates.
 
 | template | routes | share |
 |---|---:|---:|
-| Blog post | 53 | 54% |
+| Blog post | 53 | 52% |
 | Video page | 20 | 20% |
 | Solution (biopharma / industrial) | 2 | 2% |
 | Modality (text hero) | 2 | 2% |
 | Form page | 2 | 2% |
+| Legal document (placeholder) | 2 | 2% |
 | Homepage | 1 | 1% |
 | Platform | 1 | 1% |
 | Solution (academia) | 1 | 1% |
@@ -48,7 +49,7 @@ The largest 3 templates (Blog post, Video page, Solution (biopharma / industrial
 
 **4 routes carry chrome = `nav:dark / footer:accent`** — Modality (ticker hero), Modality (text hero + problem statement), Modality (text hero).
 
-**63 routes carry chrome = `nav:light / footer:dark`** — Team, Careers, Lab, Case studies, Form page, Blog index, Blog post, Press kit, Licensing, DPA.
+**65 routes carry chrome = `nav:light / footer:dark`** — Team, Careers, Lab, Case studies, Form page, Blog index, Blog post, Press kit, Licensing, DPA, Legal document (placeholder).
 
 **22 routes carry chrome = `nav:dark (light on phone) / footer:dark`** — Security, Video index, Video page.
 
@@ -61,8 +62,8 @@ component library or stays local to its page.
 
 | section | category | templates | routes | implementation | scope |
 |---|---|---:|---:|---|---|
-| `chrome.navbar` | CHROME | 22 | 96 | `src/components/Navbar.jsx` | On 96 routes: every route except the link-in-bio pages (links, notebook, shirt). |
-| `chrome.footer` | CHROME | 22 | 96 | `src/components/Footer.jsx` | On 96 routes: every route except the link-in-bio pages (links, notebook, shirt). |
+| `chrome.navbar` | CHROME | 23 | 98 | `src/components/Navbar.jsx` | On 98 routes: every route except the link-in-bio pages (links, notebook, shirt). |
+| `chrome.footer` | CHROME | 23 | 98 | `src/components/Footer.jsx` | On 98 routes: every route except the link-in-bio pages (links, notebook, shirt). |
 | `content.recent-posts` | CONTENT | 2 | 54 | `src/components/blog/RecentPosts.jsx` | On 54 routes: every blog post plus /blog/maturity. |
 | `hero.post` | HERO | 1 | 53 | `src/components/blog/PostParts.jsx > PostHeader` | The 53 blog post routes. |
 | `content.post-body` | CONTENT | 1 | 53 | `src/components/blog/PostParts.jsx > RichText` | The 53 blog post routes. |
@@ -93,6 +94,7 @@ component library or stays local to its page.
 | `hero.form-page` | HERO | 1 | 2 | `src/components/resources/FormPage.jsx > AvatarTrio` | The 2 form pages (get-started and contact). |
 | `conversion.lead-form` | CONVERSION | 1 | 2 | `src/components/resources/LeadForm.jsx` | The 2 form pages (get-started and contact). |
 | `proof.trust-ticker` | PROOF | 1 | 2 | `src/components/resources/TrustTicker.jsx` | The 2 form pages (get-started and contact). |
+| `content.legal-doc` | CONTENT | 1 | 2 | `src/pages/LegalDoc.jsx` | The 2 legal pages (legal terms and privacy policy). |
 | `hero.home` | HERO | 1 | 1 | `src/components/Hero.jsx` | Homepage only. |
 | `product.platform-tabs` | PRODUCT | 1 | 1 | `src/components/PlatformUI.jsx` | Homepage only. |
 | `proof.customers` | PROOF | 1 | 1 | `src/components/Customers.jsx` | Homepage only. |
@@ -161,7 +163,7 @@ component library or stays local to its page.
 
 **18 shared sections** appear in more than one template and belong in a component library.
 
-**79 single-use sections** appear in exactly one template. Building these
+**80 single-use sections** appear in exactly one template. Building these
 as "reusable" components up front would be speculative — keep them page-local
 until a second caller actually appears.
 
@@ -173,7 +175,7 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.home` | page-local |
 | 3 | PRODUCT | `product.platform-tabs` | page-local |
 | 4 | PROOF | `proof.customers` | page-local |
@@ -186,7 +188,7 @@ until a second caller actually appears.
 | 11 | COMPANY | `company.lab-teaser` | page-local |
 | 12 | CONTENT | `content.wet-lab-posts` | page-local |
 | 13 | CONVERSION | `conversion.footer-cta-home` | page-local |
-| 14 | CHROME | `chrome.footer` | shared ×22 |
+| 14 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Platform — `template.platform`
 
@@ -194,7 +196,7 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.platform-intro` | page-local |
 | 3 | PRODUCT | `product.manifesto` | page-local |
 | 4 | PROOF | `proof.logo-wall` | page-local |
@@ -206,7 +208,7 @@ until a second caller actually appears.
 | 10 | PROOF | `proof.quote-band` | page-local |
 | 11 | CONTENT | `content.latest-updates` | page-local |
 | 12 | CONVERSION | `conversion.footer-cta-light` | page-local |
-| 13 | CHROME | `chrome.footer` | shared ×22 |
+| 13 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Solution (biopharma / industrial) — `template.solution`
 
@@ -214,7 +216,7 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.solution` | page-local |
 | 3 | PROOF | `proof.logo-ticker` | page-local |
 | 4 | PRODUCT | `product.pipeline-benefits` | page-local |
@@ -223,7 +225,7 @@ until a second caller actually appears.
 | 7 | PRODUCT | `product.workflow-tabs-solution` | page-local |
 | 8 | PRODUCT | `product.security-list` | page-local |
 | 9 | CONVERSION | `conversion.footer-cta-dark` | page-local |
-| 10 | CHROME | `chrome.footer` | shared ×22 |
+| 10 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Solution (academia) — `template.academia`
 
@@ -231,10 +233,10 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.academia` | page-local |
 | 3 | CONVERSION | `conversion.academia-form` | page-local |
-| 4 | CHROME | `chrome.footer` | shared ×22 |
+| 4 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Modality (ticker hero) — `template.modality-ticker`
 
@@ -242,7 +244,7 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.modality-ticker` | page-local |
 | 3 | PRODUCT | `product.modality-pipeline` | shared ×3 |
 | 4 | PRODUCT | `product.feature-list` | shared ×3 |
@@ -252,7 +254,7 @@ until a second caller actually appears.
 | 8 | PROOF | `proof.modality-cases` | shared ×3 |
 | 9 | COMPANY | `company.teams-cards-modality` | shared ×3 |
 | 10 | CONVERSION | `conversion.footer-cta-blue` | shared ×3 |
-| 11 | CHROME | `chrome.footer` | shared ×22 |
+| 11 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Modality (text hero + problem statement) — `template.modality-problem`
 
@@ -260,7 +262,7 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.modality-text` | shared ×2 |
 | 3 | PRODUCT | `product.problem-statement` | page-local |
 | 4 | PRODUCT | `product.modality-pipeline` | shared ×3 |
@@ -271,7 +273,7 @@ until a second caller actually appears.
 | 9 | PROOF | `proof.modality-cases` | shared ×3 |
 | 10 | COMPANY | `company.teams-cards-modality` | shared ×3 |
 | 11 | CONVERSION | `conversion.footer-cta-blue` | shared ×3 |
-| 12 | CHROME | `chrome.footer` | shared ×22 |
+| 12 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Modality (text hero) — `template.modality-text`
 
@@ -279,7 +281,7 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.modality-text` | shared ×2 |
 | 3 | PRODUCT | `product.modality-pipeline` | shared ×3 |
 | 4 | PRODUCT | `product.feature-list` | shared ×3 |
@@ -289,7 +291,7 @@ until a second caller actually appears.
 | 8 | PROOF | `proof.modality-cases` | shared ×3 |
 | 9 | COMPANY | `company.teams-cards-modality` | shared ×3 |
 | 10 | CONVERSION | `conversion.footer-cta-blue` | shared ×3 |
-| 11 | CHROME | `chrome.footer` | shared ×22 |
+| 11 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Team — `template.team`
 
@@ -297,12 +299,12 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.team-intro` | page-local |
 | 3 | COMPANY | `company.offices` | page-local |
 | 4 | COMPANY | `company.our-team` | page-local |
 | 5 | COMPANY | `company.investors` | page-local |
-| 6 | CHROME | `chrome.footer` | shared ×22 |
+| 6 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Careers — `template.careers`
 
@@ -310,14 +312,14 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.careers` | page-local |
 | 3 | COMPANY | `company.photo-mosaic` | page-local |
 | 4 | COMPANY | `company.life-at-cradle` | page-local |
 | 5 | COMPANY | `company.open-positions` | page-local |
 | 6 | CONVERSION | `conversion.newsletter` | shared ×2 |
 | 7 | COMPANY | `company.scam-notice` | page-local |
-| 8 | CHROME | `chrome.footer` | shared ×22 |
+| 8 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Lab — `template.lab`
 
@@ -325,7 +327,7 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.lab` | page-local |
 | 3 | COMPANY | `company.aerial-photo` | page-local |
 | 4 | COMPANY | `company.lab-intro` | page-local |
@@ -333,7 +335,7 @@ until a second caller actually appears.
 | 6 | COMPANY | `company.automation` | page-local |
 | 7 | COMPANY | `company.lab-team-selector` | page-local |
 | 8 | COMPANY | `company.sharing-is-caring` | page-local |
-| 9 | CHROME | `chrome.footer` | shared ×22 |
+| 9 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Case studies — `template.case`
 
@@ -341,11 +343,11 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.case` | page-local |
 | 3 | PROOF | `proof.case-grid` | page-local |
 | 4 | CONVERSION | `conversion.newsletter` | shared ×2 |
-| 5 | CHROME | `chrome.footer` | shared ×22 |
+| 5 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Security — `template.security`
 
@@ -353,10 +355,10 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.security` | page-local |
 | 3 | CONTENT | `content.policy-body` | page-local |
-| 4 | CHROME | `chrome.footer` | shared ×22 |
+| 4 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Form page — `template.form-page`
 
@@ -364,11 +366,11 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.form-page` | page-local |
 | 3 | CONVERSION | `conversion.lead-form` | page-local |
 | 4 | PROOF | `proof.trust-ticker` | page-local |
-| 5 | CHROME | `chrome.footer` | shared ×22 |
+| 5 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Blog index — `template.blog-index`
 
@@ -376,11 +378,11 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.blog` | page-local |
 | 3 | CONTENT | `content.blog-rails` | page-local |
 | 4 | CONTENT | `content.all-posts` | page-local |
-| 5 | CHROME | `chrome.footer` | shared ×22 |
+| 5 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Blog post — `template.blog-post`
 
@@ -388,11 +390,11 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.post` | page-local |
 | 3 | CONTENT | `content.post-body` | page-local |
 | 4 | CONTENT | `content.recent-posts` | shared ×2 |
-| 5 | CHROME | `chrome.footer` | shared ×22 |
+| 5 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Maturity report — `template.blog-maturity`
 
@@ -400,11 +402,11 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.maturity` | page-local |
 | 3 | CONTENT | `content.maturity-report` | page-local |
 | 4 | CONTENT | `content.recent-posts` | shared ×2 |
-| 5 | CHROME | `chrome.footer` | shared ×22 |
+| 5 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Video index — `template.video-index`
 
@@ -412,9 +414,9 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | CONTENT | `content.video-index` | page-local |
-| 3 | CHROME | `chrome.footer` | shared ×22 |
+| 3 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Video page — `template.video-post`
 
@@ -422,9 +424,9 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.video-post` | page-local |
-| 3 | CHROME | `chrome.footer` | shared ×22 |
+| 3 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Whitepaper — `template.whitepaper`
 
@@ -432,11 +434,11 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.whitepaper` | page-local |
 | 3 | CONTENT | `content.whitepaper-body` | page-local |
 | 4 | CONVERSION | `conversion.whitepaper-cta` | page-local |
-| 5 | CHROME | `chrome.footer` | shared ×22 |
+| 5 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Press kit — `template.presskit`
 
@@ -444,10 +446,10 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.presskit` | page-local |
 | 3 | CONTENT | `content.presskit-files` | page-local |
-| 4 | CHROME | `chrome.footer` | shared ×22 |
+| 4 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Licensing — `template.licensing`
 
@@ -455,12 +457,12 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | HERO | `hero.licensing` | page-local |
 | 3 | CONVERSION | `conversion.license-tiers` | page-local |
 | 4 | PRODUCT | `product.included-list` | page-local |
 | 5 | PROOF | `proof.partners-band` | page-local |
-| 6 | CHROME | `chrome.footer` | shared ×22 |
+| 6 | CHROME | `chrome.footer` | shared ×23 |
 
 ### DPA — `template.dpa`
 
@@ -468,9 +470,9 @@ until a second caller actually appears.
 
 | # | category | section | |
 |---:|---|---|---|
-| 1 | CHROME | `chrome.navbar` | shared ×22 |
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
 | 2 | CONTENT | `content.doc-viewer` | page-local |
-| 3 | CHROME | `chrome.footer` | shared ×22 |
+| 3 | CHROME | `chrome.footer` | shared ×23 |
 
 ### Link-in-bio (links) — `template.link-in-bio-links`
 
@@ -509,6 +511,16 @@ until a second caller actually appears.
 | 5 | CONTENT | `content.wet-lab-videos` | shared ×3 |
 | 6 | CONTENT | `content.footer-graphic` | shared ×3 |
 
+### Legal document (placeholder) — `template.legal`
+
+2 routes · `/legal-terms`, `/privacy-policy` · chrome: **nav:light / footer:dark**
+
+| # | category | section | |
+|---:|---|---|---|
+| 1 | CHROME | `chrome.navbar` | shared ×23 |
+| 2 | CONTENT | `content.legal-doc` | page-local |
+| 3 | CHROME | `chrome.footer` | shared ×23 |
+
 ## Section reference
 
 ### CHROME
@@ -517,11 +529,11 @@ _Site-wide navigation and footer, whose colour variant is chosen per route in sr
 
 **`chrome.navbar`** — Fixed 64px top bar with the Cradle mark, Solutions/Company/Resources hover dropdowns, a Sign in control and a Discuss-your-project button; on phone it collapses to a hamburger menu. One component with dark, light and academia (green bar) variants.
 
-· On 96 routes: every route except the link-in-bio pages (links, notebook, shirt). · appears on 96 routes · implemented by `src/components/Navbar.jsx`
+· On 98 routes: every route except the link-in-bio pages (links, notebook, shirt). · appears on 98 routes · implemented by `src/components/Navbar.jsx`
 
 **`chrome.footer`** — Columned site footer: logo, link columns, a Connect column and a legal bar. One component whose only difference between variants is the background colour (blue, dark or accent).
 
-· On 96 routes: every route except the link-in-bio pages (links, notebook, shirt). · appears on 96 routes · implemented by `src/components/Footer.jsx`
+· On 98 routes: every route except the link-in-bio pages (links, notebook, shirt). · appears on 98 routes · implemented by `src/components/Footer.jsx`
 
 ### HERO
 
@@ -878,6 +890,10 @@ _Editorial and document bodies, such as articles, lists and policy text._
 **`content.footer-graphic`** — Footer graphic that slides up on enter.
 
 · The 3 link-in-bio pages. · appears on 3 routes · implemented by `src/components/misc/LinkInBio.jsx > FooterGraphic`
+
+**`content.legal-doc`** — Placeholder legal document: title, numbered generic headings and placeholder paragraphs. Not measured on live.
+
+· The 2 legal pages (legal terms and privacy policy). · appears on 2 routes · implemented by `src/pages/LegalDoc.jsx`
 
 ### CONVERSION
 

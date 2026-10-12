@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { shortDate } from './blogData.js'
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 function Thumb({ src }) {
   // 64×40 r6, cover, ::after 1px rgba(27,27,177,.04)

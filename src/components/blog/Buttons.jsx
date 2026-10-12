@@ -20,7 +20,7 @@ export function Secondary36P16({ to, className = '', children }) {
 }
 
 // Ghost36: transparent; hover bg rgba(0,0,0,.02) ≈100ms.
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 export function Ghost36({ to, className = '', children }) {
   const M = to ? MotionLink : motion.span
   return (

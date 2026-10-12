@@ -333,7 +333,7 @@ export default function Benefits() {
           <p className="font-sans font-medium text-muted text-[16px] leading-6 tracking-[-0.64px] md:w-[600px] lg:text-[20px] lg:leading-[30px] lg:tracking-[-0.8px]">
             Get products to market in quarters, not years. Use Cradle to chart the fastest course to proteins that meet all your desired objectives. Explore further, optimize faster, and reach your destination in fewer experiments.
           </p>
-          <Button href="./platform" className="w-full md:w-auto">
+          <Button href="/platform" className="w-full md:w-auto">
             <span className="md:hidden">Explore Cradle Platform</span>
             <span className="hidden md:inline">Explore our platform</span>
           </Button>

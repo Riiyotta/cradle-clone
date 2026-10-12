@@ -79,7 +79,7 @@ function Bar({ i, label }) {
     ? <MotionLink to="/" {...props} className={`${cls} ${sized}`}>{content}</MotionLink>
     : <motion.div {...props} className={`${cls} ${sized}`}>{content}</motion.div>
 }
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 function Pill({ children }) {
   return (

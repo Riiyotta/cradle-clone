@@ -23,7 +23,7 @@ export default function FooterCTA() {
             <span className="text-blue-300">Now, let's talk?</span>
           </h1>
           <div className="flex items-center justify-center overflow-hidden rounded-2xl bg-white/[0.12] p-1">
-            <Button variant="secondary" href="./get-started" className="!px-8">I'm interested</Button>
+            <Button variant="secondary" href="/get-started" className="!px-8">I'm interested</Button>
           </div>
         </div>
       </div>

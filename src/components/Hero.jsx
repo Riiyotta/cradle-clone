@@ -30,7 +30,7 @@ function Chevron({ className }) {
 function NewsPill() {
   return (
     <motion.a
-      href="./blog/hansa"
+      href="/blog/hansa"
       initial={{ opacity: 0.001, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: 'spring', bounce: 0.05, duration: 0.4, delay: 0.8 }}

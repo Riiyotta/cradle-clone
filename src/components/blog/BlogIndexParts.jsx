@@ -4,7 +4,7 @@ import { Caret, LadderTile } from './Motion.jsx'
 import { ButtonDefault, Secondary36P16 } from './Buttons.jsx'
 import { introFor } from './blogData.js'
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 // §B1.2 Hero heading with blinking caret
 export function BlogHeading() {

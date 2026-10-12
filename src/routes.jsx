@@ -27,6 +27,8 @@ const Notebook = lazy(() => import('./pages/Notebook.jsx'))
 const Links = lazy(() => import('./pages/Links.jsx'))
 const Shirt = lazy(() => import('./pages/Shirt.jsx'))
 const Licensing = lazy(() => import('./pages/Licensing.jsx'))
+const LegalTerms = lazy(() => import('./pages/LegalDoc.jsx').then((m) => ({ default: m.LegalTerms })))
+const PrivacyPolicy = lazy(() => import('./pages/LegalDoc.jsx').then((m) => ({ default: m.PrivacyPolicy })))
 const Dpa = lazy(() => import('./pages/Dpa.jsx'))
 
 export const routes = [
@@ -57,4 +59,6 @@ export const routes = [
   { path: '/shirt', Component: Shirt },
   { path: '/licensing', Component: Licensing },
   { path: '/dpa', Component: Dpa },
+  { path: '/legal-terms', Component: LegalTerms },
+  { path: '/privacy-policy', Component: PrivacyPolicy },
 ]

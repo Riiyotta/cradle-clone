@@ -87,7 +87,7 @@ export default function Enterprise() {
               <br />
               Plus, you retain full ownership of your intellectual property—no royalties, just a software subscription fee.
             </p>
-            <Button variant="secondary" href="./security" className="w-full md:w-auto">Security at Cradle</Button>
+            <Button variant="secondary" href="/security" className="w-full md:w-auto">Security at Cradle</Button>
           </div>
         </div>
 

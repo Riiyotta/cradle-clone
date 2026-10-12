@@ -39,6 +39,9 @@ export const CHROME = [
   { path: '/presskit', nav: LIGHT, footer: 'dark' },
   { path: '/licensing', nav: LIGHT, footer: 'dark' },
   { path: '/dpa', nav: LIGHT, footer: 'dark' },
+  // not measured on live (placeholder pages); styled like /dpa
+  { path: '/legal-terms', nav: LIGHT, footer: 'dark' },
+  { path: '/privacy-policy', nav: LIGHT, footer: 'dark' },
 ]
 
 // Unknown routes (404) were not measured; they fall back to the homepage chrome.

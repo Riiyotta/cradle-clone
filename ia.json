@@ -3,8 +3,8 @@
   "meta": {
     "source": "Local replica of https://www.cradle.bio (React/Vite clone in this folder)",
     "status": "measured-from-codebase",
-    "totalRoutes": 99,
-    "totalTemplates": 25
+    "totalRoutes": 101,
+    "totalTemplates": 26
   },
   "categories": {
     "CHROME": "Site-wide navigation and footer, whose colour variant is chosen per route in src/chrome.js.",
@@ -19,13 +19,13 @@
     "chrome.navbar": {
       "category": "CHROME",
       "description": "Fixed 64px top bar with the Cradle mark, Solutions/Company/Resources hover dropdowns, a Sign in control and a Discuss-your-project button; on phone it collapses to a hamburger menu. One component with dark, light and academia (green bar) variants.",
-      "scope": "On 96 routes: every route except the link-in-bio pages (links, notebook, shirt).",
+      "scope": "On 98 routes: every route except the link-in-bio pages (links, notebook, shirt).",
       "implementedBy": "src/components/Navbar.jsx"
     },
     "chrome.footer": {
       "category": "CHROME",
       "description": "Columned site footer: logo, link columns, a Connect column and a legal bar. One component whose only difference between variants is the background colour (blue, dark or accent).",
-      "scope": "On 96 routes: every route except the link-in-bio pages (links, notebook, shirt).",
+      "scope": "On 98 routes: every route except the link-in-bio pages (links, notebook, shirt).",
       "implementedBy": "src/components/Footer.jsx"
     },
     "hero.home": {
@@ -597,6 +597,12 @@
       "description": "Footer graphic that slides up on enter.",
       "scope": "The 3 link-in-bio pages.",
       "implementedBy": "src/components/misc/LinkInBio.jsx > FooterGraphic"
+    },
+    "content.legal-doc": {
+      "category": "CONTENT",
+      "description": "Placeholder legal document: title, numbered generic headings and placeholder paragraphs. Not measured on live.",
+      "scope": "The 2 legal pages (legal terms and privacy policy).",
+      "implementedBy": "src/pages/LegalDoc.jsx"
     }
   },
   "templates": [
@@ -1051,6 +1057,21 @@
         "conversion.link-buttons",
         "content.wet-lab-videos",
         "content.footer-graphic"
+      ]
+    },
+    {
+      "id": "template.legal",
+      "name": "Legal document (placeholder)",
+      "routeCount": 2,
+      "routes": [
+        "/legal-terms",
+        "/privacy-policy"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "content.legal-doc",
+        "chrome.footer"
       ]
     }
   ]
