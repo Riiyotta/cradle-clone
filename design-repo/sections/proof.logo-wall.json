@@ -1,0 +1,65 @@
+{
+  "id": "proof.logo-wall",
+  "category": "PROOF",
+  "description": "Static wall of customer logos.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/LogoWall.jsx",
+  "measuredFrom": [
+    "src/components/platform/LogoWall.jsx:1-45"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 32
+        },
+        "measuredMax": 21
+      }
+    }
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {
+      "base": 3
+    },
+    "measuredFrom": "src/components/platform/LogoWall.jsx:1-45"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "paragraphs": [
+      "Scientists in pharma and industrial bio use Cradle to shorten protein R&D timelines up to 12x while growing overall pipeline success."
+    ]
+  }
+}

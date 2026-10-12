@@ -1,0 +1,14 @@
+{
+  "id": "component.word-reveal",
+  "kind": "component",
+  "description": "Heading whose words rise in one by one.",
+  "implementedBy": "src/components/blog/Motion.jsx > WordReveal",
+  "props": [
+    "text",
+    "as"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/blog/Motion.jsx:56-80"
+  ]
+}

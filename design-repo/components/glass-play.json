@@ -1,0 +1,11 @@
+{
+  "id": "component.glass-play",
+  "kind": "component",
+  "description": "Translucent circular play button.",
+  "implementedBy": "src/components/company/shared.jsx > GlassPlay",
+  "props": [],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/company/shared.jsx:42-49"
+  ]
+}

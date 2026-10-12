@@ -1,0 +1,98 @@
+{
+  "id": "conversion.whitepaper-cta",
+  "category": "CONVERSION",
+  "description": "Whitepaper closing call to action with side sheets.",
+  "scope": "/whitepaper only.",
+  "implementedBy": "src/components/media/WhitepaperSections.jsx > WhitepaperCTA",
+  "measuredFrom": [
+    "src/components/media/WhitepaperSections.jsx:71-95"
+  ],
+  "allowedTemplates": [
+    "template.whitepaper"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "measuredMax": 2
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 38
+        },
+        "measuredMax": 25
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/media/WhitepaperSections.jsx:71-95"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "CRADLE-1 Whitepaper",
+    "paragraphs": [
+      "The paper covers the complete technical framework — group DPO, diversity-aware ranking, batch-effect handling, ablations — plus full wet-lab protocols and a documented failure case."
+    ],
+    "ctas": [
+      {
+        "label": "Talk to Sales",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

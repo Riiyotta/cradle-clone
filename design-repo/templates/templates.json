@@ -1,0 +1,1366 @@
+{
+  "$description": "One entry per page shape; nodes are the observed section order. required/repeatable are explicit so they are machine-enforced.",
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "blue"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.home",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.platform-tabs",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.customers",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.recent-case-studies",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.benefits-bento",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.protein-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.modalities-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.use-cases",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.enterprise",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.lab-teaser",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.wet-lab-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.footer-cta-home",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Home.jsx:1-32"
+      ]
+    },
+    {
+      "id": "template.platform",
+      "name": "Platform",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/platform"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.platform-intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.manifesto",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.ui-collage",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.platform-benefits",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.feature-rows",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.teams-cards-platform",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.workflow-tabs",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.quote-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.latest-updates",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.footer-cta-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Platform.jsx:1-33"
+      ]
+    },
+    {
+      "id": "template.solution",
+      "name": "Solution (biopharma / industrial)",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 2,
+      "routes": [
+        "/solutions/biopharma",
+        "/solutions/industrial"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.solution",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-ticker",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.pipeline-benefits",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.modality-tabs",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.case-quote",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.workflow-tabs-solution",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.security-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.footer-cta-dark",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/SolutionsBiopharma.jsx:1-7"
+      ]
+    },
+    {
+      "id": "template.academia",
+      "name": "Solution (academia)",
+      "chrome": {
+        "nav": {
+          "desktop": "academia",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/solutions/academia"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.academia",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.academia-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/SolutionsAcademia.jsx:1-15"
+      ]
+    },
+    {
+      "id": "template.modality-ticker",
+      "name": "Modality (ticker hero)",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "accent"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/modality/antibody"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.modality-ticker",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.modality-pipeline",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.feature-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.dark-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.product-mock",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.properties-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.modality-cases",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.teams-cards-modality",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.footer-cta-blue",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/ModalityAntibody.jsx:1-122"
+      ]
+    },
+    {
+      "id": "template.modality-problem",
+      "name": "Modality (text hero + problem statement)",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "accent"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/modality/enzyme"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.modality-text",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.problem-statement",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.modality-pipeline",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.feature-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.dark-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.product-mock",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.properties-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.modality-cases",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.teams-cards-modality",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.footer-cta-blue",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/ModalityEnzyme.jsx:1-123"
+      ]
+    },
+    {
+      "id": "template.modality-text",
+      "name": "Modality (text hero)",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "accent"
+      },
+      "routeCount": 2,
+      "routes": [
+        "/modality/vaccine",
+        "/modality/peptide"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.modality-text",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.modality-pipeline",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.feature-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.dark-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.product-mock",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.properties-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.modality-cases",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.teams-cards-modality",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.footer-cta-blue",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/ModalityVaccine.jsx:1-137"
+      ]
+    },
+    {
+      "id": "template.team",
+      "name": "Team",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/team"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.team-intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.offices",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.our-team",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.investors",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Team.jsx:1-19"
+      ]
+    },
+    {
+      "id": "template.careers",
+      "name": "Careers",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/careers"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.careers",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.photo-mosaic",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.life-at-cradle",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.open-positions",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.newsletter",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.scam-notice",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Careers.jsx:1-31"
+      ]
+    },
+    {
+      "id": "template.lab",
+      "name": "Lab",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/lab"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.lab",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.aerial-photo",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.lab-intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.perks",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.automation",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.lab-team-selector",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "company.sharing-is-caring",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/LabPage.jsx:1-21"
+      ]
+    },
+    {
+      "id": "template.case",
+      "name": "Case studies",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/case"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.case",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.case-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.newsletter",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Case.jsx:1-161"
+      ]
+    },
+    {
+      "id": "template.security",
+      "name": "Security",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/security"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.security",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.policy-body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Security.jsx:1-164"
+      ]
+    },
+    {
+      "id": "template.form-page",
+      "name": "Form page",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 2,
+      "routes": [
+        "/get-started",
+        "/contact"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.form-page",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.lead-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.trust-ticker",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/GetStarted.jsx:1-14"
+      ]
+    },
+    {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/blog"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.blog",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-rails",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.all-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Blog.jsx:1-49"
+      ]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 53,
+      "routePattern": "/blog/:slug",
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.post",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.post-body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.recent-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/BlogPost.jsx:1-38"
+      ]
+    },
+    {
+      "id": "template.blog-maturity",
+      "name": "Maturity report",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/blog/maturity"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.maturity",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.maturity-report",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.recent-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/BlogMaturity.jsx:1-245"
+      ]
+    },
+    {
+      "id": "template.video-index",
+      "name": "Video index",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/video"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.video-index",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/VideoIndex.jsx:1-27"
+      ]
+    },
+    {
+      "id": "template.video-post",
+      "name": "Video page",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 20,
+      "routePattern": "/video/:slug",
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.video-post",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/VideoPost.jsx:1-25"
+      ]
+    },
+    {
+      "id": "template.whitepaper",
+      "name": "Whitepaper",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/whitepaper"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.whitepaper",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.whitepaper-body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.whitepaper-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Whitepaper.jsx:1-15"
+      ]
+    },
+    {
+      "id": "template.presskit",
+      "name": "Press kit",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/presskit"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.presskit",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.presskit-files",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Presskit.jsx:1-14"
+      ]
+    },
+    {
+      "id": "template.licensing",
+      "name": "Licensing",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/licensing"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.licensing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.license-tiers",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.included-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.partners-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Licensing.jsx:1-14"
+      ]
+    },
+    {
+      "id": "template.dpa",
+      "name": "DPA",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 1,
+      "routes": [
+        "/dpa"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.doc-viewer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Dpa.jsx:1-24"
+      ]
+    },
+    {
+      "id": "template.link-in-bio-links",
+      "name": "Link-in-bio (links)",
+      "chrome": {
+        "nav": null,
+        "footer": null
+      },
+      "routeCount": 1,
+      "routes": [
+        "/links"
+      ],
+      "nodes": [
+        {
+          "section": "hero.link-in-bio",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.link-buttons",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.case-grid-compact",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.wet-lab-videos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.footer-graphic",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Links.jsx:1-17"
+      ]
+    },
+    {
+      "id": "template.link-in-bio-form",
+      "name": "Link-in-bio with form (notebook)",
+      "chrome": {
+        "nav": null,
+        "footer": null
+      },
+      "routeCount": 1,
+      "routes": [
+        "/notebook"
+      ],
+      "nodes": [
+        {
+          "section": "hero.link-in-bio",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.form-placeholder",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.link-buttons",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.wet-lab-videos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.footer-graphic",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Notebook.jsx:1-27"
+      ]
+    },
+    {
+      "id": "template.shirt",
+      "name": "Link-in-bio with shirt hero",
+      "chrome": {
+        "nav": null,
+        "footer": null
+      },
+      "routeCount": 1,
+      "routes": [
+        "/shirt"
+      ],
+      "nodes": [
+        {
+          "section": "hero.shirt",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.link-in-bio",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.form-placeholder",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.link-buttons",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.wet-lab-videos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.footer-graphic",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/Shirt.jsx:1-30"
+      ]
+    },
+    {
+      "id": "template.legal",
+      "name": "Legal document (placeholder)",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      },
+      "routeCount": 2,
+      "routes": [
+        "/legal-terms",
+        "/privacy-policy"
+      ],
+      "nodes": [
+        {
+          "section": "chrome.navbar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.legal-doc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "measuredFrom": [
+        "src/pages/LegalDoc.jsx:1-35"
+      ]
+    }
+  ]
+}

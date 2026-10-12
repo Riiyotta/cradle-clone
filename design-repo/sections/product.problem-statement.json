@@ -1,0 +1,72 @@
+{
+  "id": "product.problem-statement",
+  "category": "PRODUCT",
+  "description": "Problem-statement block that precedes the pipeline.",
+  "scope": "Enzyme modality page only.",
+  "implementedBy": "src/components/modality/Pipeline.jsx > ProblemStatement",
+  "measuredFrom": [
+    "src/components/modality/Pipeline.jsx:31-43"
+  ],
+  "allowedTemplates": [
+    "template.modality-problem"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/modality/Pipeline.jsx:31-43",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 75,
+          "measuredFrom": "src/components/modality/Pipeline.jsx:31-43",
+          "budgetBasis": "site-wide observed max of key \"body\" across harvested section data"
+        },
+        "maxItems": 8
+      }
+    },
+    "required": [
+      "title",
+      "paragraphs"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/modality/Pipeline.jsx:31-43"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "title": "Section title",
+    "paragraphs": [
+      "Body text"
+    ]
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "proof.case-grid-compact",
+  "category": "PROOF",
+  "description": "Compact recent case-study grid.",
+  "scope": "/links only.",
+  "implementedBy": "src/components/misc/LinkInBio.jsx > CaseGrid",
+  "measuredFrom": [
+    "src/components/misc/LinkInBio.jsx:123-144"
+  ],
+  "allowedTemplates": [
+    "template.link-in-bio-links"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "tag": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "img": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 26,
+              "measuredMax": 17
+            }
+          },
+          "required": [
+            "slug",
+            "tag",
+            "img",
+            "title"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 6,
+        "measuredFrom": "src/components/misc/LinkInBio.jsx:114-121"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {
+      "base": 2
+    },
+    "measuredFrom": "src/components/misc/LinkInBio.jsx:123-144"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "items": [
+      {
+        "slug": "keasling-qs21",
+        "tag": "Enzyme",
+        "img": "/assets/case-keasling-qs21.png",
+        "title": "Using AI to produce vaccine adjuvants without cutting down rainforest"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "company.investors",
+  "category": "COMPANY",
+  "description": "Investors and advisors grid.",
+  "scope": "/team only.",
+  "implementedBy": "src/components/company/TeamSections.jsx > Investors",
+  "measuredFrom": [
+    "src/components/company/TeamSections.jsx:184-211"
+  ],
+  "allowedTemplates": [
+    "template.team"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "base": 3,
+      "md": 3
+    },
+    "measuredFrom": "src/components/company/TeamSections.jsx:184-211"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

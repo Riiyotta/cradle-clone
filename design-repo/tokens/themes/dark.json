@@ -1,0 +1,19 @@
+{
+  "$description": "#030712 surfaces with white text (navbar \"dark\", footer \"dark\"/\"blue\"/\"accent\" sit on dark/brand surfaces). Evidence: src/chrome.js variant table.",
+  "theme": "dark",
+  "roles": {
+    "text.primary": "{semantic.text.on-dark}",
+    "text.secondary": "{semantic.text.on-dark-secondary}",
+    "text.tertiary": "{semantic.text.tertiary}",
+    "surface.page": "{semantic.surface.dark}",
+    "surface.alt": "{semantic.surface.dark}",
+    "surface.card": "{semantic.surface.dark}",
+    "surface.accent": "{semantic.surface.accent}",
+    "surface.brand": "{semantic.surface.brand}",
+    "border.default": "{semantic.border.on-dark}",
+    "text.link-inline": "{semantic.text.on-dark}"
+  },
+  "$extensions": {
+    "measuredFrom": "src/chrome.js:6-9"
+  }
+}

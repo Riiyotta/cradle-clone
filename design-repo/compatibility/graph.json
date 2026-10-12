@@ -1,0 +1,228 @@
+{
+  "$description": "Rhythm and structure rules a JSON Schema cannot express. Every rule id is enforced by schema/semantic_validate.py; verify_all.py checks the two agree.",
+  "rules": [
+    {
+      "id": "TEMPLATE_NODE_SEQUENCE",
+      "severity": "error",
+      "description": "A PageSpec's nodes must equal its declared template's node list in order. Template nodes are all required and non-repeatable (no optionality was observed in the source)."
+    },
+    {
+      "id": "ROUTE_BELONGS_TO_TEMPLATE",
+      "severity": "error",
+      "description": "PageSpec.route must be one of the declared template's routes (or match its CMS routePattern with a real CMS slug)."
+    },
+    {
+      "id": "SECTION_ALLOWED_TEMPLATES",
+      "severity": "error",
+      "description": "A section may only appear in templates listed in its contract's allowedTemplates (derived from the IA matrix)."
+    },
+    {
+      "id": "NAV_FIRST",
+      "severity": "error",
+      "description": "chrome.navbar is the first node on every template that has chrome and absent on templates that have none."
+    },
+    {
+      "id": "FOOTER_LAST",
+      "severity": "error",
+      "description": "chrome.footer is the last node on every template that has chrome and absent on templates that have none."
+    },
+    {
+      "id": "CHROME_MATCHES_ROUTE",
+      "severity": "error",
+      "description": "Navbar variant (desktop), navbar content.phoneVariant and footer variant must equal the per-route table measured in src/chrome.js (stored in templates/routes.json)."
+    },
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "description": "At most one HERO-category section per page, except the named templates below that contain more than one. Templates with zero heroes are listed in noHeroTemplates.",
+      "exceptions": {
+        "multiHeroTemplates": {
+          "template.shirt": 2
+        }
+      },
+      "noHeroTemplates": [
+        "template.dpa",
+        "template.legal",
+        "template.video-index"
+      ]
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "description": "Avoid two adjacent non-chrome sections of one category, except the adjacent pairs that occur in the real templates.",
+      "exceptions": {
+        "pairs": [
+          [
+            "company.aerial-photo",
+            "company.lab-intro"
+          ],
+          [
+            "company.automation",
+            "company.lab-team-selector"
+          ],
+          [
+            "company.lab-intro",
+            "company.perks"
+          ],
+          [
+            "company.lab-team-selector",
+            "company.sharing-is-caring"
+          ],
+          [
+            "company.life-at-cradle",
+            "company.open-positions"
+          ],
+          [
+            "company.offices",
+            "company.our-team"
+          ],
+          [
+            "company.our-team",
+            "company.investors"
+          ],
+          [
+            "company.perks",
+            "company.automation"
+          ],
+          [
+            "company.photo-mosaic",
+            "company.life-at-cradle"
+          ],
+          [
+            "content.blog-rails",
+            "content.all-posts"
+          ],
+          [
+            "content.maturity-report",
+            "content.recent-posts"
+          ],
+          [
+            "content.post-body",
+            "content.recent-posts"
+          ],
+          [
+            "content.wet-lab-videos",
+            "content.footer-graphic"
+          ],
+          [
+            "conversion.form-placeholder",
+            "conversion.link-buttons"
+          ],
+          [
+            "hero.shirt",
+            "hero.link-in-bio"
+          ],
+          [
+            "product.benefits-bento",
+            "product.protein-visual"
+          ],
+          [
+            "product.dark-band",
+            "product.product-mock"
+          ],
+          [
+            "product.feature-list",
+            "product.dark-band"
+          ],
+          [
+            "product.modalities-grid",
+            "product.use-cases"
+          ],
+          [
+            "product.modality-pipeline",
+            "product.feature-list"
+          ],
+          [
+            "product.pipeline-benefits",
+            "product.modality-tabs"
+          ],
+          [
+            "product.platform-benefits",
+            "product.feature-rows"
+          ],
+          [
+            "product.problem-statement",
+            "product.modality-pipeline"
+          ],
+          [
+            "product.product-mock",
+            "product.properties-grid"
+          ],
+          [
+            "product.protein-visual",
+            "product.modalities-grid"
+          ],
+          [
+            "product.ui-collage",
+            "product.platform-benefits"
+          ],
+          [
+            "product.use-cases",
+            "product.enterprise"
+          ],
+          [
+            "product.workflow-tabs-solution",
+            "product.security-list"
+          ],
+          [
+            "proof.customers",
+            "proof.recent-case-studies"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "NO_CONSECUTIVE_SCROLL_STAGES",
+      "severity": "warn",
+      "description": "No two adjacent nodes may both declare the scroll-linked motion pattern."
+    },
+    {
+      "id": "MOTION_BUDGET",
+      "severity": "warn",
+      "description": "A page may declare scroll-linked motion on at most 2 nodes (the most any real template allows by its sections' evidenced patterns).",
+      "params": {
+        "maxScrollLinkedNodes": 2
+      }
+    },
+    {
+      "id": "REDUCED_MOTION_FALLBACK",
+      "severity": "error",
+      "description": "Every node.motion declares reducedMotionFallback and it must equal the fallback mapped to its pattern. NOTE: the source site/clone contains no reduced-motion handling (grep for useReducedMotion / prefers-reduced-motion returns nothing); this rule is a generation-time contract added by the design-repo, not an observed behaviour.",
+      "params": {
+        "patternFallbacks": {
+          "none": "static",
+          "load-appear": "static",
+          "in-view-reveal": "static",
+          "word-stagger-eyebrow": "static",
+          "scroll-linked": "static",
+          "tab-switch": "instant",
+          "marquee": "pause",
+          "autoplay-video": "pause",
+          "auto-carousel": "pause",
+          "hover-variant": "instant",
+          "dropdown": "instant"
+        }
+      }
+    },
+    {
+      "id": "NO_EXTERNAL_LINKS",
+      "severity": "error",
+      "description": "No string anywhere in a PageSpec may contain http(s)://, mailto: or a protocol-relative URL. The clone removes outbound links (external anchors are rendered as buttons) and its forms do not submit anywhere."
+    },
+    {
+      "id": "ASSET_ROLE_POLICY",
+      "severity": "error",
+      "description": "media[].assetRole must be allowed for the section. Roles whose policy is must-reuse-exact or must-not-fabricate require assetRef to be one of that role's registered files (pinned-value check) and must not carry generationBrief; may-generate-new roles require generationBrief and must not carry assetRef. Roles with no registered files cannot be referenced."
+    },
+    {
+      "id": "CMS_SLUG_MATCHES_ROUTE",
+      "severity": "error",
+      "description": "On blog-post / video-post pages any content.post reference must name the collection and slug of the page's own route."
+    },
+    {
+      "id": "MAX_WORDS",
+      "severity": "error",
+      "description": "Every string field carrying maxWords in its section contract must not exceed it."
+    }
+  ]
+}

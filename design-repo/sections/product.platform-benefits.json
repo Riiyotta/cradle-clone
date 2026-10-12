@@ -1,0 +1,90 @@
+{
+  "id": "product.platform-benefits",
+  "category": "PRODUCT",
+  "description": "Grid of platform benefit tiles.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/BenefitsGrid.jsx",
+  "measuredFrom": [
+    "src/components/platform/BenefitsGrid.jsx:1-47"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "measuredMax": 5
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 45,
+              "measuredMax": 30
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 5
+              },
+              "maxItems": 4
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/platform/BenefitsGrid.jsx:5-26"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/platform/BenefitsGrid.jsx:1-47"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "items": [
+      {
+        "title": "Save months of R&D time",
+        "body": "Customers achieve 2-12x speedups across 50+ programs. We help you reach your targets in fewer rounds by solving complex trade-offs faster."
+      }
+    ]
+  }
+}

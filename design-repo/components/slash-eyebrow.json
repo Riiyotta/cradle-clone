@@ -1,0 +1,13 @@
+{
+  "id": "component.slash-eyebrow",
+  "kind": "component",
+  "description": "Eyebrow with a slash separator between two labels.",
+  "implementedBy": "src/components/modality/primitives.jsx > SlashEyebrow",
+  "props": [
+    "labelColor"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/modality/primitives.jsx:77-85"
+  ]
+}

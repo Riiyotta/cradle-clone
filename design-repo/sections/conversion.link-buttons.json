@@ -1,0 +1,76 @@
+{
+  "id": "conversion.link-buttons",
+  "category": "CONVERSION",
+  "description": "Stack of link buttons; same-site ones navigate, external ones are inert.",
+  "scope": "The 3 link-in-bio pages.",
+  "implementedBy": "src/components/misc/LinkInBio.jsx > LinkButtons",
+  "measuredFrom": [
+    "src/components/misc/LinkInBio.jsx:96-112"
+  ],
+  "allowedTemplates": [
+    "template.link-in-bio-links",
+    "template.link-in-bio-form",
+    "template.shirt"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/misc/LinkInBio.jsx:96-112"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "ctas": [
+      {
+        "label": "Book a meeting",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

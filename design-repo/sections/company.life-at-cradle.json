@@ -1,0 +1,88 @@
+{
+  "id": "company.life-at-cradle",
+  "category": "COMPANY",
+  "description": "Life-at-Cradle video poster plus interview rows.",
+  "scope": "/careers only.",
+  "implementedBy": "src/components/company/CareersSections.jsx > LifeAtCradle",
+  "measuredFrom": [
+    "src/components/company/CareersSections.jsx:114-141"
+  ],
+  "allowedTemplates": [
+    "template.careers"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 51
+        },
+        "measuredMax": 34
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/company/CareersSections.jsx:114-141"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "paragraphs": [
+      "Placeholder paragraph about how a team spread across several countries and time zones meets up in person on a regular basis to step back, look at the bigger picture together and have longer conversations."
+    ],
+    "ctas": [
+      {
+        "label": "here",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

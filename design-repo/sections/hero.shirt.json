@@ -1,0 +1,60 @@
+{
+  "id": "hero.shirt",
+  "category": "HERO",
+  "description": "Dark t-shirt hero with parallax squiggles.",
+  "scope": "/shirt only.",
+  "implementedBy": "src/components/misc/ShirtHero.jsx",
+  "measuredFrom": [
+    "src/components/misc/ShirtHero.jsx:1-32"
+  ],
+  "allowedTemplates": [
+    "template.shirt"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "hero-blob",
+      "page-image"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "scroll-linked",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "scroll-linked": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "useScroll",
+        "useTransform"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/misc/ShirtHero.jsx:1-32"
+  },
+  "literalAssets": [
+    "/assets/hero-blob-left.png",
+    "/assets/hero-blob-right.png",
+    "/assets/pages/shirt/image-31-vBTUyXNN.png"
+  ],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

@@ -1,0 +1,87 @@
+{
+  "id": "conversion.footer-cta-dark",
+  "category": "CONVERSION",
+  "description": "Dark closing call-to-action band with sliding screens.",
+  "scope": "The 2 solution pages (biopharma and industrial).",
+  "implementedBy": "src/components/solutions/FooterCTADark.jsx",
+  "measuredFrom": [
+    "src/components/solutions/FooterCTADark.jsx:1-63"
+  ],
+  "allowedTemplates": [
+    "template.solution"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "media": {
+    "roles": [
+      "ui-screenshot"
+    ],
+    "maxItems": 3
+  },
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "useInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/solutions/FooterCTADark.jsx:1-63"
+  },
+  "literalAssets": [
+    "/assets/ui-data.png",
+    "/assets/ui-report-cta.png",
+    "/assets/ui-round.png"
+  ],
+  "exampleContent": {
+    "ctas": [
+      {
+        "label": "Let's talk",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

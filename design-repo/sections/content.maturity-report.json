@@ -1,0 +1,113 @@
+{
+  "id": "content.maturity-report",
+  "category": "CONTENT",
+  "description": "Interactive maturity ladder, ledger, framework, coloured strand bands and common patterns (placeholder paragraphs).",
+  "scope": "/blog/maturity only.",
+  "implementedBy": "src/pages/BlogMaturity.jsx > Framework",
+  "measuredFrom": [
+    "src/pages/BlogMaturity.jsx:71-109"
+  ],
+  "allowedTemplates": [
+    "template.blog-maturity"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 9,
+        "measuredMax": 6
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 15
+        },
+        "measuredMax": 10
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "measuredMax": 4
+            },
+            "p": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "icon",
+            "title"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/blog/maturity/content.js:15-19"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "page-image"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/pages/BlogMaturity.jsx:71-109"
+  },
+  "literalAssets": [
+    "/assets/pages/blog-maturity/image-BuFFsMu1.png"
+  ],
+  "exampleContent": {
+    "heading": "The Three Strands of ML Maturity",
+    "paragraphs": [
+      "Now let's break down each strand into its key components."
+    ],
+    "items": [
+      {
+        "icon": "/assets/pages/blog-maturity/1-i7eLtA6o.png",
+        "title": "Scope of ML Application"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "conversion.footer-cta-blue",
+  "category": "CONVERSION",
+  "description": "Blue closing call-to-action band with sliding screens.",
+  "scope": "All 4 modality pages.",
+  "implementedBy": "src/components/modality/TeamsCTA.jsx > FooterCTABlue",
+  "measuredFrom": [
+    "src/components/modality/TeamsCTA.jsx:90-132"
+  ],
+  "allowedTemplates": [
+    "template.modality-ticker",
+    "template.modality-problem",
+    "template.modality-text"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "src": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "cls": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "delay": {
+              "type": "number"
+            },
+            "x": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "src",
+            "cls"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/modality/TeamsCTA.jsx:83-88"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/modality/TeamsCTA.jsx:90-132"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "items": [
+      {
+        "src": "/assets/ui-report-cta.png",
+        "cls": "cta-screen cta-report"
+      }
+    ]
+  }
+}

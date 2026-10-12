@@ -1,0 +1,1110 @@
+{
+  "$description": "Every real route mapped to exactly one template, with its chrome variants (measured in src/chrome.js).",
+  "routes": [
+    {
+      "route": "/",
+      "template": "template.home",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "blue"
+      }
+    },
+    {
+      "route": "/platform",
+      "template": "template.platform",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/solutions/biopharma",
+      "template": "template.solution",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/solutions/industrial",
+      "template": "template.solution",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/solutions/academia",
+      "template": "template.academia",
+      "chrome": {
+        "nav": {
+          "desktop": "academia",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/modality/antibody",
+      "template": "template.modality-ticker",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "accent"
+      }
+    },
+    {
+      "route": "/modality/enzyme",
+      "template": "template.modality-problem",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "accent"
+      }
+    },
+    {
+      "route": "/modality/vaccine",
+      "template": "template.modality-text",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "accent"
+      }
+    },
+    {
+      "route": "/modality/peptide",
+      "template": "template.modality-text",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "accent"
+      }
+    },
+    {
+      "route": "/team",
+      "template": "template.team",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/careers",
+      "template": "template.careers",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/lab",
+      "template": "template.lab",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/case",
+      "template": "template.case",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/security",
+      "template": "template.security",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/get-started",
+      "template": "template.form-page",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/contact",
+      "template": "template.form-page",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog",
+      "template": "template.blog-index",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/aintibody",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/hansa",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/optimizing-entire-batch",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/variant-selection-with-ml",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/antibody-first-round",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/guided-rounds",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/zero-shot",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/lundbeck",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/keasling-qs21",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/visualizing-trade-offs-in-multi-property-protein-optimization",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/marcus-schindler",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/beyond-the-bench",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/therapeutic-peptides",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/staphylococcus-aureus-vaccine",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/igg-campaign",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/haloalkane-dehalogenase-thermostability",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/polyspecific-anti-venom-vhhs",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/polyspecific-vhhs-sars-cov-2",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/bayer-collaboration",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/cradle-2025",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/sample-tracking",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/webinar-lab-automation",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/company-culture",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/webinar-maturity",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/from-lab-rat-to-data-detective-how-this-scientist-turned-sales-into-an-art-form",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/benchmarking-at-cradle",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/adaptyv2",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/ab4s",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/how-protein-tags-revolutionize-lab-automation",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/slas2025",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/adaptyv-protein-design-competition",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/series-b",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/antibody-ngs-data-initiative",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/align-to-innovate-benchmark",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/cultural-values",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/sam-partovi-joins-cradle-as-cco",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/affordable-high-throughput-protein-purification",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/the-art-of-assays-part-2",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/the-art-of-assays-part-1",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/interviews-franzi",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/from-prisons-to-proteins",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/cradle-partners-with-google-cloud-on-security-for-protein-engineering",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/the-rise-of-the-bioneers-innovating-with-proteins-to-transform-industries-part-2",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/interviews-jinel",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/the-rise-of-the-bioneers-part-1",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/exploring-darwin-assembly",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/interviews-jonathan",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/case-study-combining-ai-generated-mutations-with-human-expertise-for-better-enzyme-designs",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/ginkgo-partnership",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/data-collection-guide",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/cradle-raises-24m-series-a-and-signs-partnerships-with-industry-leaders",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/2022-bio-developer-survey-results",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/cradle-raises-5m",
+      "template": "template.blog-post",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/blog/maturity",
+      "template": "template.blog-maturity",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video",
+      "template": "template.video-index",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/guided-rounds",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/sankey",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/launch",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/launch-sm",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/cradle-1",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/pegs-stef",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/pegs-jonathan",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/ai-maturity",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/lab-automation",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/cetuximab",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/keasling",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/benchling-demo",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/culture",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/outro",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/turntable",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/lab-normalization",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/lab-tracking",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/clip-1",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/plate-butler",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/video/welcome-marcus",
+      "template": "template.video-post",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/whitepaper",
+      "template": "template.whitepaper",
+      "chrome": {
+        "nav": {
+          "desktop": "dark",
+          "phone": "dark"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/presskit",
+      "template": "template.presskit",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/licensing",
+      "template": "template.licensing",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/dpa",
+      "template": "template.dpa",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/links",
+      "template": "template.link-in-bio-links",
+      "chrome": {
+        "nav": null,
+        "footer": null
+      }
+    },
+    {
+      "route": "/notebook",
+      "template": "template.link-in-bio-form",
+      "chrome": {
+        "nav": null,
+        "footer": null
+      }
+    },
+    {
+      "route": "/shirt",
+      "template": "template.shirt",
+      "chrome": {
+        "nav": null,
+        "footer": null
+      }
+    },
+    {
+      "route": "/legal-terms",
+      "template": "template.legal",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    },
+    {
+      "route": "/privacy-policy",
+      "template": "template.legal",
+      "chrome": {
+        "nav": {
+          "desktop": "light",
+          "phone": "light"
+        },
+        "footer": "dark"
+      }
+    }
+  ],
+  "measuredFrom": [
+    "src/chrome.js:1-54"
+  ]
+}

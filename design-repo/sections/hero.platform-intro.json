@@ -1,0 +1,111 @@
+{
+  "id": "hero.platform-intro",
+  "category": "HERO",
+  "description": "Dark platform intro with a video trigger and heading that appears on load.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/Intro.jsx",
+  "measuredFrom": [
+    "src/components/platform/Intro.jsx:1-89"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 12,
+        "measuredMax": 8
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 6,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 35
+        },
+        "measuredMax": 23
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": {
+    "roles": [
+      "page-image",
+      "video"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "autoplay-video",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "autoplay-video": "pause",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/platform/Intro.jsx:1-89"
+  },
+  "literalAssets": [
+    "/assets/pages/platform/intro-yChT7D.mp4",
+    "/assets/pages/platform/video-trigger-evbqum.png"
+  ],
+  "exampleContent": {
+    "heading": "The AI protein engineering software built for scientists",
+    "paragraphs": [
+      "Cradle makes it easy for scientists to train and run protein AI that produces successful candidates 2 - 12x faster than traditional workflows."
+    ],
+    "ctas": [
+      {
+        "label": "Explore platform",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

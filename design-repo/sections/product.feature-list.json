@@ -1,0 +1,107 @@
+{
+  "id": "product.feature-list",
+  "category": "PRODUCT",
+  "description": "Feature list whose items replay on scroll.",
+  "scope": "All 4 modality pages.",
+  "implementedBy": "src/components/modality/Features.jsx > FeatureList",
+  "measuredFrom": [
+    "src/components/modality/Features.jsx:10-41"
+  ],
+  "allowedTemplates": [
+    "template.modality-ticker",
+    "template.modality-problem",
+    "template.modality-text"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/modality/Features.jsx:10-41",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "blocks": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 75,
+              "measuredFrom": "src/components/modality/Features.jsx:10-41",
+              "budgetBasis": "site-wide observed max of key \"body\" across harvested section data"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "measuredFrom": "src/components/modality/Features.jsx:10-41",
+              "budgetBasis": "site-wide observed max of key \"label\" across harvested section data"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 26,
+              "measuredFrom": "src/components/modality/Features.jsx:10-41",
+              "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+            }
+          },
+          "required": [
+            "body",
+            "label",
+            "title"
+          ]
+        }
+      }
+    },
+    "required": [
+      "title",
+      "blocks"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/modality/Features.jsx:10-41"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "title": "Section title",
+    "blocks": [
+      {
+        "body": "Body text",
+        "label": "Label",
+        "title": "Section title"
+      }
+    ]
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

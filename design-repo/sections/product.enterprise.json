@@ -1,0 +1,150 @@
+{
+  "id": "product.enterprise",
+  "category": "PRODUCT",
+  "description": "Dark enterprise section with a fading background photo and a six-item feature grid.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/Enterprise.jsx",
+  "measuredFrom": [
+    "src/components/Enterprise.jsx:1-103"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "measuredMax": 3
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 23,
+              "measuredMax": 15
+            },
+            "beta": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 6,
+        "measuredFrom": "src/components/Enterprise.jsx:7-14"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "lab-photo",
+      "ui-icon"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "word-stagger-eyebrow",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "word-stagger-eyebrow": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "Eyebrow",
+        "useInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "lg",
+    "gridColumns": {
+      "base": 2,
+      "lg": 3
+    },
+    "measuredFrom": "src/components/Enterprise.jsx:1-103"
+  },
+  "literalAssets": [
+    "/assets/enterprise-bg.png",
+    "/assets/icon-check.svg"
+  ],
+  "exampleContent": {
+    "heading": "Private. Secure. Yours.",
+    "eyebrow": "BUILT FOR ENTERPRISE",
+    "ctas": [
+      {
+        "label": "Security at Cradle",
+        "href": "/get-started"
+      }
+    ],
+    "items": [
+      {
+        "title": "Privacy-first AI",
+        "body": "You experimental data is only used to train your organizations custom models."
+      }
+    ]
+  }
+}

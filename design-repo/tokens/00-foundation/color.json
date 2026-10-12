@@ -1,0 +1,456 @@
+{
+  "$description": "Foundation colors. Palette from tailwind.config.js, extras from a hex-literal histogram over src/.",
+  "color": {
+    "gray.950": {
+      "$type": "color",
+      "$value": "#030712",
+      "$extensions": {
+        "hexLiteralUsage": 17,
+        "measuredFrom": "CLONE_SPEC.md:31"
+      }
+    },
+    "gray.900": {
+      "$type": "color",
+      "$value": "#111827",
+      "$extensions": {
+        "hexLiteralUsage": 1,
+        "measuredFrom": "CLONE_SPEC.md:32"
+      }
+    },
+    "gray.800": {
+      "$type": "color",
+      "$value": "#1f2937",
+      "$extensions": {
+        "hexLiteralUsage": 8,
+        "measuredFrom": "CLONE_SPEC.md:33"
+      }
+    },
+    "gray.700": {
+      "$type": "color",
+      "$value": "#374151",
+      "$extensions": {
+        "hexLiteralUsage": 1,
+        "measuredFrom": "CLONE_SPEC.md:34"
+      }
+    },
+    "gray.400": {
+      "$type": "color",
+      "$value": "#9ca3af",
+      "$extensions": {
+        "hexLiteralUsage": 9,
+        "measuredFrom": "CLONE_SPEC.md:36"
+      }
+    },
+    "gray.300": {
+      "$type": "color",
+      "$value": "#d1d5db",
+      "$extensions": {
+        "hexLiteralUsage": 1,
+        "measuredFrom": "CLONE_SPEC.md:37"
+      }
+    },
+    "gray.200": {
+      "$type": "color",
+      "$value": "#e5e7eb",
+      "$extensions": {
+        "hexLiteralUsage": 5,
+        "measuredFrom": "CLONE_SPEC.md:38"
+      }
+    },
+    "gray.100": {
+      "$type": "color",
+      "$value": "#f3f4f6",
+      "$extensions": {
+        "hexLiteralUsage": 17,
+        "measuredFrom": "CLONE_SPEC.md:39"
+      }
+    },
+    "gray.50": {
+      "$type": "color",
+      "$value": "#f9fafb",
+      "$extensions": {
+        "hexLiteralUsage": 17,
+        "measuredFrom": "CLONE_SPEC.md:40"
+      }
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#616e80",
+      "$extensions": {
+        "hexLiteralUsage": 3,
+        "measuredFrom": "CLONE_SPEC.md:35"
+      }
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "#224eee",
+      "$extensions": {
+        "hexLiteralUsage": 8,
+        "measuredFrom": "CLONE_SPEC.md:41"
+      }
+    },
+    "brand.hover": {
+      "$type": "color",
+      "$value": "#1b3ada",
+      "$extensions": {
+        "hexLiteralUsage": 4,
+        "measuredFrom": "CLONE_SPEC.md:42"
+      }
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "#2d66f8",
+      "$extensions": {
+        "hexLiteralUsage": 23,
+        "measuredFrom": "CLONE_SPEC.md:43"
+      }
+    },
+    "blue.400": {
+      "$type": "color",
+      "$value": "#5e95fc",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "CLONE_SPEC.md:44"
+      }
+    },
+    "blue.300": {
+      "$type": "color",
+      "$value": "#92bafe",
+      "$extensions": {
+        "hexLiteralUsage": 1,
+        "measuredFrom": "CLONE_SPEC.md:45"
+      }
+    },
+    "blue.200": {
+      "$type": "color",
+      "$value": "#bed5ff",
+      "$extensions": {
+        "hexLiteralUsage": 0,
+        "measuredFrom": "CLONE_SPEC.md:46"
+      }
+    },
+    "blue.100": {
+      "$type": "color",
+      "$value": "#dbe7fe",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "CLONE_SPEC.md:47"
+      }
+    },
+    "blue.50": {
+      "$type": "color",
+      "$value": "#eff4ff",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "CLONE_SPEC.md:48"
+      }
+    },
+    "modality.antibody": {
+      "$type": "color",
+      "$value": "#3cab57",
+      "$extensions": {
+        "hexLiteralUsage": 13,
+        "measuredFrom": "CLONE_SPEC.md:49"
+      }
+    },
+    "modality.enzyme": {
+      "$type": "color",
+      "$value": "#0ea5e9",
+      "$extensions": {
+        "hexLiteralUsage": 22,
+        "measuredFrom": "CLONE_SPEC.md:50"
+      }
+    },
+    "modality.sky400": {
+      "$type": "color",
+      "$value": "#38bdf8",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "CLONE_SPEC.md:50"
+      }
+    },
+    "modality.peptide": {
+      "$type": "color",
+      "$value": "#98b62c",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "CLONE_SPEC.md:51"
+      }
+    },
+    "modality.vaccine": {
+      "$type": "color",
+      "$value": "#9b9265",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "CLONE_SPEC.md:52"
+      }
+    },
+    "status.progress": {
+      "$type": "color",
+      "$value": "rgb(235,145,49)",
+      "$extensions": {
+        "hexLiteralUsage": 17,
+        "measuredFrom": "tailwind.config.js:19"
+      }
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#ffffff",
+      "$extensions": {
+        "hexLiteralUsage": 287,
+        "measuredFrom": "CLONE_SPEC.md:54"
+      }
+    },
+    "extra.0284c7": {
+      "$type": "color",
+      "$value": "#0284c7",
+      "$extensions": {
+        "hexLiteralUsage": 12,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.4a5463": {
+      "$type": "color",
+      "$value": "#4a5463",
+      "$extensions": {
+        "hexLiteralUsage": 8,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.61c779": {
+      "$type": "color",
+      "$value": "#61c779",
+      "$extensions": {
+        "hexLiteralUsage": 7,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.9fa8b5": {
+      "$type": "color",
+      "$value": "#9fa8b5",
+      "$extensions": {
+        "hexLiteralUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.212d3a": {
+      "$type": "color",
+      "$value": "#212d3a",
+      "$extensions": {
+        "hexLiteralUsage": 5,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.0151f8": {
+      "$type": "color",
+      "$value": "#0151f8",
+      "$extensions": {
+        "hexLiteralUsage": 5,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.f0f9ff": {
+      "$type": "color",
+      "$value": "#f0f9ff",
+      "$extensions": {
+        "hexLiteralUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.29333c": {
+      "$type": "color",
+      "$value": "#29333c",
+      "$extensions": {
+        "hexLiteralUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.5c5c5c": {
+      "$type": "color",
+      "$value": "#5c5c5c",
+      "$extensions": {
+        "hexLiteralUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.1f5f36": {
+      "$type": "color",
+      "$value": "#1f5f36",
+      "$extensions": {
+        "hexLiteralUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.266f38": {
+      "$type": "color",
+      "$value": "#266f38",
+      "$extensions": {
+        "hexLiteralUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.effaf1": {
+      "$type": "color",
+      "$value": "#effaf1",
+      "$extensions": {
+        "hexLiteralUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.e51520": {
+      "$type": "color",
+      "$value": "#e51520",
+      "$extensions": {
+        "hexLiteralUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.0000ee": {
+      "$type": "color",
+      "$value": "#0000ee",
+      "$extensions": {
+        "hexLiteralUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.e1f7e6": {
+      "$type": "color",
+      "$value": "#e1f7e6",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.0369a1": {
+      "$type": "color",
+      "$value": "#0369a1",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    },
+    "extra.1e5e35": {
+      "$type": "color",
+      "$value": "#1e5e35",
+      "$extensions": {
+        "hexLiteralUsage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} hex literals",
+        "note": "used in source but not in the Tailwind palette"
+      }
+    }
+  },
+  "alpha": {
+    "rgba-0-0-0-08": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.08)",
+      "$extensions": {
+        "literalUsage": 45,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-0-0-0-12": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.12)",
+      "$extensions": {
+        "literalUsage": 15,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-0-0-0-04": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.04)",
+      "$extensions": {
+        "literalUsage": 14,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-0-0-0-8": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.8)",
+      "$extensions": {
+        "literalUsage": 11,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-3-7-18-08": {
+      "$type": "color",
+      "$value": "rgba(3,7,18,.08)",
+      "$extensions": {
+        "literalUsage": 9,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-0-0-0-5": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.5)",
+      "$extensions": {
+        "literalUsage": 9,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-255-255-255-08": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.08)",
+      "$extensions": {
+        "literalUsage": 9,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-0-0-0-0-25": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,0.25)",
+      "$extensions": {
+        "literalUsage": 7,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-255-255-255-5": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.5)",
+      "$extensions": {
+        "literalUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-0-0-0-2": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.2)",
+      "$extensions": {
+        "literalUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-0-0-0-25": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.25)",
+      "$extensions": {
+        "literalUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    },
+    "rgba-17-24-39-24": {
+      "$type": "color",
+      "$value": "rgba(17,24,39,.24)",
+      "$extensions": {
+        "literalUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} rgba() literals"
+      }
+    }
+  }
+}

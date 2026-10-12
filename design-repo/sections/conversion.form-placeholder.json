@@ -1,0 +1,54 @@
+{
+  "id": "conversion.form-placeholder",
+  "category": "CONVERSION",
+  "description": "Empty form box at the measured size where the live page embeds a form.",
+  "scope": "/notebook and /shirt.",
+  "implementedBy": "src/components/misc/LinkInBio.jsx > FormPlaceholder",
+  "measuredFrom": [
+    "src/components/misc/LinkInBio.jsx:60-70"
+  ],
+  "allowedTemplates": [
+    "template.link-in-bio-form",
+    "template.shirt"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "h": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/misc/LinkInBio.jsx:60-70",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      }
+    }
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/misc/LinkInBio.jsx:60-70"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "h": "Heading"
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

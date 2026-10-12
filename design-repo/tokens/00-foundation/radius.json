@@ -1,0 +1,109 @@
+{
+  "$description": "Border radius scale (usage >= 3).",
+  "radius": {
+    "r-8": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$extensions": {
+        "classUsage": 61,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-12": {
+      "$type": "dimension",
+      "$value": "12px",
+      "$extensions": {
+        "classUsage": 58,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-full": {
+      "$type": "dimension",
+      "$value": "9999px",
+      "$extensions": {
+        "classUsage": 23,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-4": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$extensions": {
+        "classUsage": 14,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-2": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$extensions": {
+        "classUsage": 11,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-0": {
+      "$type": "dimension",
+      "$value": "0px",
+      "$extensions": {
+        "classUsage": 9,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-10": {
+      "$type": "dimension",
+      "$value": "10px",
+      "$extensions": {
+        "classUsage": 7,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-6": {
+      "$type": "dimension",
+      "$value": "6px",
+      "$extensions": {
+        "classUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-20": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$extensions": {
+        "classUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-100": {
+      "$type": "dimension",
+      "$value": "100px",
+      "$extensions": {
+        "classUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-3": {
+      "$type": "dimension",
+      "$value": "3px",
+      "$extensions": {
+        "classUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-1": {
+      "$type": "dimension",
+      "$value": "1px",
+      "$extensions": {
+        "classUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    },
+    "r-7": {
+      "$type": "dimension",
+      "$value": "7px",
+      "$extensions": {
+        "classUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} rounded-* classes (Tailwind: rounded=4px, -lg=8px, -xl=12px)"
+      }
+    }
+  }
+}

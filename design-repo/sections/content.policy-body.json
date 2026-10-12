@@ -1,0 +1,43 @@
+{
+  "id": "content.policy-body",
+  "category": "CONTENT",
+  "description": "Long policy body with sticky H4 headings (placeholder paragraphs).",
+  "scope": "/security only.",
+  "implementedBy": "src/pages/Security.jsx > PolicyItem",
+  "measuredFrom": [
+    "src/pages/Security.jsx:62-76"
+  ],
+  "allowedTemplates": [
+    "template.security"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/pages/Security.jsx:62-76"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

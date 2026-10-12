@@ -1,0 +1,90 @@
+{
+  "id": "content.blog-rails",
+  "category": "CONTENT",
+  "description": "Three post rails (case studies, news, meet the team) and the maturity promo card.",
+  "scope": "/blog only.",
+  "implementedBy": "src/components/blog/BlogIndexParts.jsx > GroupRail",
+  "measuredFrom": [
+    "src/components/blog/BlogIndexParts.jsx:82-97"
+  ],
+  "allowedTemplates": [
+    "template.blog-index"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/blog/BlogIndexParts.jsx:82-97",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "posts": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 20,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "collection",
+            "slug"
+          ],
+          "properties": {
+            "collection": {
+              "enum": [
+                "blog",
+                "video"
+              ]
+            },
+            "slug": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]+$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "title",
+      "posts"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "md": 3
+    },
+    "measuredFrom": "src/components/blog/BlogIndexParts.jsx:82-97"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "title": "Section title",
+    "posts": [
+      {
+        "collection": "blog",
+        "slug": "aintibody"
+      }
+    ]
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

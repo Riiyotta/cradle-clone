@@ -1,0 +1,14 @@
+{
+  "id": "component.check-badge-animated",
+  "kind": "component",
+  "description": "Check badge with optional green tone and draw-in animation.",
+  "implementedBy": "src/components/platform/shared.jsx > CheckBadge",
+  "props": [
+    "green",
+    "animate"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/platform/shared.jsx:40-57"
+  ]
+}

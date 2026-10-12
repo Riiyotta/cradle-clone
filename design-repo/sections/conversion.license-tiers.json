@@ -1,0 +1,108 @@
+{
+  "id": "conversion.license-tiers",
+  "category": "CONVERSION",
+  "description": "License tier cards.",
+  "scope": "/licensing only.",
+  "implementedBy": "src/components/misc/Licensing.jsx > LicenseGrid",
+  "measuredFrom": [
+    "src/components/misc/Licensing.jsx:114-131"
+  ],
+  "allowedTemplates": [
+    "template.licensing"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "measuredMax": 2
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 8
+        },
+        "measuredMax": 5
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": {
+    "roles": [
+      "page-image"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "md": 3
+    },
+    "measuredFrom": "src/components/misc/Licensing.jsx:114-131"
+  },
+  "literalAssets": [
+    "/assets/pages/licensing/license-grid-FRS8jcOd.jpg",
+    "/assets/pages/licensing/license-grid-FwU6ZVTs.jpg"
+  ],
+  "exampleContent": {
+    "heading": "Our licenses",
+    "paragraphs": [
+      "Licensing for every research need."
+    ],
+    "ctas": [
+      {
+        "label": "Apply now",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

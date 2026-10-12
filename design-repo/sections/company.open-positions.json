@@ -1,0 +1,43 @@
+{
+  "id": "company.open-positions",
+  "category": "COMPANY",
+  "description": "Open positions list (placeholder rows in the clone).",
+  "scope": "/careers only.",
+  "implementedBy": "src/components/company/CareersSections.jsx > OpenPositions",
+  "measuredFrom": [
+    "src/components/company/CareersSections.jsx:151-172"
+  ],
+  "allowedTemplates": [
+    "template.careers"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/company/CareersSections.jsx:151-172"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

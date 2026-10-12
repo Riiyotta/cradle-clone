@@ -1,0 +1,92 @@
+{
+  "id": "company.our-team",
+  "category": "COMPANY",
+  "description": "Team members grouped as photo pills with bio tooltips.",
+  "scope": "/team only.",
+  "implementedBy": "src/components/company/TeamSections.jsx > OurTeam",
+  "measuredFrom": [
+    "src/components/company/TeamSections.jsx:155-179"
+  ],
+  "allowedTemplates": [
+    "template.team"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "measuredMax": 3
+            },
+            "info": {
+              "type": "boolean"
+            },
+            "members": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "maxItems": 35
+            }
+          },
+          "required": [
+            "label"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 8,
+        "measuredFrom": "src/components/company/teamData.js:3-92"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "person-photo"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {
+      "base": 3
+    },
+    "measuredFrom": "src/components/company/TeamSections.jsx:155-179"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "items": [
+      {
+        "label": "Co-founders"
+      }
+    ]
+  }
+}

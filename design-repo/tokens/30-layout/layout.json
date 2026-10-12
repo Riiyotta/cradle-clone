@@ -1,0 +1,59 @@
+{
+  "$description": "Page-frame and grid measurements.",
+  "layout": {
+    "container.max-width": {
+      "$value": "1280px",
+      "$extensions": {
+        "measuredFrom": "tailwind.config.js:27"
+      }
+    },
+    "container.gutter.desktop": {
+      "$value": "40px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:25"
+      }
+    },
+    "container.gutter.phone": {
+      "$value": "16px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:25"
+      }
+    },
+    "nav.height": {
+      "$value": "64px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:24"
+      }
+    },
+    "hero.padding-top.desktop": {
+      "$value": "280px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:24"
+      }
+    },
+    "hero.padding-top.phone": {
+      "$value": "120px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:24"
+      }
+    },
+    "breakpoint.phone-max": {
+      "$value": "809.98px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:18"
+      }
+    },
+    "breakpoint.tablet-range": {
+      "$value": "810px-1199.98px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:17"
+      }
+    },
+    "breakpoint.desktop-min": {
+      "$value": "1200px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:16"
+      }
+    }
+  }
+}

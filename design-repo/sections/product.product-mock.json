@@ -1,0 +1,45 @@
+{
+  "id": "product.product-mock",
+  "category": "PRODUCT",
+  "description": "Product video or image that scales up as it scrolls into view.",
+  "scope": "All 4 modality pages.",
+  "implementedBy": "src/components/modality/Features.jsx > ProductMock",
+  "measuredFrom": [
+    "src/components/modality/Features.jsx:75-84"
+  ],
+  "allowedTemplates": [
+    "template.modality-ticker",
+    "template.modality-problem",
+    "template.modality-text"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/modality/Features.jsx:75-84"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

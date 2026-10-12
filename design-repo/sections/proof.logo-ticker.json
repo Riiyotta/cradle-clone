@@ -1,0 +1,52 @@
+{
+  "id": "proof.logo-ticker",
+  "category": "PROOF",
+  "description": "Horizontally scrolling marquee of customer logos.",
+  "scope": "The 2 solution pages (biopharma and industrial).",
+  "implementedBy": "src/components/solutions/LogoTicker.jsx",
+  "measuredFrom": [
+    "src/components/solutions/LogoTicker.jsx:1-49"
+  ],
+  "allowedTemplates": [
+    "template.solution"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "marquee",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "marquee": "pause",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "Marquee"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/solutions/LogoTicker.jsx:1-49"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

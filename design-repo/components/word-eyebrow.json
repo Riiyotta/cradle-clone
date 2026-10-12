@@ -1,0 +1,13 @@
+{
+  "id": "component.word-eyebrow",
+  "kind": "component",
+  "description": "Eyebrow with per-word reveal used on modality pages.",
+  "implementedBy": "src/components/modality/primitives.jsx > WordEyebrow",
+  "props": [
+    "color"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/modality/primitives.jsx:56-75"
+  ]
+}

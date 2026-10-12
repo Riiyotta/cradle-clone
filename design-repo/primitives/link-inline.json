@@ -1,0 +1,11 @@
+{
+  "id": "primitive.link-inline",
+  "kind": "primitive",
+  "description": "Inline text link style (blue, lightens on hover) and muted link style.",
+  "implementedBy": "src/components/company/shared.jsx > INLINE_LINK",
+  "props": [],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/company/shared.jsx:13"
+  ]
+}

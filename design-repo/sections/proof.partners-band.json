@@ -1,0 +1,98 @@
+{
+  "id": "proof.partners-band",
+  "category": "PROOF",
+  "description": "Partnerships band.",
+  "scope": "/licensing only.",
+  "implementedBy": "src/components/misc/Licensing.jsx > PartnersBand",
+  "measuredFrom": [
+    "src/components/misc/Licensing.jsx:195-210"
+  ],
+  "allowedTemplates": [
+    "template.licensing"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "measuredMax": 1
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 38
+        },
+        "measuredMax": 25
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/misc/Licensing.jsx:195-210"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Partnerships",
+    "paragraphs": [
+      "CRO or service provider? If you wish to use or deploy Cradle as part of your service offering, please contact us here to discuss options."
+    ],
+    "ctas": [
+      {
+        "label": "Contact Cradle",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

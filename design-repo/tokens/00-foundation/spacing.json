@@ -1,0 +1,177 @@
+{
+  "$description": "Spacing steps seen >= 15 times plus page-frame measurements.",
+  "spacing": {
+    "gap-20px": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$extensions": {
+        "classUsage": 133,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "gap-40px": {
+      "$type": "dimension",
+      "$value": "40px",
+      "$extensions": {
+        "classUsage": 129,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "gap-16px": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$extensions": {
+        "classUsage": 57,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "gap-24px": {
+      "$type": "dimension",
+      "$value": "24px",
+      "$extensions": {
+        "classUsage": 43,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "gap-12px": {
+      "$type": "dimension",
+      "$value": "12px",
+      "$extensions": {
+        "classUsage": 40,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "gap-80px": {
+      "$type": "dimension",
+      "$value": "80px",
+      "$extensions": {
+        "classUsage": 38,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "gap-8px": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$extensions": {
+        "classUsage": 36,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "gap-4px": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$extensions": {
+        "classUsage": 27,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} gap-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-40px": {
+      "$type": "dimension",
+      "$value": "40px",
+      "$extensions": {
+        "classUsage": 181,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-20px": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$extensions": {
+        "classUsage": 131,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-80px": {
+      "$type": "dimension",
+      "$value": "80px",
+      "$extensions": {
+        "classUsage": 118,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-16px": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$extensions": {
+        "classUsage": 77,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-0px": {
+      "$type": "dimension",
+      "$value": "0px",
+      "$extensions": {
+        "classUsage": 55,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-24px": {
+      "$type": "dimension",
+      "$value": "24px",
+      "$extensions": {
+        "classUsage": 42,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-8px": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$extensions": {
+        "classUsage": 36,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-4px": {
+      "$type": "dimension",
+      "$value": "4px",
+      "$extensions": {
+        "classUsage": 25,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-12px": {
+      "$type": "dimension",
+      "$value": "12px",
+      "$extensions": {
+        "classUsage": 24,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "padding-32px": {
+      "$type": "dimension",
+      "$value": "32px",
+      "$extensions": {
+        "classUsage": 24,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} padding-* utility classes (Tailwind step = 4px)"
+      }
+    },
+    "container-max": {
+      "$type": "dimension",
+      "$value": "1280px",
+      "$extensions": {
+        "measuredFrom": "tailwind.config.js:27"
+      }
+    },
+    "section-gutter-desktop": {
+      "$type": "dimension",
+      "$value": "40px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:25"
+      }
+    },
+    "section-gutter-phone": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:25"
+      }
+    },
+    "nav-height": {
+      "$type": "dimension",
+      "$value": "64px",
+      "$extensions": {
+        "measuredFrom": "CLONE_SPEC.md:24"
+      }
+    }
+  }
+}

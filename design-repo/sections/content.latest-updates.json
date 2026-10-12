@@ -1,0 +1,101 @@
+{
+  "id": "content.latest-updates",
+  "category": "CONTENT",
+  "description": "Sticky-title 'latest updates' list of recent posts.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/LatestUpdates.jsx",
+  "measuredFrom": [
+    "src/components/platform/LatestUpdates.jsx:1-73"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "icon": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "measuredMax": 4
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 69
+              },
+              "maxItems": 10
+            },
+            "titleColor": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            }
+          },
+          "required": [
+            "icon",
+            "title"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/platform/LatestUpdates.jsx:5-40"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/platform/LatestUpdates.jsx:1-73"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "items": [
+      {
+        "icon": "data-XQPahj.png",
+        "title": "Data & Workflow Management"
+      }
+    ]
+  }
+}

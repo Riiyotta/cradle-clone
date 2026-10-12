@@ -1,0 +1,43 @@
+{
+  "id": "hero.blog",
+  "category": "HERO",
+  "description": "Blog heading with a blinking caret, plus a featured latest-post card.",
+  "scope": "/blog only.",
+  "implementedBy": "src/components/blog/BlogIndexParts.jsx > BlogHeading",
+  "measuredFrom": [
+    "src/components/blog/BlogIndexParts.jsx:10-24"
+  ],
+  "allowedTemplates": [
+    "template.blog-index"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/blog/BlogIndexParts.jsx:10-24"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

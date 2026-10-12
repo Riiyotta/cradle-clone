@@ -1,0 +1,81 @@
+{
+  "id": "proof.case-grid",
+  "category": "PROOF",
+  "description": "Eleven-card case grid beside a sticky subscribe card, with a subscribe modal.",
+  "scope": "/case only.",
+  "implementedBy": "src/pages/Case.jsx > CaseCard",
+  "measuredFrom": [
+    "src/pages/Case.jsx:64-85"
+  ],
+  "allowedTemplates": [
+    "template.case"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "tag": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3,
+        "measuredFrom": "src/pages/Case.jsx:64-85",
+        "budgetBasis": "site-wide observed max of key \"tag\" across harvested section data"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/pages/Case.jsx:64-85",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "href": {
+        "type": "string",
+        "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+      },
+      "excerpt": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/pages/Case.jsx:64-85",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      }
+    },
+    "required": [
+      "title"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/pages/Case.jsx:64-85"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "tag": "Tag",
+    "title": "Section title",
+    "href": "/get-started",
+    "excerpt": "Short excerpt"
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

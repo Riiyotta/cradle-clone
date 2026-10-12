@@ -1,0 +1,116 @@
+{
+  "id": "product.protein-visual",
+  "category": "PRODUCT",
+  "description": "Field of 29 frosted bubbles with four molecule tiles that drift on scroll.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/ProteinVisual.jsx",
+  "measuredFrom": [
+    "src/components/ProteinVisual.jsx:1-131"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "bg": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "travel": {
+              "type": "number"
+            },
+            "phoneTravel": {
+              "type": "number"
+            },
+            "scaleTo": {
+              "type": "number"
+            },
+            "d": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {}
+            },
+            "p": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {}
+            },
+            "t": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {}
+            }
+          },
+          "required": [
+            "name",
+            "bg"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/ProteinVisual.jsx:42-59"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "scroll-linked",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "scroll-linked": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "useScroll",
+        "useSpring",
+        "useTransform"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/ProteinVisual.jsx:1-131"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "items": [
+      {
+        "name": "Placeholder text",
+        "bg": "#3cab57"
+      }
+    ]
+  }
+}

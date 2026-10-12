@@ -1,0 +1,45 @@
+{
+  "id": "hero.form-page",
+  "category": "HERO",
+  "description": "Form-page header with an avatar trio.",
+  "scope": "The 2 form pages (get-started and contact).",
+  "implementedBy": "src/components/resources/FormPage.jsx > AvatarTrio",
+  "measuredFrom": [
+    "src/components/resources/FormPage.jsx:8-34"
+  ],
+  "allowedTemplates": [
+    "template.form-page"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/resources/FormPage.jsx:8-34"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

@@ -1,0 +1,188 @@
+{
+  "id": "proof.customers",
+  "category": "PROOF",
+  "description": "Auto-advancing testimonial carousel with a progress bar, beside a 3x4 customer-logo grid with read-more badges.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/Customers.jsx",
+  "measuredFrom": [
+    "src/components/Customers.jsx:1-186"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 17,
+        "measuredMax": 11
+      },
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "measuredMax": 2
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "bg": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "measuredMax": 5
+            },
+            "logo": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 53,
+              "measuredMax": 35
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "measuredMax": 3
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 11,
+              "measuredMax": 7
+            }
+          },
+          "required": [
+            "logo",
+            "quote",
+            "name",
+            "title"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/Customers.jsx:16-45"
+      },
+      "groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "file": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "measuredMax": 3
+            },
+            "badge": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "to": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            }
+          },
+          "required": [
+            "file",
+            "alt"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 12,
+        "measuredFrom": "src/components/Customers.jsx:47-60"
+      }
+    },
+    "required": [
+      "heading",
+      "items",
+      "groups"
+    ]
+  },
+  "media": {
+    "roles": [
+      "customer-logo",
+      "ui-icon"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "word-stagger-eyebrow",
+      "load-appear",
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "word-stagger-eyebrow": "static",
+      "load-appear": "static",
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "Eyebrow",
+        "whileInView"
+      ],
+      "hasHover": true,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "base": 3,
+      "md": 2,
+      "lg": 3
+    },
+    "measuredFrom": "src/components/Customers.jsx:1-186"
+  },
+  "literalAssets": [
+    "/assets/icon-arrow-up-right.svg"
+  ],
+  "exampleContent": {
+    "heading": "Trusted by the world's top Biopharma and Industrial Bio R&D teams",
+    "eyebrow": "OUR CUSTOMERS",
+    "items": [
+      {
+        "logo": "testimonial-logo-novonesis.png",
+        "quote": "Through our partnership with Cradle, we are embedding advanced Al directly into how we innovate, enabling our teams to shorten development time and bring real-world biosolutions faster to market.",
+        "name": "Placeholder text",
+        "title": "Chief Scientific Officer, Novonesis"
+      }
+    ],
+    "groups": [
+      {
+        "file": "novonesis",
+        "alt": "novonesis"
+      }
+    ]
+  }
+}

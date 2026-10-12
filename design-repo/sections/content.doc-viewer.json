@@ -1,0 +1,99 @@
+{
+  "id": "content.doc-viewer",
+  "category": "CONTENT",
+  "description": "Scrolling document viewer of 17 placeholder pages.",
+  "scope": "/dpa only.",
+  "implementedBy": "src/components/misc/DocViewer.jsx",
+  "measuredFrom": [
+    "src/components/misc/DocViewer.jsx:1-70"
+  ],
+  "allowedTemplates": [
+    "template.dpa"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "lines": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "w": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 26,
+              "measuredFrom": "src/components/misc/DocViewer.jsx:1-70",
+              "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+            },
+            "x": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 26,
+              "measuredFrom": "src/components/misc/DocViewer.jsx:1-70",
+              "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+            },
+            "y": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 26,
+              "measuredFrom": "src/components/misc/DocViewer.jsx:1-70",
+              "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+            }
+          },
+          "required": [
+            "w",
+            "x",
+            "y"
+          ]
+        }
+      }
+    },
+    "required": [
+      "lines"
+    ]
+  },
+  "media": {
+    "roles": [
+      "brand-mark"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/misc/DocViewer.jsx:1-70"
+  },
+  "literalAssets": [
+    "/assets/cradle-symbol.svg"
+  ],
+  "exampleContent": {
+    "lines": [
+      {
+        "w": "Text",
+        "x": "Text",
+        "y": "Text"
+      }
+    ]
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

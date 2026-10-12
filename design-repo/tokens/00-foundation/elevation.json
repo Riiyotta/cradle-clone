@@ -1,0 +1,69 @@
+{
+  "$description": "Top shadows by usage. The inset 1px rings are the site's border treatment for buttons (Framer draws borders with an inset ::after).",
+  "elevation": {
+    "shadow-1": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(0,0,0,.08)",
+      "$extensions": {
+        "classUsage": 16,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    },
+    "shadow-2": {
+      "$type": "shadow",
+      "$value": "inset 0 0 0 1px rgba(0,0,0,.12)",
+      "$extensions": {
+        "classUsage": 8,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    },
+    "shadow-3": {
+      "$type": "shadow",
+      "$value": "0 1px 8px 0 rgba(0,0,0,.08)",
+      "$extensions": {
+        "classUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    },
+    "shadow-4": {
+      "$type": "shadow",
+      "$value": "0 1px 16px 0 rgba(0,0,0,0.25)",
+      "$extensions": {
+        "classUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    },
+    "shadow-5": {
+      "$type": "shadow",
+      "$value": "rgba(0,0,0,.08) 0 1px 8px 0",
+      "$extensions": {
+        "classUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    },
+    "shadow-6": {
+      "$type": "shadow",
+      "$value": "inset 0 1px 0 0 rgba(255,255,255,0.04)",
+      "$extensions": {
+        "classUsage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    },
+    "shadow-7": {
+      "$type": "shadow",
+      "$value": "0 1px 8px 0 rgba(22,31,85,.16)",
+      "$extensions": {
+        "classUsage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    },
+    "shadow-8": {
+      "$type": "shadow",
+      "$value": "inset 0 1px 0 0 rgba(0,0,0,0.04)",
+      "$extensions": {
+        "classUsage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} shadow-[...] classes"
+      }
+    }
+  }
+}

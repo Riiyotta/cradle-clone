@@ -1,0 +1,122 @@
+{
+  "id": "hero.modality-ticker",
+  "category": "HERO",
+  "description": "Modality hero with scrolling property tickers.",
+  "scope": "Antibody modality page only.",
+  "implementedBy": "src/components/modality/Heroes.jsx > PropertyTickerHero",
+  "measuredFrom": [
+    "src/components/modality/Heroes.jsx:32-71"
+  ],
+  "allowedTemplates": [
+    "template.modality-ticker"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "rows": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 12,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 75,
+          "measuredFrom": "src/components/modality/Heroes.jsx:32-71",
+          "budgetBasis": "site-wide observed max of key \"body\" across harvested section data"
+        }
+      },
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6,
+        "measuredFrom": "src/components/modality/Heroes.jsx:32-71",
+        "budgetBasis": "site-wide observed max of key \"eyebrow\" across harvested section data"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/modality/Heroes.jsx:32-71",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "lead": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/modality/Heroes.jsx:32-71",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "measuredFrom": "src/components/modality/Heroes.jsx:32-71",
+              "budgetBasis": "site-wide observed max of key \"label\" across harvested section data"
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "rows",
+      "title"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/modality/Heroes.jsx:32-71"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "rows": [
+      "Text"
+    ],
+    "eyebrow": "Eyebrow label",
+    "title": "Section title",
+    "lead": "Lead paragraph text",
+    "ctas": [
+      {
+        "label": "Get started",
+        "href": "/get-started"
+      }
+    ]
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

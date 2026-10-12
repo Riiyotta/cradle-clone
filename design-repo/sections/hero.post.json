@@ -1,0 +1,81 @@
+{
+  "id": "hero.post",
+  "category": "HERO",
+  "description": "Post header with title, intro, date, author chips and cover image.",
+  "scope": "The 53 blog post routes.",
+  "implementedBy": "src/components/blog/PostParts.jsx > PostHeader",
+  "measuredFrom": [
+    "src/components/blog/PostParts.jsx:11-43"
+  ],
+  "allowedTemplates": [
+    "template.blog-post"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "post": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "collection",
+          "slug"
+        ],
+        "properties": {
+          "collection": {
+            "enum": [
+              "blog",
+              "video"
+            ]
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        }
+      }
+    },
+    "required": [
+      "post"
+    ]
+  },
+  "media": {
+    "roles": [
+      "page-graphic"
+    ],
+    "maxItems": 3
+  },
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/blog/PostParts.jsx:11-43"
+  },
+  "literalAssets": [
+    "/assets/pages/blog-post/date-18x18-8dbda2.svg"
+  ],
+  "exampleContent": {
+    "post": {
+      "collection": "blog",
+      "slug": "aintibody"
+    }
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

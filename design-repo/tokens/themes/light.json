@@ -1,0 +1,19 @@
+{
+  "$description": "White page, ink text (navbar/footer variants \"light\"). Evidence: CLONE_SPEC section 0.",
+  "theme": "light",
+  "roles": {
+    "text.primary": "{semantic.text.primary}",
+    "text.secondary": "{semantic.text.secondary}",
+    "text.tertiary": "{semantic.text.tertiary}",
+    "surface.page": "{semantic.surface.page}",
+    "surface.alt": "{semantic.surface.alt}",
+    "surface.card": "{semantic.surface.card}",
+    "surface.accent": "{semantic.surface.accent}",
+    "surface.brand": "{semantic.surface.brand}",
+    "border.default": "{semantic.border.default}",
+    "text.link-inline": "{semantic.text.link-inline}"
+  },
+  "$extensions": {
+    "measuredFrom": "src/chrome.js:6-9"
+  }
+}

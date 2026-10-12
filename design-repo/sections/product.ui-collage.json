@@ -1,0 +1,62 @@
+{
+  "id": "product.ui-collage",
+  "category": "PRODUCT",
+  "description": "Parallax collage of product UI fragments.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/Collage.jsx",
+  "measuredFrom": [
+    "src/components/platform/Collage.jsx:1-79"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "page-image",
+      "ui-screenshot"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "scroll-linked",
+      "in-view-reveal",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "scroll-linked": "static",
+      "in-view-reveal": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "useScroll",
+        "useTransform",
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/platform/Collage.jsx:1-79"
+  },
+  "literalAssets": [
+    "/assets/pages/platform/wetlab-riCniX.png",
+    "/assets/ui-data.png"
+  ],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

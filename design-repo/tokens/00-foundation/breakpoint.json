@@ -1,0 +1,24 @@
+{
+  "$description": "Min-width breakpoints. Phone < 810, tablet 810-1199, desktop >= 1200 (tablet not measured on live, see CLONE_SPEC section 17).",
+  "breakpoint": {
+    "md": {
+      "$type": "dimension",
+      "$value": "810px",
+      "$extensions": {
+        "classUsage": 1834,
+        "measuredFrom": "tailwind.config.js:5"
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "1200px",
+      "$extensions": {
+        "classUsage": 345,
+        "measuredFrom": "tailwind.config.js:5"
+      }
+    }
+  },
+  "$extensions": {
+    "measuredFrom": "CLONE_SPEC.md:13-20"
+  }
+}

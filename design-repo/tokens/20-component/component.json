@@ -1,0 +1,132 @@
+{
+  "$description": "Component-scoped values read from the primitives that implement them.",
+  "component": {
+    "button.primary": {
+      "props": {
+        "background": "{semantic.surface.brand}",
+        "backgroundHover": "{semantic.surface.brand-hover}",
+        "color": "{semantic.text.on-dark}",
+        "shadow": "inset 0 0 0 1px rgba(0,0,0,.12)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:45"
+      }
+    },
+    "button.secondary-48": {
+      "props": {
+        "background": "linear-gradient(180deg,#fff 0%,#f9fafb 100%)",
+        "backgroundHover": "linear-gradient(#f9fafb,#f3f4f6)",
+        "color": "{color.gray.800}",
+        "shadow": "inset 0 0 0 1px rgba(0,0,0,.08)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:48"
+      }
+    },
+    "button.secondary-36": {
+      "props": {
+        "background": "#ffffff",
+        "color": "{semantic.text.primary}",
+        "shadow": "inset 0 0 0 1px rgba(0,0,0,.08)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:47"
+      }
+    },
+    "button.on-dark-40": {
+      "props": {
+        "background": "rgba(255,255,255,.08)",
+        "color": "{semantic.text.on-dark}",
+        "shadow": "inset 0 0 0 1px rgba(0,0,0,.08)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/media/shared.jsx:23"
+      }
+    },
+    "button.size-48": {
+      "props": {
+        "height": "48px",
+        "paddingX": "24px",
+        "radius": "12px",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": 600
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:43"
+      }
+    },
+    "button.size-36": {
+      "props": {
+        "height": "36px",
+        "paddingX": "12px",
+        "radius": "8px",
+        "fontSize": "14px",
+        "lineHeight": "16.8px",
+        "letterSpacing": "-0.14px",
+        "fontWeight": 600
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:42"
+      }
+    },
+    "button.hover-transition": {
+      "props": {
+        "duration": "100ms",
+        "easing": "{motion.ease-framer}",
+        "properties": [
+          "background",
+          "box-shadow",
+          "color"
+        ]
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:37"
+      }
+    },
+    "eyebrow.marker": {
+      "props": {
+        "size": "8px",
+        "radius": "2px",
+        "background": "{semantic.surface.accent}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:14"
+      }
+    },
+    "container": {
+      "props": {
+        "maxWidth": "1280px",
+        "gutterDesktop": "40px",
+        "gutterPhone": "16px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/ui.jsx:56"
+      }
+    },
+    "badge.beta": {
+      "props": {
+        "background": "#ffffff",
+        "color": "{semantic.text.primary}",
+        "fontSize": "9px",
+        "fontWeight": 800,
+        "letterSpacing": "0.72px",
+        "radius": "4px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/Enterprise.jsx:40"
+      }
+    },
+    "check-badge": {
+      "props": {
+        "size": "32px",
+        "circle": "22px",
+        "background": "{semantic.surface.accent}",
+        "glyph": "/assets/icon-check.svg"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/Enterprise.jsx:16"
+      }
+    }
+  }
+}

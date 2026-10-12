@@ -1,0 +1,75 @@
+{
+  "id": "company.lab-team-selector",
+  "category": "COMPANY",
+  "description": "Click-to-select lab team member viewer.",
+  "scope": "/lab only.",
+  "implementedBy": "src/components/company/LabSections.jsx > MeetTheTeam",
+  "measuredFrom": [
+    "src/components/company/LabSections.jsx:314-336"
+  ],
+  "allowedTemplates": [
+    "template.lab"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 21
+        },
+        "measuredMax": 14
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {
+      "base": 2
+    },
+    "measuredFrom": "src/components/company/LabSections.jsx:314-336"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Meet the team",
+    "paragraphs": [
+      "Psst! Tap any team member to find out what their favourite lab device is."
+    ]
+  }
+}

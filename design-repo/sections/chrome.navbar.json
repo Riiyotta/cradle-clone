@@ -1,0 +1,96 @@
+{
+  "id": "chrome.navbar",
+  "category": "CHROME",
+  "description": "Fixed 64px top bar with the Cradle mark, Solutions/Company/Resources hover dropdowns, a Sign in control and a Discuss-your-project button; on phone it collapses to a hamburger menu. One component with dark, light and academia (green bar) variants.",
+  "scope": "On 98 routes: every route except the link-in-bio pages (links, notebook, shirt).",
+  "implementedBy": "src/components/Navbar.jsx",
+  "measuredFrom": [
+    "src/components/Navbar.jsx:1-267"
+  ],
+  "allowedTemplates": [
+    "template.home",
+    "template.platform",
+    "template.solution",
+    "template.academia",
+    "template.modality-ticker",
+    "template.modality-problem",
+    "template.modality-text",
+    "template.team",
+    "template.careers",
+    "template.lab",
+    "template.case",
+    "template.security",
+    "template.form-page",
+    "template.blog-index",
+    "template.blog-post",
+    "template.blog-maturity",
+    "template.video-index",
+    "template.video-post",
+    "template.whitepaper",
+    "template.presskit",
+    "template.licensing",
+    "template.dpa",
+    "template.legal"
+  ],
+  "variants": [
+    "dark",
+    "light",
+    "academia"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "phoneVariant": {
+        "enum": [
+          "light",
+          "dark"
+        ]
+      }
+    },
+    "required": [
+      "phoneVariant"
+    ]
+  },
+  "media": {
+    "roles": [
+      "brand-mark"
+    ],
+    "maxItems": 3
+  },
+  "motion": {
+    "patterns": [
+      "tab-switch",
+      "load-appear",
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "tab-switch": "instant",
+      "load-appear": "static",
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "AnimatePresence"
+      ],
+      "hasHover": true,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/Navbar.jsx:1-267"
+  },
+  "literalAssets": [
+    "/assets/cradle-symbol.svg",
+    "/assets/logo-wordmark.png"
+  ],
+  "exampleContent": {
+    "phoneVariant": "dark"
+  }
+}

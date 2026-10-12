@@ -1,0 +1,19 @@
+{
+  "id": "component.link-button",
+  "kind": "component",
+  "description": "Router-link styled as a primary or secondary button.",
+  "implementedBy": "src/components/company/shared.jsx > LinkButton",
+  "props": [
+    "to",
+    "variant"
+  ],
+  "variants": {
+    "variant": [
+      "primary",
+      "secondary"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/company/shared.jsx:24-28"
+  ]
+}

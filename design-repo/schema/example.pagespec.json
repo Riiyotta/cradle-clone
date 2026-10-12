@@ -1,0 +1,363 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "template": "template.home",
+  "route": "/",
+  "nodes": [
+    {
+      "section": "chrome.navbar",
+      "content": {
+        "phoneVariant": "dark"
+      },
+      "motion": {
+        "pattern": "tab-switch",
+        "reducedMotionFallback": "instant"
+      },
+      "variant": "dark",
+      "media": [
+        {
+          "assetRole": "brand-mark",
+          "assetRef": "/assets/cradle-symbol.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "hero.home",
+      "content": {
+        "paragraphs": [
+          "Leverage AI to generate protein candidates and improve their properties. More breakthroughs in fewer experiments — guided by your own experimental data."
+        ]
+      },
+      "motion": {
+        "pattern": "scroll-linked",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "hero-blob",
+          "generationBrief": "Simple glyph in the existing stroke style"
+        }
+      ]
+    },
+    {
+      "section": "product.platform-tabs",
+      "content": {
+        "items": [
+          {
+            "title": "Generate candidates",
+            "pill": "Generation",
+            "img": "round",
+            "desc": "Track round status easily, from generating candidates to uploading experimental results."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "load-appear",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "proof.customers",
+      "content": {
+        "heading": "Trusted by the world's top Biopharma and Industrial Bio R&D teams",
+        "eyebrow": "OUR CUSTOMERS",
+        "items": [
+          {
+            "logo": "testimonial-logo-novonesis.png",
+            "quote": "Through our partnership with Cradle, we are embedding advanced Al directly into how we innovate, enabling our teams to shorten development time and bring real-world biosolutions faster to market.",
+            "name": "Placeholder text",
+            "title": "Chief Scientific Officer, Novonesis"
+          }
+        ],
+        "groups": [
+          {
+            "file": "novonesis",
+            "alt": "novonesis"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "in-view-reveal",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "customer-logo",
+          "assetRef": "/assets/customer-logo-abbvie.svg",
+          "alt": ""
+        },
+        {
+          "assetRole": "ui-icon",
+          "generationBrief": "Simple glyph in the existing stroke style"
+        }
+      ]
+    },
+    {
+      "section": "proof.recent-case-studies",
+      "content": {
+        "heading": "Recent case studies",
+        "items": [
+          {
+            "img": "case-keasling-qs21.png",
+            "href": "./blog/keasling-qs21",
+            "title": "Using AI to produce vaccine adjuvants without cutting down rainforest"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "hover-variant",
+        "reducedMotionFallback": "instant"
+      },
+      "media": [
+        {
+          "assetRole": "placeholder",
+          "generationBrief": "Neutral abstract stand-in in the site palette"
+        }
+      ]
+    },
+    {
+      "section": "product.benefits-bento",
+      "content": {
+        "heading": "Compounding results",
+        "subheading": "Breakthroughs on repeat",
+        "eyebrow": "PROTEIN ENGINEERING 2.0",
+        "paragraphs": [
+          "Round Progress"
+        ],
+        "items": [
+          {
+            "blue": 0,
+            "gray": 0,
+            "animate": false
+          }
+        ],
+        "groups": [
+          {
+            "name": "Placeholder text",
+            "icon": "icon-antibody-mask.svg",
+            "status": "icon-status-in-progress.svg",
+            "label": "Round 4"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "in-view-reveal",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "modality-illustration",
+          "assetRef": "/assets/benefits-grid-pattern.svg",
+          "alt": ""
+        },
+        {
+          "assetRole": "video",
+          "assetRef": "/assets/benefits-video.mp4",
+          "alt": ""
+        },
+        {
+          "assetRole": "video-poster",
+          "assetRef": "/assets/benefits-video-poster.png",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "product.protein-visual",
+      "content": {
+        "items": [
+          {
+            "name": "Placeholder text",
+            "bg": "#3cab57"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "scroll-linked",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "placeholder",
+          "generationBrief": "Neutral abstract stand-in in the site palette"
+        }
+      ]
+    },
+    {
+      "section": "product.modalities-grid",
+      "content": {
+        "eyebrow": "WORK ON ANY PROTEIN",
+        "paragraphs": [
+          "Accelerate your journey from hit identification to lead optimization and beyond. If you can measure it, you can optimize it with Cradle."
+        ],
+        "ctas": [
+          {
+            "label": "Explore Cradle Platform",
+            "href": "/get-started"
+          }
+        ],
+        "items": [
+          {
+            "title": "Antibodies",
+            "color": "bg-antibody",
+            "icon": "modality-icon-antibody.svg",
+            "hover": "modality-icon-hover-antibody-enzyme.svg",
+            "href": "./modality/antibody",
+            "body": "Craft mature and developable binders that avoid unwanted immunogenicity."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "word-stagger-eyebrow",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "placeholder",
+          "generationBrief": "Neutral abstract stand-in in the site palette"
+        }
+      ]
+    },
+    {
+      "section": "product.use-cases",
+      "content": {
+        "heading": "Explore uses cases",
+        "items": [
+          {
+            "title": "Biopharma",
+            "body": "See how Cradle works for pharma",
+            "href": "./solutions/biopharma",
+            "mask": "icon-antibody-mask.svg",
+            "color": "bg-antibody",
+            "hover": "rgba(60,171,87,0.4) 0px 0px 8px 0px"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "load-appear",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "product.enterprise",
+      "content": {
+        "heading": "Private. Secure. Yours.",
+        "eyebrow": "BUILT FOR ENTERPRISE",
+        "ctas": [
+          {
+            "label": "Security at Cradle",
+            "href": "/get-started"
+          }
+        ],
+        "items": [
+          {
+            "title": "Privacy-first AI",
+            "body": "You experimental data is only used to train your organizations custom models."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "in-view-reveal",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "lab-photo",
+          "assetRef": "/assets/enterprise-bg.png",
+          "alt": ""
+        },
+        {
+          "assetRole": "ui-icon",
+          "generationBrief": "Simple glyph in the existing stroke style"
+        }
+      ]
+    },
+    {
+      "section": "company.lab-teaser",
+      "content": {
+        "eyebrow": "THE CRADLE LAB",
+        "paragraphs": [
+          "Much like a self-driving car company: they wouldn’t just design algorithms and cross their fingers. They need to test real-world scenarios and collect data in order to fine-tune performance. We take the same approach, ensuring our models are performant even before seeing your data."
+        ],
+        "ctas": [
+          {
+            "label": "Get to know our wet lab",
+            "href": "/get-started"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "word-stagger-eyebrow",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "lab-photo",
+          "assetRef": "/assets/lab-photo.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "content.wet-lab-posts",
+      "content": {
+        "heading": "Learnings from our wet lab",
+        "items": [
+          {
+            "img": "blog-beyond-the-bench.png",
+            "href": "./blog/beyond-the-bench",
+            "title": "We put our CTO in a lab coat. Here’s what happened next."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "hover-variant",
+        "reducedMotionFallback": "instant"
+      },
+      "media": [
+        {
+          "assetRole": "placeholder",
+          "generationBrief": "Neutral abstract stand-in in the site palette"
+        }
+      ]
+    },
+    {
+      "section": "conversion.footer-cta-home",
+      "content": {
+        "ctas": [
+          {
+            "label": "I'm interested",
+            "href": "/get-started"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "static"
+      },
+      "media": [
+        {
+          "assetRole": "ui-screenshot",
+          "assetRef": "/assets/ui-data.png",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "section": "chrome.footer",
+      "content": {},
+      "motion": {
+        "pattern": "hover-variant",
+        "reducedMotionFallback": "instant"
+      },
+      "variant": "blue",
+      "media": [
+        {
+          "assetRole": "brand-mark",
+          "assetRef": "/assets/cradle-symbol-footer.svg",
+          "alt": ""
+        }
+      ]
+    }
+  ]
+}

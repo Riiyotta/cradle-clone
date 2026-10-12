@@ -1,0 +1,125 @@
+{
+  "id": "product.use-cases",
+  "category": "PRODUCT",
+  "description": "Two 'explore use cases' cards with glow-on-hover shadows.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/UseCases.jsx",
+  "measuredFrom": [
+    "src/components/UseCases.jsx:1-82"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 9,
+              "measuredMax": 6
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "mask": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "color": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "hover": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "measuredMax": 5
+            }
+          },
+          "required": [
+            "title",
+            "body",
+            "href",
+            "mask",
+            "color",
+            "hover"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 2,
+        "measuredFrom": "src/components/UseCases.jsx:10-27"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/UseCases.jsx:1-82"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Explore uses cases",
+    "items": [
+      {
+        "title": "Biopharma",
+        "body": "See how Cradle works for pharma",
+        "href": "./solutions/biopharma",
+        "mask": "icon-antibody-mask.svg",
+        "color": "bg-antibody",
+        "hover": "rgba(60,171,87,0.4) 0px 0px 8px 0px"
+      }
+    ]
+  }
+}

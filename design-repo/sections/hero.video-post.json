@@ -1,0 +1,61 @@
+{
+  "id": "hero.video-post",
+  "category": "HERO",
+  "description": "Dark video hero with title and a poster-only player.",
+  "scope": "The 20 video routes.",
+  "implementedBy": "src/components/media/shared.jsx > PosterPlayer",
+  "measuredFrom": [
+    "src/components/media/shared.jsx:7-17"
+  ],
+  "allowedTemplates": [
+    "template.video-post"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/media/shared.jsx:7-17",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      }
+    },
+    "required": [
+      "title"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/media/shared.jsx:7-17"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "title": "Section title"
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

@@ -1,0 +1,107 @@
+{
+  "id": "company.lab-teaser",
+  "category": "COMPANY",
+  "description": "Homepage teaser for the Cradle wet lab: photo plus short text and a button.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/Lab.jsx",
+  "measuredFrom": [
+    "src/components/Lab.jsx:1-53"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 66
+        },
+        "measuredMax": 44
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 9
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "media": {
+    "roles": [
+      "lab-photo",
+      "person-photo"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "word-stagger-eyebrow",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "word-stagger-eyebrow": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "Eyebrow"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "lg",
+    "gridColumns": {},
+    "measuredFrom": "src/components/Lab.jsx:1-53"
+  },
+  "literalAssets": [
+    "/assets/lab-photo.jpg"
+  ],
+  "exampleContent": {
+    "eyebrow": "THE CRADLE LAB",
+    "paragraphs": [
+      "Much like a self-driving car company: they wouldn’t just design algorithms and cross their fingers. They need to test real-world scenarios and collect data in order to fine-tune performance. We take the same approach, ensuring our models are performant even before seeing your data."
+    ],
+    "ctas": [
+      {
+        "label": "Get to know our wet lab",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

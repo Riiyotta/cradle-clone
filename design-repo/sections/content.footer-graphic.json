@@ -1,0 +1,56 @@
+{
+  "id": "content.footer-graphic",
+  "category": "CONTENT",
+  "description": "Footer graphic that slides up on enter.",
+  "scope": "The 3 link-in-bio pages.",
+  "implementedBy": "src/components/misc/LinkInBio.jsx > FooterGraphic",
+  "measuredFrom": [
+    "src/components/misc/LinkInBio.jsx:184-203"
+  ],
+  "allowedTemplates": [
+    "template.link-in-bio-links",
+    "template.link-in-bio-form",
+    "template.shirt"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/misc/LinkInBio.jsx:184-203"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

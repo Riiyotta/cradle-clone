@@ -1,0 +1,123 @@
+{
+  "id": "product.pipeline-benefits",
+  "category": "PRODUCT",
+  "description": "Before vs. with-Cradle pipeline animation followed by three benefit blocks (toggles, file ticker, positions illustration).",
+  "scope": "The 2 solution pages (biopharma and industrial).",
+  "implementedBy": "src/components/solutions/PipelineBenefits.jsx",
+  "measuredFrom": [
+    "src/components/solutions/PipelineBenefits.jsx:1-67"
+  ],
+  "allowedTemplates": [
+    "template.solution"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "block": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "featureCls": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          },
+          "features": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          },
+          "files": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          },
+          "lead": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          },
+          "tileHPhone": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          },
+          "toggles": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          }
+        },
+        "required": [
+          "featureCls",
+          "features",
+          "files",
+          "lead",
+          "tileHPhone",
+          "title",
+          "toggles"
+        ]
+      }
+    },
+    "required": [
+      "block"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "md": 3
+    },
+    "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "block": {
+      "featureCls": "Text",
+      "features": "Text",
+      "files": "Text",
+      "lead": "Lead paragraph text",
+      "tileHPhone": "Text",
+      "title": "Section title",
+      "toggles": "Text"
+    }
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

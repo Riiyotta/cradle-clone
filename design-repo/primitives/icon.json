@@ -1,0 +1,14 @@
+{
+  "id": "primitive.icon",
+  "kind": "primitive",
+  "description": "Inline SVG glyph set: check, file, play and the three modality glyphs.",
+  "implementedBy": "src/components/solutions/primitives.jsx > CheckGlyph",
+  "props": [
+    "className",
+    "strokeWidth"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/solutions/primitives.jsx:62-69"
+  ]
+}

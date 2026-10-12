@@ -1,0 +1,106 @@
+{
+  "id": "proof.recent-case-studies",
+  "category": "PROOF",
+  "description": "Row of four case-study cards (two on phone) with image, title and hover border.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/CaseStudies.jsx",
+  "measuredFrom": [
+    "src/components/CaseStudies.jsx:1-46"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "img": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 26,
+              "measuredMax": 17
+            }
+          },
+          "required": [
+            "img",
+            "href",
+            "title"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/CaseStudies.jsx:5-10"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {
+      "base": 2
+    },
+    "measuredFrom": "src/components/CaseStudies.jsx:1-46"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Recent case studies",
+    "items": [
+      {
+        "img": "case-keasling-qs21.png",
+        "href": "./blog/keasling-qs21",
+        "title": "Using AI to produce vaccine adjuvants without cutting down rainforest"
+      }
+    ]
+  }
+}

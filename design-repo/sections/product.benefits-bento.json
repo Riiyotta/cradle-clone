@@ -1,0 +1,197 @@
+{
+  "id": "product.benefits-bento",
+  "category": "PRODUCT",
+  "description": "'Protein engineering 2.0' bento grid of animated mini-UIs, a video card and a radar chart.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/Benefits.jsx",
+  "measuredFrom": [
+    "src/components/Benefits.jsx:1-352"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6,
+        "measuredMax": 4
+      },
+      "subheading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6,
+        "measuredMax": 4
+      },
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 12,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 51
+        },
+        "measuredMax": 34
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "blue": {
+              "type": "number"
+            },
+            "gray": {
+              "type": "number"
+            },
+            "animate": {
+              "type": "boolean"
+            }
+          }
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/Benefits.jsx:51-56"
+      },
+      "groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "icon": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "border": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "icon",
+            "status",
+            "label"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/Benefits.jsx:152-156"
+      }
+    },
+    "required": [
+      "heading",
+      "items",
+      "groups"
+    ]
+  },
+  "media": {
+    "roles": [
+      "modality-illustration",
+      "video",
+      "video-poster"
+    ],
+    "maxItems": 8
+  },
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "word-stagger-eyebrow",
+      "autoplay-video",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "word-stagger-eyebrow": "static",
+      "autoplay-video": "pause",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "Eyebrow",
+        "useInView",
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "base": 1,
+      "md": 4,
+      "lg": 5
+    },
+    "measuredFrom": "src/components/Benefits.jsx:1-352"
+  },
+  "literalAssets": [
+    "/assets/benefits-grid-pattern.svg",
+    "/assets/benefits-radar-mobile.png",
+    "/assets/benefits-t7rna-structure.png",
+    "/assets/benefits-video-poster.png",
+    "/assets/benefits-video.mp4",
+    "/assets/radar-circles.svg",
+    "/assets/radar-polygon-blue.svg",
+    "/assets/radar-polygon-yellow.svg"
+  ],
+  "exampleContent": {
+    "heading": "Compounding results",
+    "subheading": "Breakthroughs on repeat",
+    "eyebrow": "PROTEIN ENGINEERING 2.0",
+    "paragraphs": [
+      "Round Progress"
+    ],
+    "items": [
+      {
+        "blue": 0,
+        "gray": 0,
+        "animate": false
+      }
+    ],
+    "groups": [
+      {
+        "name": "Placeholder text",
+        "icon": "icon-antibody-mask.svg",
+        "status": "icon-status-in-progress.svg",
+        "label": "Round 4"
+      }
+    ]
+  }
+}

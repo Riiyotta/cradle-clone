@@ -1,0 +1,20 @@
+{
+  "id": "component.marquee",
+  "kind": "component",
+  "description": "Looping horizontal or vertical scroller that duplicates its children.",
+  "implementedBy": "src/components/solutions/primitives.jsx > Marquee",
+  "props": [
+    "axis",
+    "speed",
+    "gap"
+  ],
+  "variants": {
+    "axis": [
+      "x",
+      "y"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/solutions/primitives.jsx:132-179"
+  ]
+}

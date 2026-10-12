@@ -1,0 +1,13 @@
+{
+  "id": "component.secondary-button-36",
+  "kind": "component",
+  "description": "Blog-family secondary and ghost buttons.",
+  "implementedBy": "src/components/blog/Buttons.jsx > Secondary36P16",
+  "props": [
+    "to"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/blog/Buttons.jsx:14-21"
+  ]
+}

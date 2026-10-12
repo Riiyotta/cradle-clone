@@ -1,0 +1,14 @@
+{
+  "id": "component.poster-player",
+  "kind": "component",
+  "description": "Video poster with a play affordance (external player removed).",
+  "implementedBy": "src/components/media/shared.jsx > PosterPlayer",
+  "props": [
+    "poster",
+    "title"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/media/shared.jsx:7-17"
+  ]
+}

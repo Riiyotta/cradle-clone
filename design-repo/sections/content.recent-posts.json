@@ -1,0 +1,99 @@
+{
+  "id": "content.recent-posts",
+  "category": "CONTENT",
+  "description": "Recent-posts row of post cards.",
+  "scope": "On 54 routes: every blog post plus /blog/maturity.",
+  "implementedBy": "src/components/blog/RecentPosts.jsx",
+  "measuredFrom": [
+    "src/components/blog/RecentPosts.jsx:1-38"
+  ],
+  "allowedTemplates": [
+    "template.blog-post",
+    "template.blog-maturity"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "measuredMax": 2
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 20
+        },
+        "measuredMax": 13
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/blog/RecentPosts.jsx:1-38"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Recent posts",
+    "paragraphs": [
+      "Subscribe and get new posts and updates from Cradle straight to your inbox."
+    ],
+    "ctas": [
+      {
+        "label": "Subscribe",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

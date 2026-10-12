@@ -1,0 +1,69 @@
+{
+  "$description": "Square element sizes (h-N w-N) used >= 3 times.",
+  "iconSize": {
+    "icon-20px": {
+      "$type": "dimension",
+      "$value": "20px",
+      "$extensions": {
+        "classUsage": 10,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    },
+    "icon-24px": {
+      "$type": "dimension",
+      "$value": "24px",
+      "$extensions": {
+        "classUsage": 9,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    },
+    "icon-32px": {
+      "$type": "dimension",
+      "$value": "32px",
+      "$extensions": {
+        "classUsage": 8,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    },
+    "icon-40px": {
+      "$type": "dimension",
+      "$value": "40px",
+      "$extensions": {
+        "classUsage": 8,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    },
+    "icon-8px": {
+      "$type": "dimension",
+      "$value": "8px",
+      "$extensions": {
+        "classUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    },
+    "icon-48px": {
+      "$type": "dimension",
+      "$value": "48px",
+      "$extensions": {
+        "classUsage": 6,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    },
+    "icon-16px": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$extensions": {
+        "classUsage": 4,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    },
+    "icon-64px": {
+      "$type": "dimension",
+      "$value": "64px",
+      "$extensions": {
+        "classUsage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} square h-N w-N pairs"
+      }
+    }
+  }
+}

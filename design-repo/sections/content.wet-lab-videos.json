@@ -1,0 +1,88 @@
+{
+  "id": "content.wet-lab-videos",
+  "category": "CONTENT",
+  "description": "Wet-lab video cards (poster only).",
+  "scope": "The 3 link-in-bio pages.",
+  "implementedBy": "src/components/misc/LinkInBio.jsx > WetLab",
+  "measuredFrom": [
+    "src/components/misc/LinkInBio.jsx:168-182"
+  ],
+  "allowedTemplates": [
+    "template.link-in-bio-links",
+    "template.link-in-bio-form",
+    "template.shirt"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 8,
+        "measuredMax": 5
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/misc/LinkInBio.jsx:168-182"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Meet the Cradle wet lab",
+    "ctas": [
+      {
+        "label": "Learn more",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

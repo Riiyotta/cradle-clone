@@ -1,0 +1,18 @@
+{
+  "id": "primitive.eyebrow",
+  "kind": "primitive",
+  "description": "Uppercase mono label with an accent square marker; per-word spring reveal on desktop, static on phone.",
+  "implementedBy": "src/components/ui.jsx > Eyebrow",
+  "props": [
+    "dark: boolean"
+  ],
+  "variants": {
+    "tone": [
+      "light",
+      "dark"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/ui.jsx:9-35"
+  ]
+}

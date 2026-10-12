@@ -1,0 +1,81 @@
+{
+  "id": "proof.modality-cases",
+  "category": "PROOF",
+  "description": "Modality case studies: logos, a quote or a featured card, plus case cards.",
+  "scope": "All 4 modality pages.",
+  "implementedBy": "src/components/modality/Cases.jsx",
+  "measuredFrom": [
+    "src/components/modality/Cases.jsx:1-119"
+  ],
+  "allowedTemplates": [
+    "template.modality-ticker",
+    "template.modality-problem",
+    "template.modality-text"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "measuredMax": 2
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 9,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 4
+        },
+        "measuredMax": 2
+      }
+    }
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 4
+  },
+  "motion": {
+    "patterns": [
+      "word-stagger-eyebrow",
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "word-stagger-eyebrow": "static",
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "WordEyebrow"
+      ],
+      "hasHover": true,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "base": 3,
+      "md": 5
+    },
+    "measuredFrom": "src/components/modality/Cases.jsx:1-119"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "eyebrow": "Case studies",
+    "paragraphs": [
+      "Case studies"
+    ]
+  }
+}

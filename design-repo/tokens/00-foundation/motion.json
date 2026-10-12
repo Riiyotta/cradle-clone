@@ -1,0 +1,194 @@
+{
+  "$description": "Easing curves, springs and stagger. All values are framer-motion JS; the original has no CSS keyframes (CLONE_SPEC header).",
+  "motion": {
+    "ease-framer": {
+      "$type": "cubicBezier",
+      "$value": [
+        0.12,
+        0.23,
+        0.5,
+        1
+      ],
+      "$extensions": {
+        "usage": 39,
+        "measuredFrom": "src/components/ui.jsx:7"
+      }
+    },
+    "ease-back": {
+      "$type": "cubicBezier",
+      "$value": [
+        0.7,
+        -0.35,
+        0.3,
+        1.1
+      ],
+      "$extensions": {
+        "usage": 5,
+        "measuredFrom": "src/components/modality/primitives.jsx:7"
+      }
+    },
+    "ease-hover-100ms": {
+      "$type": "duration",
+      "$value": "100ms",
+      "$extensions": {
+        "note": "hover color/shadow tween on buttons",
+        "measuredFrom": "src/components/ui.jsx:36"
+      }
+    },
+    "ease-out-standard": {
+      "$type": "cubicBezier",
+      "$value": [
+        0.44,
+        0,
+        0.56,
+        1
+      ],
+      "$extensions": {
+        "measuredFrom": "histogram:src/**/*.{jsx,js,css} cubic-bezier literals"
+      }
+    },
+    "spring-d0_4-b0_2": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.4,
+        "bounce": 0.2
+      },
+      "$extensions": {
+        "usage": 5,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_8-b0_0": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.8,
+        "bounce": 0.0
+      },
+      "$extensions": {
+        "usage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d1_0-b0_3": {
+      "$type": "spring",
+      "$value": {
+        "duration": 1.0,
+        "bounce": 0.3
+      },
+      "$extensions": {
+        "usage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_4-b0_1": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.4,
+        "bounce": 0.1
+      },
+      "$extensions": {
+        "usage": 3,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_8-b0_2": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.8,
+        "bounce": 0.2
+      },
+      "$extensions": {
+        "usage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_6-b0_2": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.6,
+        "bounce": 0.2
+      },
+      "$extensions": {
+        "usage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_8-b0_1": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.8,
+        "bounce": 0.1
+      },
+      "$extensions": {
+        "usage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_6-b0_1": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.6,
+        "bounce": 0.1
+      },
+      "$extensions": {
+        "usage": 2,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_4-b0_0": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.4,
+        "bounce": 0.0
+      },
+      "$extensions": {
+        "usage": 1,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_5-b0_2": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.5,
+        "bounce": 0.2
+      },
+      "$extensions": {
+        "usage": 1,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_4-b0_05": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.4,
+        "bounce": 0.05
+      },
+      "$extensions": {
+        "usage": 1,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "spring-d0_5-b0_1": {
+      "$type": "spring",
+      "$value": {
+        "duration": 0.5,
+        "bounce": 0.1
+      },
+      "$extensions": {
+        "usage": 1,
+        "measuredFrom": "histogram:src/**/*.{jsx,js} framer-motion spring transitions"
+      }
+    },
+    "stagger-word-eyebrow": {
+      "$type": "duration",
+      "$value": "100ms",
+      "$extensions": {
+        "note": "per-word delay, spring 0.8s bounce 0, y 8->0, once",
+        "measuredFrom": "src/components/ui.jsx:24"
+      }
+    }
+  },
+  "$extensions": {
+    "measuredFrom": "CLONE_SPEC.md:553-556"
+  }
+}

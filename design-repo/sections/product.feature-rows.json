@@ -1,0 +1,134 @@
+{
+  "id": "product.feature-rows",
+  "category": "PRODUCT",
+  "description": "Three alternating image/text feature rows that slide up on enter.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/FeatureRows.jsx",
+  "measuredFrom": [
+    "src/components/platform/FeatureRows.jsx:1-72"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 27
+        },
+        "measuredMax": 18
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "img": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 9,
+              "measuredMax": 6
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 75,
+              "measuredMax": 50
+            },
+            "section": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "measuredMax": 4
+            },
+            "inner": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "imageRight": {
+              "type": "boolean"
+            },
+            "mask": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "img",
+            "body",
+            "section",
+            "inner"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/platform/FeatureRows.jsx:5-29"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/platform/FeatureRows.jsx:1-72"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "paragraphs": [
+      "See how Cradle handles multiple complex objectives in parallel, adapts to your data and automatically de-risks every plate."
+    ],
+    "items": [
+      {
+        "img": "ui-Ty4HuN.png",
+        "body": "Placeholder copy for this feature. This neutral paragraph stands in for the original description and keeps a similar length, so the layout wraps across the same number of lines. Additional plain sentences continue here to fill the remaining space without restating any claims from the source page. It stays generic.",
+        "section": "pt-10 pb-[60px] md:py-20",
+        "inner": "md:pr-10"
+      }
+    ]
+  }
+}

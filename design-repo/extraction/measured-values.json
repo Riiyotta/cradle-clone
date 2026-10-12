@@ -1,0 +1,950 @@
+{
+  "$description": "Every citation used in this repo: ref is path:line[-line] relative to the source project root; anchor is text that must appear inside the cited range. verify_all.py resolves each ref against the sibling source tree when present (warns, does not fail, when absent).",
+  "sourceProject": "cradle-clone (local React/Vite replica of www.cradle.bio)",
+  "citations": [
+    {
+      "ref": "CLONE_SPEC.md:13-20",
+      "anchor": "### Breakpoints (from `__framer__breakpoints`)"
+    },
+    {
+      "ref": "CLONE_SPEC.md:16",
+      "anchor": "| Desktop | `(min-width: 1200px)` | `default` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:17",
+      "anchor": "| Tablet | `(min-width: 810px) and (max-width: 1"
+    },
+    {
+      "ref": "CLONE_SPEC.md:18",
+      "anchor": "| Phone | `(max-width: 809.98px)` | `1oroiq2` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:23",
+      "anchor": "- `body` bg `#ffffff`. Every page wrapper is a c"
+    },
+    {
+      "ref": "CLONE_SPEC.md:24",
+      "anchor": "- Fixed nav is 64px tall and overlays the page. "
+    },
+    {
+      "ref": "CLONE_SPEC.md:25",
+      "anchor": "- Content container: `max-width:1280px`, horizon"
+    },
+    {
+      "ref": "CLONE_SPEC.md:28-32",
+      "anchor": "### Color tokens (Framer `--token-*`, resolved)"
+    },
+    {
+      "ref": "CLONE_SPEC.md:31",
+      "anchor": "| ink / dark bg (`gray-950`) | `#030712` rgb(3,7"
+    },
+    {
+      "ref": "CLONE_SPEC.md:32",
+      "anchor": "| gray-900 | `#111827` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:33",
+      "anchor": "| gray-800 (secondary-button text, card gradient"
+    },
+    {
+      "ref": "CLONE_SPEC.md:34",
+      "anchor": "| gray-700 | `#374151` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:35",
+      "anchor": "| body muted text | `#616e80` rgb(97,110,128) |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:36",
+      "anchor": "| gray-400 (icons, inactive tab text) | `#9ca3af"
+    },
+    {
+      "ref": "CLONE_SPEC.md:37",
+      "anchor": "| gray-300 (bar-chart gray) | `#d1d5db` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:38",
+      "anchor": "| gray-200 | `#e5e7eb` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:39",
+      "anchor": "| gray-100 (card bg) | `#f3f4f6` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:40",
+      "anchor": "| gray-50 (section alt bg) | `#f9fafb` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:41",
+      "anchor": "| brand blue (button bg) | `#224eee` rgb(34,78,2"
+    },
+    {
+      "ref": "CLONE_SPEC.md:42",
+      "anchor": "| brand blue hover | `#1b3ada` rgb(27,58,218) |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:43",
+      "anchor": "| accent blue (bullets, active borders, tab bar)"
+    },
+    {
+      "ref": "CLONE_SPEC.md:44",
+      "anchor": "| blue-400 (CTA gradient) | `#5e95fc` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:45",
+      "anchor": "| blue-300 (CTA 2nd line) | `#92bafe` rgb(146,18"
+    },
+    {
+      "ref": "CLONE_SPEC.md:46",
+      "anchor": "| blue-200 (progress fill, glow) | `#bed5ff` rgb"
+    },
+    {
+      "ref": "CLONE_SPEC.md:47",
+      "anchor": "| blue-100 (highlight bubble) | `#dbe7fe` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:48",
+      "anchor": "| blue-50 | `#eff4ff` |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:49",
+      "anchor": "| green (antibody) | `#3cab57` rgb(60,171,87) |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:50",
+      "anchor": "| sky (enzyme, bar \"with Cradle\") | `#0ea5e9` rg"
+    },
+    {
+      "ref": "CLONE_SPEC.md:51",
+      "anchor": "| olive (peptide) | `#98b62c` rgb(152,182,44) |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:52",
+      "anchor": "| khaki (vaccine) | `#9b9265` rgb(155,146,101) |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:53",
+      "anchor": "| orange (in-progress icon) | rgb(235,145,49) |"
+    },
+    {
+      "ref": "CLONE_SPEC.md:54",
+      "anchor": "| white alphas | `#ffffff0a` (0.04), `#ffffff14`"
+    },
+    {
+      "ref": "CLONE_SPEC.md:553-556",
+      "anchor": "## 14. Motion summary"
+    },
+    {
+      "ref": "src/chrome.js:1-54",
+      "anchor": "// Route → site-chrome variant table (single sou"
+    },
+    {
+      "ref": "src/chrome.js:6",
+      "anchor": "#1f5f36"
+    },
+    {
+      "ref": "src/chrome.js:6-9",
+      "anchor": "// nav:    { desktop, phone } — 'dark' | 'light'"
+    },
+    {
+      "ref": "src/components/Benefits.jsx:1-352",
+      "anchor": "import { useEffect, useRef } from 'react'"
+    },
+    {
+      "ref": "src/components/Benefits.jsx:152-156",
+      "anchor": "const PROJECTS = ["
+    },
+    {
+      "ref": "src/components/Benefits.jsx:51-56",
+      "anchor": "const BARS = ["
+    },
+    {
+      "ref": "src/components/CaseStudies.jsx:1-46",
+      "anchor": "import { Container } from './ui.jsx'"
+    },
+    {
+      "ref": "src/components/CaseStudies.jsx:5-10",
+      "anchor": "const CARDS = ["
+    },
+    {
+      "ref": "src/components/Customers.jsx:1-186",
+      "anchor": "import { useEffect, useState } from 'react'"
+    },
+    {
+      "ref": "src/components/Customers.jsx:16-45",
+      "anchor": "const SLIDES = ["
+    },
+    {
+      "ref": "src/components/Customers.jsx:47-60",
+      "anchor": "const LOGOS = ["
+    },
+    {
+      "ref": "src/components/Enterprise.jsx:1-103",
+      "anchor": "import { useRef } from 'react'"
+    },
+    {
+      "ref": "src/components/Enterprise.jsx:16",
+      "anchor": "// 32×32 box"
+    },
+    {
+      "ref": "src/components/Enterprise.jsx:30-49",
+      "anchor": "function Feature({ title, body, beta, row2 }) {"
+    },
+    {
+      "ref": "src/components/Enterprise.jsx:40",
+      "anchor": "BETA"
+    },
+    {
+      "ref": "src/components/Enterprise.jsx:45",
+      "anchor": "text-white/60"
+    },
+    {
+      "ref": "src/components/Enterprise.jsx:7-14",
+      "anchor": "const FEATURES = ["
+    },
+    {
+      "ref": "src/components/Footer.jsx:1-100",
+      "anchor": "import { Link } from 'react-router-dom'"
+    },
+    {
+      "ref": "src/components/FooterCTA.jsx:1-59",
+      "anchor": "import { Button } from './ui.jsx'"
+    },
+    {
+      "ref": "src/components/Hero.jsx:1-121",
+      "anchor": "import { useEffect, useState } from 'react'"
+    },
+    {
+      "ref": "src/components/Lab.jsx:1-53",
+      "anchor": "import { Eyebrow, Button } from './ui.jsx'"
+    },
+    {
+      "ref": "src/components/Modalities.jsx:1-67",
+      "anchor": "import { Eyebrow, Button } from './ui.jsx'"
+    },
+    {
+      "ref": "src/components/Modalities.jsx:5-10",
+      "anchor": "const CARDS = ["
+    },
+    {
+      "ref": "src/components/Navbar.jsx:1-267",
+      "anchor": "import { Fragment, useState } from 'react'"
+    },
+    {
+      "ref": "src/components/PlatformUI.jsx:1-152",
+      "anchor": "import { useState } from 'react'"
+    },
+    {
+      "ref": "src/components/PlatformUI.jsx:12-16",
+      "anchor": "const TABS = ["
+    },
+    {
+      "ref": "src/components/ProteinVisual.jsx:1-131",
+      "anchor": "import { useEffect, useRef, useState } from 'rea"
+    },
+    {
+      "ref": "src/components/ProteinVisual.jsx:42-59",
+      "anchor": "const TILES = ["
+    },
+    {
+      "ref": "src/components/UseCases.jsx:1-82",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/UseCases.jsx:10-27",
+      "anchor": "const CARDS = ["
+    },
+    {
+      "ref": "src/components/WetLabBlog.jsx:1-41",
+      "anchor": "// CLONE_SPEC §12 Learnings from our wet lab (`l"
+    },
+    {
+      "ref": "src/components/WetLabBlog.jsx:3-8",
+      "anchor": "const CARDS = ["
+    },
+    {
+      "ref": "src/components/blog/BlogIndexParts.jsx:10-24",
+      "anchor": "export function BlogHeading() {"
+    },
+    {
+      "ref": "src/components/blog/BlogIndexParts.jsx:82-97",
+      "anchor": "export function GroupRail({ title, posts, titleC"
+    },
+    {
+      "ref": "src/components/blog/Buttons.jsx:14-21",
+      "anchor": "export function Secondary36P16({ to, className ="
+    },
+    {
+      "ref": "src/components/blog/Motion.jsx:56-80",
+      "anchor": "export function WordReveal({ text, as = 'h2', cl"
+    },
+    {
+      "ref": "src/components/blog/PostParts.jsx:11-43",
+      "anchor": "export function PostHeader({ post }) {"
+    },
+    {
+      "ref": "src/components/blog/PostParts.jsx:91-139",
+      "anchor": "export function RichText({ blocks, post }) {"
+    },
+    {
+      "ref": "src/components/blog/PostRow.jsx:17-41",
+      "anchor": "export function PostRowIndex({ post }) {"
+    },
+    {
+      "ref": "src/components/blog/RecentPosts.jsx:1-38",
+      "anchor": "import { RECENT } from './blogData.js'"
+    },
+    {
+      "ref": "src/components/blog/maturity/content.js:15-19",
+      "anchor": "export const STRANDS = ["
+    },
+    {
+      "ref": "src/components/company/CareersSections.jsx:114-141",
+      "anchor": "export function LifeAtCradle() {"
+    },
+    {
+      "ref": "src/components/company/CareersSections.jsx:151-172",
+      "anchor": "export function OpenPositions() {"
+    },
+    {
+      "ref": "src/components/company/CareersSections.jsx:176-198",
+      "anchor": "export function Newsletter() {"
+    },
+    {
+      "ref": "src/components/company/CareersSections.jsx:200-213",
+      "anchor": "export function ScamNotice() {"
+    },
+    {
+      "ref": "src/components/company/CareersSections.jsx:55-66",
+      "anchor": "export function PhotoMosaic() {"
+    },
+    {
+      "ref": "src/components/company/CareersSections.jsx:9-37",
+      "anchor": "export function CareersHeader() {"
+    },
+    {
+      "ref": "src/components/company/LabSections.jsx:133-152",
+      "anchor": "export function Perks() {"
+    },
+    {
+      "ref": "src/components/company/LabSections.jsx:182-227",
+      "anchor": "export function Automation() {"
+    },
+    {
+      "ref": "src/components/company/LabSections.jsx:21-56",
+      "anchor": "export function LabHeader() {"
+    },
+    {
+      "ref": "src/components/company/LabSections.jsx:314-336",
+      "anchor": "export function MeetTheTeam() {"
+    },
+    {
+      "ref": "src/components/company/LabSections.jsx:367-396",
+      "anchor": "export function SharingIsCaring() {"
+    },
+    {
+      "ref": "src/components/company/LabSections.jsx:60-89",
+      "anchor": "export function AerialPhoto() {"
+    },
+    {
+      "ref": "src/components/company/LabSections.jsx:91-125",
+      "anchor": "export function LabIntro() {"
+    },
+    {
+      "ref": "src/components/company/TeamIntro.jsx:1-74",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/company/TeamSections.jsx:155-179",
+      "anchor": "export function OurTeam() {"
+    },
+    {
+      "ref": "src/components/company/TeamSections.jsx:184-211",
+      "anchor": "export function Investors() {"
+    },
+    {
+      "ref": "src/components/company/TeamSections.jsx:53-80",
+      "anchor": "export function Offices() {"
+    },
+    {
+      "ref": "src/components/company/labData.js:34-39",
+      "anchor": "export const FLOATING = ["
+    },
+    {
+      "ref": "src/components/company/shared.jsx:10",
+      "anchor": "export const BODY = 'font-sans font-medium text-"
+    },
+    {
+      "ref": "src/components/company/shared.jsx:13",
+      "anchor": "export const INLINE_LINK = 'text-[#0284c7] hover"
+    },
+    {
+      "ref": "src/components/company/shared.jsx:24-28",
+      "anchor": "export function LinkButton({ to, variant = 'prim"
+    },
+    {
+      "ref": "src/components/company/shared.jsx:42-49",
+      "anchor": "export function GlassPlay() {"
+    },
+    {
+      "ref": "src/components/company/shared.jsx:5",
+      "anchor": "export const H1 = 'font-heading font-medium text"
+    },
+    {
+      "ref": "src/components/company/shared.jsx:7",
+      "anchor": "export const H3 = 'font-heading font-medium text"
+    },
+    {
+      "ref": "src/components/company/shared.jsx:8",
+      "anchor": "export const H4 = 'font-heading font-medium text"
+    },
+    {
+      "ref": "src/components/company/shared.jsx:9",
+      "anchor": "export const LEAD = 'font-sans font-medium text-"
+    },
+    {
+      "ref": "src/components/company/teamData.js:111-115",
+      "anchor": "export const OFFICES = ["
+    },
+    {
+      "ref": "src/components/company/teamData.js:3-92",
+      "anchor": "export const TEAM_GROUPS = ["
+    },
+    {
+      "ref": "src/components/media/Presskit.jsx:39-57",
+      "anchor": "export function PresskitTitle() {"
+    },
+    {
+      "ref": "src/components/media/Presskit.jsx:94-106",
+      "anchor": "export function PresskitFileList({ title, items "
+    },
+    {
+      "ref": "src/components/media/VideoIndexParts.jsx:1-52",
+      "anchor": "import { Link } from 'react-router-dom'"
+    },
+    {
+      "ref": "src/components/media/WhitepaperIntro.jsx:1-105",
+      "anchor": "import { motion, useScroll, useTransform } from "
+    },
+    {
+      "ref": "src/components/media/WhitepaperSections.jsx:24-50",
+      "anchor": "export function FactRows() {"
+    },
+    {
+      "ref": "src/components/media/WhitepaperSections.jsx:71-95",
+      "anchor": "export function WhitepaperCTA() {"
+    },
+    {
+      "ref": "src/components/media/shared.jsx:23",
+      "anchor": "SECONDARY_ON_DARK40"
+    },
+    {
+      "ref": "src/components/media/shared.jsx:26-29",
+      "anchor": "export function CradleSymbol({ className = '' })"
+    },
+    {
+      "ref": "src/components/media/shared.jsx:7-17",
+      "anchor": "export function PosterPlayer({ poster, title = '"
+    },
+    {
+      "ref": "src/components/misc/DocViewer.jsx:1-70",
+      "anchor": "// PAGES_B §B11 doc viewer. The 17 DPA page scan"
+    },
+    {
+      "ref": "src/components/misc/Licensing.jsx:114-131",
+      "anchor": "export function LicenseGrid() {"
+    },
+    {
+      "ref": "src/components/misc/Licensing.jsx:133-137",
+      "anchor": "const GROUPS = ["
+    },
+    {
+      "ref": "src/components/misc/Licensing.jsx:158-193",
+      "anchor": "export function IncludedList() {"
+    },
+    {
+      "ref": "src/components/misc/Licensing.jsx:195-210",
+      "anchor": "export function PartnersBand() {"
+    },
+    {
+      "ref": "src/components/misc/Licensing.jsx:45-77",
+      "anchor": "export function LicensingHero() {"
+    },
+    {
+      "ref": "src/components/misc/LinkInBio.jsx:114-121",
+      "anchor": "const CASES = ["
+    },
+    {
+      "ref": "src/components/misc/LinkInBio.jsx:123-144",
+      "anchor": "export function CaseGrid() {"
+    },
+    {
+      "ref": "src/components/misc/LinkInBio.jsx:168-182",
+      "anchor": "export function WetLab() {"
+    },
+    {
+      "ref": "src/components/misc/LinkInBio.jsx:184-203",
+      "anchor": "export function FooterGraphic() {"
+    },
+    {
+      "ref": "src/components/misc/LinkInBio.jsx:37-56",
+      "anchor": "export function BrandBlock() {"
+    },
+    {
+      "ref": "src/components/misc/LinkInBio.jsx:60-70",
+      "anchor": "export function FormPlaceholder({ h, hMobile }) "
+    },
+    {
+      "ref": "src/components/misc/LinkInBio.jsx:96-112",
+      "anchor": "export function LinkButtons({ antibodyIcon = 'li"
+    },
+    {
+      "ref": "src/components/misc/ShirtHero.jsx:1-32",
+      "anchor": "import { motion, useScroll, useTransform } from "
+    },
+    {
+      "ref": "src/components/modality/Cases.jsx:1-119",
+      "anchor": "import { Link } from 'react-router-dom'"
+    },
+    {
+      "ref": "src/components/modality/Features.jsx:10-41",
+      "anchor": "export function FeatureList({ title, accent, blo"
+    },
+    {
+      "ref": "src/components/modality/Features.jsx:75-84",
+      "anchor": "export function ProductMock({ video, image, aspe"
+    },
+    {
+      "ref": "src/components/modality/Features.jsx:88-115",
+      "anchor": "export function Properties({ eyebrow, title, lea"
+    },
+    {
+      "ref": "src/components/modality/Heroes.jsx:110-142",
+      "anchor": "export function TextHero({"
+    },
+    {
+      "ref": "src/components/modality/Heroes.jsx:32-71",
+      "anchor": "export function PropertyTickerHero({ rows, iconM"
+    },
+    {
+      "ref": "src/components/modality/ModalityPage.jsx:22-25",
+      "anchor": "function DarkBand({ sectionClass = '', children "
+    },
+    {
+      "ref": "src/components/modality/Pipeline.jsx:1-119",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/modality/Pipeline.jsx:31-43",
+      "anchor": "export function ProblemStatement({ title, paragr"
+    },
+    {
+      "ref": "src/components/modality/TeamsCTA.jsx:43-67",
+      "anchor": "export function Teams({ title, gradient = true, "
+    },
+    {
+      "ref": "src/components/modality/TeamsCTA.jsx:83-88",
+      "anchor": "const SCREENS = ["
+    },
+    {
+      "ref": "src/components/modality/TeamsCTA.jsx:90-132",
+      "anchor": "export function FooterCTABlue({ line1, line2, bu"
+    },
+    {
+      "ref": "src/components/modality/primitives.jsx:113",
+      "anchor": "export const H5 = 'font-heading font-semibold te"
+    },
+    {
+      "ref": "src/components/modality/primitives.jsx:56-75",
+      "anchor": "export function WordEyebrow({ children, classNam"
+    },
+    {
+      "ref": "src/components/modality/primitives.jsx:7",
+      "anchor": "export const EASE_BACK"
+    },
+    {
+      "ref": "src/components/modality/primitives.jsx:77-85",
+      "anchor": "export function SlashEyebrow({ children, labelCo"
+    },
+    {
+      "ref": "src/components/modality/primitives.jsx:91-107",
+      "anchor": "export function CheckBadge() {"
+    },
+    {
+      "ref": "src/components/platform/BenefitsGrid.jsx:1-47",
+      "anchor": "import { Link } from 'react-router-dom'"
+    },
+    {
+      "ref": "src/components/platform/BenefitsGrid.jsx:5-26",
+      "anchor": "const ITEMS = ["
+    },
+    {
+      "ref": "src/components/platform/Collage.jsx:1-79",
+      "anchor": "import { motion, useScroll, useTransform } from "
+    },
+    {
+      "ref": "src/components/platform/FeatureRows.jsx:1-72",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/platform/FeatureRows.jsx:5-29",
+      "anchor": "const ROWS = ["
+    },
+    {
+      "ref": "src/components/platform/FooterCTALight.jsx:1-59",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/platform/Intro.jsx:1-89",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/platform/LatestUpdates.jsx:1-73",
+      "anchor": "import { Link } from 'react-router-dom'"
+    },
+    {
+      "ref": "src/components/platform/LatestUpdates.jsx:5-40",
+      "anchor": "const GROUPS = ["
+    },
+    {
+      "ref": "src/components/platform/LogoWall.jsx:1-45",
+      "anchor": "import { LEAD } from './shared.jsx'"
+    },
+    {
+      "ref": "src/components/platform/Manifesto.jsx:1-93",
+      "anchor": "import { Fragment, useRef } from 'react'"
+    },
+    {
+      "ref": "src/components/platform/Manifesto.jsx:6-16",
+      "anchor": "const SENTENCES = ["
+    },
+    {
+      "ref": "src/components/platform/QuoteBand.jsx:1-45",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/platform/TabbedCards.jsx:1-85",
+      "anchor": "import { useRef, useState } from 'react'"
+    },
+    {
+      "ref": "src/components/platform/Teams.jsx:1-71",
+      "anchor": "import { H2, LEAD, H4, BODY, GRADIENT_H2, CheckB"
+    },
+    {
+      "ref": "src/components/platform/Teams.jsx:5-18",
+      "anchor": "const CARDS = ["
+    },
+    {
+      "ref": "src/components/platform/shared.jsx:12",
+      "anchor": "INLINE_LINK"
+    },
+    {
+      "ref": "src/components/platform/shared.jsx:40-57",
+      "anchor": "export function CheckBadge({ green = false, anim"
+    },
+    {
+      "ref": "src/components/platform/shared.jsx:7",
+      "anchor": "export const H2 = 'font-heading font-medium text"
+    },
+    {
+      "ref": "src/components/resources/FormPage.jsx:8-34",
+      "anchor": "function AvatarTrio() {"
+    },
+    {
+      "ref": "src/components/resources/LeadForm.jsx:1-127",
+      "anchor": "import { useState } from 'react'"
+    },
+    {
+      "ref": "src/components/resources/NewsletterForm.jsx:1-35",
+      "anchor": "import { useState } from 'react'"
+    },
+    {
+      "ref": "src/components/resources/TrustTicker.jsx:1-80",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/solutions/AcademiaForm.jsx:1-117",
+      "anchor": "import { ph } from './primitives.jsx'"
+    },
+    {
+      "ref": "src/components/solutions/AcademiaHero.jsx:1-87",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/solutions/AcademiaHero.jsx:15-19",
+      "anchor": "const LOGOS = ["
+    },
+    {
+      "ref": "src/components/solutions/AcademiaHero.jsx:21-25",
+      "anchor": "const ROWS = ["
+    },
+    {
+      "ref": "src/components/solutions/CaseQuote.jsx:1-60",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/solutions/FooterCTADark.jsx:1-63",
+      "anchor": "import { useRef } from 'react'"
+    },
+    {
+      "ref": "src/components/solutions/LogoTicker.jsx:1-49",
+      "anchor": "import { Marquee, useIsPhone } from './primitive"
+    },
+    {
+      "ref": "src/components/solutions/ModalityTabs.jsx:1-110",
+      "anchor": "import { useState } from 'react'"
+    },
+    {
+      "ref": "src/components/solutions/PipelineBenefits.jsx:1-67",
+      "anchor": "import { T } from './primitives.jsx'"
+    },
+    {
+      "ref": "src/components/solutions/SecurityBlock.jsx:1-53",
+      "anchor": "import { CheckGlyph, T } from './primitives.jsx'"
+    },
+    {
+      "ref": "src/components/solutions/SecurityBlock.jsx:7-13",
+      "anchor": "const ITEMS = ["
+    },
+    {
+      "ref": "src/components/solutions/SolutionHero.jsx:1-99",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/components/solutions/TabbedCards.jsx:1-98",
+      "anchor": "import { useRef, useState } from 'react'"
+    },
+    {
+      "ref": "src/components/solutions/TabbedCards.jsx:13-38",
+      "anchor": "const TABS = ["
+    },
+    {
+      "ref": "src/components/solutions/primitives.jsx:132-179",
+      "anchor": "export function Marquee({ axis = 'x', speed, gap"
+    },
+    {
+      "ref": "src/components/solutions/primitives.jsx:62-69",
+      "anchor": "export function CheckGlyph({ className = '', str"
+    },
+    {
+      "ref": "src/components/ui.jsx:14",
+      "anchor": "h-2 w-2 rounded-[2px] bg-accent"
+    },
+    {
+      "ref": "src/components/ui.jsx:17",
+      "anchor": "<p className={`hidden md:flex flex-wrap gap-x-[0"
+    },
+    {
+      "ref": "src/components/ui.jsx:24",
+      "anchor": "delay: i * 0.1"
+    },
+    {
+      "ref": "src/components/ui.jsx:36",
+      "anchor": "// Hover: ≈100ms tween"
+    },
+    {
+      "ref": "src/components/ui.jsx:37",
+      "anchor": "const base ="
+    },
+    {
+      "ref": "src/components/ui.jsx:40-54",
+      "anchor": "export function Button({ variant = 'primary', si"
+    },
+    {
+      "ref": "src/components/ui.jsx:42",
+      "anchor": "h-9 px-3 rounded-lg"
+    },
+    {
+      "ref": "src/components/ui.jsx:43",
+      "anchor": "h-12 px-6 rounded-xl"
+    },
+    {
+      "ref": "src/components/ui.jsx:45",
+      "anchor": "bg-brand hover:bg-brand-hover"
+    },
+    {
+      "ref": "src/components/ui.jsx:47",
+      "anchor": "bg-white text-ink"
+    },
+    {
+      "ref": "src/components/ui.jsx:48",
+      "anchor": "bg-[linear-gradient(180deg,#fff_0%,#f9fafb_100%)"
+    },
+    {
+      "ref": "src/components/ui.jsx:55-58",
+      "anchor": "export function Container({ className = '', chil"
+    },
+    {
+      "ref": "src/components/ui.jsx:56",
+      "anchor": "max-w-container"
+    },
+    {
+      "ref": "src/components/ui.jsx:7",
+      "anchor": "export const FRAMER_EASE"
+    },
+    {
+      "ref": "src/components/ui.jsx:9-35",
+      "anchor": "export function Eyebrow({ children, dark = false"
+    },
+    {
+      "ref": "src/index.css:29",
+      "anchor": "rgba(0,0,0,.08)"
+    },
+    {
+      "ref": "src/pages/Blog.jsx:1-49",
+      "anchor": "import { useEffect } from 'react'"
+    },
+    {
+      "ref": "src/pages/BlogMaturity.jsx:1-245",
+      "anchor": "import { Fragment, useMemo } from 'react'"
+    },
+    {
+      "ref": "src/pages/BlogMaturity.jsx:16-38",
+      "anchor": "function Hero() {"
+    },
+    {
+      "ref": "src/pages/BlogMaturity.jsx:71-109",
+      "anchor": "function Framework() {"
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:1-38",
+      "anchor": "import { useMemo } from 'react'"
+    },
+    {
+      "ref": "src/pages/Careers.jsx:1-31",
+      "anchor": "import { useEffect } from 'react'"
+    },
+    {
+      "ref": "src/pages/Case.jsx:1-161",
+      "anchor": "import { useState } from 'react'"
+    },
+    {
+      "ref": "src/pages/Case.jsx:56-63",
+      "anchor": "function PressTile({ logo, h, kind }) {"
+    },
+    {
+      "ref": "src/pages/Case.jsx:64-85",
+      "anchor": "function CaseCard({ tag, title, to, img, excerpt"
+    },
+    {
+      "ref": "src/pages/Dpa.jsx:1-24",
+      "anchor": "import DocViewer from '../components/misc/DocVie"
+    },
+    {
+      "ref": "src/pages/GetStarted.jsx:1-14",
+      "anchor": "import FormPage from '../components/resources/Fo"
+    },
+    {
+      "ref": "src/pages/Home.jsx:1-32",
+      "anchor": "import Hero from '../components/Hero.jsx'"
+    },
+    {
+      "ref": "src/pages/LabPage.jsx:1-21",
+      "anchor": "import { useEffect } from 'react'"
+    },
+    {
+      "ref": "src/pages/LegalDoc.jsx:1-35",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/pages/Licensing.jsx:1-14",
+      "anchor": "import { LicensingHero, LicenseGrid, IncludedLis"
+    },
+    {
+      "ref": "src/pages/Links.jsx:1-17",
+      "anchor": "import { LinkInBioRoot, LinkInBioColumn, BrandBl"
+    },
+    {
+      "ref": "src/pages/ModalityAntibody.jsx:1-122",
+      "anchor": "import ModalityPage from '../components/modality"
+    },
+    {
+      "ref": "src/pages/ModalityEnzyme.jsx:1-123",
+      "anchor": "import ModalityPage from '../components/modality"
+    },
+    {
+      "ref": "src/pages/ModalityVaccine.jsx:1-137",
+      "anchor": "import { Link } from 'react-router-dom'"
+    },
+    {
+      "ref": "src/pages/Notebook.jsx:1-27",
+      "anchor": "import { LinkInBioRoot, LinkInBioColumn, BrandBl"
+    },
+    {
+      "ref": "src/pages/Platform.jsx:1-33",
+      "anchor": "import { useEffect } from 'react'"
+    },
+    {
+      "ref": "src/pages/Presskit.jsx:1-14",
+      "anchor": "import { PresskitTitle, PresskitFileList, PRESS_"
+    },
+    {
+      "ref": "src/pages/Security.jsx:1-164",
+      "anchor": "import { motion } from 'framer-motion'"
+    },
+    {
+      "ref": "src/pages/Security.jsx:48-61",
+      "anchor": "function About({ className = '' }) {"
+    },
+    {
+      "ref": "src/pages/Security.jsx:62-76",
+      "anchor": "function PolicyItem({ item, k }) {"
+    },
+    {
+      "ref": "src/pages/Shirt.jsx:1-30",
+      "anchor": "import { LinkInBioRoot, LinkInBioColumn, BrandBl"
+    },
+    {
+      "ref": "src/pages/SolutionsAcademia.jsx:1-15",
+      "anchor": "import { useEffect } from 'react'"
+    },
+    {
+      "ref": "src/pages/SolutionsBiopharma.jsx:1-7",
+      "anchor": "import SolutionPage from '../components/solution"
+    },
+    {
+      "ref": "src/pages/Team.jsx:1-19",
+      "anchor": "import { useEffect } from 'react'"
+    },
+    {
+      "ref": "src/pages/VideoIndex.jsx:1-27",
+      "anchor": "import { useState } from 'react'"
+    },
+    {
+      "ref": "src/pages/VideoPost.jsx:1-25",
+      "anchor": "import { useParams } from 'react-router-dom'"
+    },
+    {
+      "ref": "src/pages/Whitepaper.jsx:1-15",
+      "anchor": "import { WhitepaperIntro } from '../components/m"
+    },
+    {
+      "ref": "tailwind.config.js:19",
+      "anchor": "progress:"
+    },
+    {
+      "ref": "tailwind.config.js:22",
+      "anchor": "heading:"
+    },
+    {
+      "ref": "tailwind.config.js:23",
+      "anchor": "sans:"
+    },
+    {
+      "ref": "tailwind.config.js:24",
+      "anchor": "mono:"
+    },
+    {
+      "ref": "tailwind.config.js:25",
+      "anchor": "quote:"
+    },
+    {
+      "ref": "tailwind.config.js:27",
+      "anchor": "container: '1280px'"
+    },
+    {
+      "ref": "tailwind.config.js:5",
+      "anchor": "screens: { md: '810px'"
+    }
+  ]
+}

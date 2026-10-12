@@ -1,0 +1,77 @@
+{
+  "id": "chrome.footer",
+  "category": "CHROME",
+  "description": "Columned site footer: logo, link columns, a Connect column and a legal bar. One component whose only difference between variants is the background colour (blue, dark or accent).",
+  "scope": "On 98 routes: every route except the link-in-bio pages (links, notebook, shirt).",
+  "implementedBy": "src/components/Footer.jsx",
+  "measuredFrom": [
+    "src/components/Footer.jsx:1-100"
+  ],
+  "allowedTemplates": [
+    "template.home",
+    "template.platform",
+    "template.solution",
+    "template.academia",
+    "template.modality-ticker",
+    "template.modality-problem",
+    "template.modality-text",
+    "template.team",
+    "template.careers",
+    "template.lab",
+    "template.case",
+    "template.security",
+    "template.form-page",
+    "template.blog-index",
+    "template.blog-post",
+    "template.blog-maturity",
+    "template.video-index",
+    "template.video-post",
+    "template.whitepaper",
+    "template.presskit",
+    "template.licensing",
+    "template.dpa",
+    "template.legal"
+  ],
+  "variants": [
+    "blue",
+    "dark",
+    "accent"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "brand-mark"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/Footer.jsx:1-100"
+  },
+  "literalAssets": [
+    "/assets/cradle-symbol-footer.svg"
+  ],
+  "exampleContent": {}
+}

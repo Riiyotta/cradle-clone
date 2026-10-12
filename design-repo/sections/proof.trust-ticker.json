@@ -1,0 +1,73 @@
+{
+  "id": "proof.trust-ticker",
+  "category": "PROOF",
+  "description": "Trust-logo ticker; a static 4x2 grid on phone.",
+  "scope": "The 2 form pages (get-started and contact).",
+  "implementedBy": "src/components/resources/TrustTicker.jsx",
+  "measuredFrom": [
+    "src/components/resources/TrustTicker.jsx:1-80"
+  ],
+  "allowedTemplates": [
+    "template.form-page"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 11
+        },
+        "measuredMax": 7
+      }
+    }
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "base": 4
+    },
+    "measuredFrom": "src/components/resources/TrustTicker.jsx:1-80"
+  },
+  "literalAssets": [
+    "/assets/trust-logo-7.svg"
+  ],
+  "exampleContent": {
+    "paragraphs": [
+      "Used and trusted by leading R&D teams"
+    ]
+  }
+}

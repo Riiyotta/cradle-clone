@@ -1,0 +1,93 @@
+{
+  "id": "hero.presskit",
+  "category": "HERO",
+  "description": "Press kit title with a popping, shimmering icon cluster.",
+  "scope": "/presskit only.",
+  "implementedBy": "src/components/media/Presskit.jsx > PresskitTitle",
+  "measuredFrom": [
+    "src/components/media/Presskit.jsx:39-57"
+  ],
+  "allowedTemplates": [
+    "template.presskit"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "measuredMax": 2
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": {
+    "roles": [
+      "page-graphic"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/media/Presskit.jsx:39-57"
+  },
+  "literalAssets": [
+    "/assets/pages/presskit/page-title-48x48-fea7c7.svg",
+    "/assets/pages/presskit/page-title-56x56-12bca5.svg",
+    "/assets/pages/presskit/page-title-96x96-ae7a4c.svg"
+  ],
+  "exampleContent": {
+    "heading": "Press kit",
+    "ctas": [
+      {
+        "label": "hello@cradle.bio",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

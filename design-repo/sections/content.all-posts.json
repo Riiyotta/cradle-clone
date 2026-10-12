@@ -1,0 +1,76 @@
+{
+  "id": "content.all-posts",
+  "category": "CONTENT",
+  "description": "Date-sorted list of all posts beside a sticky subscribe card, followed by a newsletter band.",
+  "scope": "/blog only.",
+  "implementedBy": "src/components/blog/PostRow.jsx > PostRowIndex",
+  "measuredFrom": [
+    "src/components/blog/PostRow.jsx:17-41"
+  ],
+  "allowedTemplates": [
+    "template.blog-index"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "post": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "collection",
+          "slug"
+        ],
+        "properties": {
+          "collection": {
+            "enum": [
+              "blog",
+              "video"
+            ]
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        }
+      }
+    },
+    "required": [
+      "post"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/blog/PostRow.jsx:17-41"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "post": {
+      "collection": "blog",
+      "slug": "aintibody"
+    }
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

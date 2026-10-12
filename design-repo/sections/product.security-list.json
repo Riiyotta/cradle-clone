@@ -1,0 +1,91 @@
+{
+  "id": "product.security-list",
+  "category": "PRODUCT",
+  "description": "Security and compliance checklist block.",
+  "scope": "The 2 solution pages (biopharma and industrial).",
+  "implementedBy": "src/components/solutions/SecurityBlock.jsx",
+  "measuredFrom": [
+    "src/components/solutions/SecurityBlock.jsx:1-53"
+  ],
+  "allowedTemplates": [
+    "template.solution"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5,
+              "measuredMax": 3
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 23,
+              "measuredMax": 15
+            },
+            "beta": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 5,
+        "measuredFrom": "src/components/solutions/SecurityBlock.jsx:7-13"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "ui-screenshot"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/solutions/SecurityBlock.jsx:1-53"
+  },
+  "literalAssets": [
+    "/assets/pages/solutions-biopharma/security-mEhlsH.png"
+  ],
+  "exampleContent": {
+    "items": [
+      {
+        "title": "Privacy-first AI",
+        "body": "Your experimental data is only used to train your organization's custom models."
+      }
+    ]
+  }
+}

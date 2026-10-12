@@ -1,0 +1,11 @@
+{
+  "id": "primitive.check-badge",
+  "kind": "primitive",
+  "description": "Accent circle with a white check glyph.",
+  "implementedBy": "src/components/modality/primitives.jsx > CheckBadge",
+  "props": [],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/modality/primitives.jsx:91-107"
+  ]
+}

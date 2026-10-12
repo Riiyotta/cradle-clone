@@ -1,0 +1,55 @@
+{
+  "id": "product.dark-band",
+  "category": "PRODUCT",
+  "description": "Dark interstitial band between features and the product mock.",
+  "scope": "All 4 modality pages.",
+  "implementedBy": "src/components/modality/ModalityPage.jsx > DarkBand",
+  "measuredFrom": [
+    "src/components/modality/ModalityPage.jsx:22-25"
+  ],
+  "allowedTemplates": [
+    "template.modality-ticker",
+    "template.modality-problem",
+    "template.modality-text"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "text": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 75,
+        "measuredFrom": "src/components/modality/ModalityPage.jsx:22-25",
+        "budgetBasis": "site-wide observed max of key \"body\" across harvested section data"
+      }
+    }
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/modality/ModalityPage.jsx:22-25"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "text": "Body text"
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

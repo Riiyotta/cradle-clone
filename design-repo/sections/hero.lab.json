@@ -1,0 +1,68 @@
+{
+  "id": "hero.lab",
+  "category": "HERO",
+  "description": "Lab header with a parallax lab coat and visitor badge.",
+  "scope": "/lab only.",
+  "implementedBy": "src/components/company/LabSections.jsx > LabHeader",
+  "measuredFrom": [
+    "src/components/company/LabSections.jsx:21-56"
+  ],
+  "allowedTemplates": [
+    "template.lab"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6,
+        "measuredMax": 4
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": {
+    "roles": [
+      "page-image"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "scroll-linked",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "scroll-linked": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "useScroll",
+        "useTransform"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/company/LabSections.jsx:21-56"
+  },
+  "literalAssets": [
+    "/assets/pages/lab/coat-FjFiAj.png"
+  ],
+  "exampleContent": {
+    "heading": "Here, put this on."
+  }
+}

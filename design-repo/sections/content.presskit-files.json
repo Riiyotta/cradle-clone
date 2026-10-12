@@ -1,0 +1,76 @@
+{
+  "id": "content.presskit-files",
+  "category": "CONTENT",
+  "description": "Three press file lists (download items are inert).",
+  "scope": "/presskit only.",
+  "implementedBy": "src/components/media/Presskit.jsx > PresskitFileList",
+  "measuredFrom": [
+    "src/components/media/Presskit.jsx:94-106"
+  ],
+  "allowedTemplates": [
+    "template.presskit"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/components/media/Presskit.jsx:94-106",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "length": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26,
+            "measuredFrom": "src/components/media/Presskit.jsx:94-106",
+            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+          }
+        },
+        "required": [
+          "length"
+        ]
+      }
+    },
+    "required": [
+      "title",
+      "items"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/media/Presskit.jsx:94-106"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "title": "Section title",
+    "items": {
+      "length": "Text"
+    }
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "primitive.container",
+  "kind": "primitive",
+  "description": "Centered 1280px max-width wrapper.",
+  "implementedBy": "src/components/ui.jsx > Container",
+  "props": [],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/ui.jsx:55-58"
+  ]
+}

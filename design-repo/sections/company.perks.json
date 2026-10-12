@@ -1,0 +1,54 @@
+{
+  "id": "company.perks",
+  "category": "COMPANY",
+  "description": "Lab perks list.",
+  "scope": "/lab only.",
+  "implementedBy": "src/components/company/LabSections.jsx > Perks",
+  "measuredFrom": [
+    "src/components/company/LabSections.jsx:133-152"
+  ],
+  "allowedTemplates": [
+    "template.lab"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "page-image",
+      "video"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "autoplay-video",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "autoplay-video": "pause",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/company/LabSections.jsx:133-152"
+  },
+  "literalAssets": [
+    "/assets/pages/team/intro-3xPwhR.mp4",
+    "/assets/pages/team/intro-DCTQ1c.png"
+  ],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

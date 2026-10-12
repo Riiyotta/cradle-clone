@@ -1,0 +1,86 @@
+{
+  "id": "conversion.academia-form",
+  "category": "CONVERSION",
+  "description": "Static local application form (submit is inert).",
+  "scope": "/solutions/academia only.",
+  "implementedBy": "src/components/solutions/AcademiaForm.jsx",
+  "measuredFrom": [
+    "src/components/solutions/AcademiaForm.jsx:1-117"
+  ],
+  "allowedTemplates": [
+    "template.academia"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4,
+        "measuredMax": 2
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 6
+        },
+        "measuredMax": 4
+      },
+      "form": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "submitBehavior"
+        ],
+        "properties": {
+          "submitBehavior": {
+            "enum": [
+              "inert"
+            ]
+          }
+        }
+      }
+    },
+    "required": [
+      "heading",
+      "form"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/solutions/AcademiaForm.jsx:1-117"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Let's talk!",
+    "paragraphs": [
+      "Submit your application today"
+    ],
+    "form": {
+      "submitBehavior": "inert"
+    }
+  }
+}

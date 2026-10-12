@@ -1,0 +1,142 @@
+{
+  "id": "company.offices",
+  "category": "COMPANY",
+  "description": "Sticky 'our offices' section with office cards and a static weather pill.",
+  "scope": "/team only.",
+  "implementedBy": "src/components/company/TeamSections.jsx > Offices",
+  "measuredFrom": [
+    "src/components/company/TeamSections.jsx:53-80"
+  ],
+  "allowedTemplates": [
+    "template.team"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "city": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "address": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 9,
+              "measuredMax": 6
+            },
+            "short": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "weather": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "maxItems": 1
+            }
+          },
+          "required": [
+            "city",
+            "short"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/company/teamData.js:111-115"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "ui-screenshot",
+      "video"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "autoplay-video",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "autoplay-video": "pause",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "base": 2,
+      "md": 3
+    },
+    "measuredFrom": "src/components/company/TeamSections.jsx:53-80"
+  },
+  "literalAssets": [
+    "/assets/pages/team/content-LOvlFN.mp4",
+    "/assets/pages/team/content-XWsIgg.png",
+    "/assets/pages/team/content-l8k0T7.png",
+    "/assets/pages/team/content-yygvM8.mp4"
+  ],
+  "exampleContent": {
+    "ctas": [
+      {
+        "label": "state-of-the art lab",
+        "href": "/get-started"
+      }
+    ],
+    "items": [
+      {
+        "city": "🇨🇭 Zurich",
+        "short": "Brandschenkestrasse 150"
+      }
+    ]
+  }
+}

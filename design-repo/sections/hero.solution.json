@@ -1,0 +1,81 @@
+{
+  "id": "hero.solution",
+  "category": "HERO",
+  "description": "Split hero with a 3D-tilted screenshot; accent colour green (biopharma) or sky (industrial).",
+  "scope": "The 2 solution pages (biopharma and industrial).",
+  "implementedBy": "src/components/solutions/SolutionHero.jsx",
+  "measuredFrom": [
+    "src/components/solutions/SolutionHero.jsx:1-99"
+  ],
+  "allowedTemplates": [
+    "template.solution"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 3
+  },
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/solutions/SolutionHero.jsx:1-99"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "ctas": [
+      {
+        "label": "Talk to sales",
+        "href": "/get-started"
+      }
+    ]
+  }
+}

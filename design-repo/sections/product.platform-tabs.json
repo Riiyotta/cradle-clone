@@ -1,0 +1,99 @@
+{
+  "id": "product.platform-tabs",
+  "category": "PRODUCT",
+  "description": "Click-only tabs that crossfade three app screenshots inside a masked frame; pills on phone.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/PlatformUI.jsx",
+  "measuredFrom": [
+    "src/components/PlatformUI.jsx:1-152"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "pill": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "img": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "desc": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 20,
+              "measuredMax": 13
+            }
+          },
+          "required": [
+            "title",
+            "pill",
+            "img",
+            "desc"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/PlatformUI.jsx:12-16"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/PlatformUI.jsx:1-152"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "items": [
+      {
+        "title": "Generate candidates",
+        "pill": "Generation",
+        "img": "round",
+        "desc": "Track round status easily, from generating candidates to uploading experimental results."
+      }
+    ]
+  }
+}

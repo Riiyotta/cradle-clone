@@ -1,0 +1,175 @@
+{
+  "id": "product.modalities-grid",
+  "category": "PRODUCT",
+  "description": "Four modality cards (antibody, enzyme, peptide, vaccine) with coloured icons.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/Modalities.jsx",
+  "measuredFrom": [
+    "src/components/Modalities.jsx:1-67"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6,
+        "measuredMax": 4
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 33
+        },
+        "measuredMax": 22
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "color": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "icon": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "hover": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 14,
+              "measuredMax": 9
+            }
+          },
+          "required": [
+            "title",
+            "color",
+            "icon",
+            "hover",
+            "href",
+            "body"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/Modalities.jsx:5-10"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "word-stagger-eyebrow",
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "word-stagger-eyebrow": "static",
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "Eyebrow"
+      ],
+      "hasHover": true,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/Modalities.jsx:1-67"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "eyebrow": "WORK ON ANY PROTEIN",
+    "paragraphs": [
+      "Accelerate your journey from hit identification to lead optimization and beyond. If you can measure it, you can optimize it with Cradle."
+    ],
+    "ctas": [
+      {
+        "label": "Explore Cradle Platform",
+        "href": "/get-started"
+      }
+    ],
+    "items": [
+      {
+        "title": "Antibodies",
+        "color": "bg-antibody",
+        "icon": "modality-icon-antibody.svg",
+        "hover": "modality-icon-hover-antibody-enzyme.svg",
+        "href": "./modality/antibody",
+        "body": "Craft mature and developable binders that avoid unwanted immunogenicity."
+      }
+    ]
+  }
+}

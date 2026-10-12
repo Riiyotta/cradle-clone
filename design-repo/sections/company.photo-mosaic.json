@@ -1,0 +1,46 @@
+{
+  "id": "company.photo-mosaic",
+  "category": "COMPANY",
+  "description": "Mosaic of office and team photos that load in.",
+  "scope": "/careers only.",
+  "implementedBy": "src/components/company/CareersSections.jsx > PhotoMosaic",
+  "measuredFrom": [
+    "src/components/company/CareersSections.jsx:55-66"
+  ],
+  "allowedTemplates": [
+    "template.careers"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {
+      "base": 3,
+      "md": 4
+    },
+    "measuredFrom": "src/components/company/CareersSections.jsx:55-66"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

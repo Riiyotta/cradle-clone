@@ -1,0 +1,25 @@
+{
+  "id": "primitive.button",
+  "kind": "primitive",
+  "description": "Button with primary/secondary variants at 48px and 36px heights; renders a router Link, an anchor, or (href null) a plain button.",
+  "implementedBy": "src/components/ui.jsx > Button",
+  "props": [
+    "variant: primary|secondary",
+    "size: 36|48",
+    "to",
+    "href"
+  ],
+  "variants": {
+    "variant": [
+      "primary",
+      "secondary"
+    ],
+    "size": [
+      36,
+      48
+    ]
+  },
+  "measuredFrom": [
+    "src/components/ui.jsx:40-54"
+  ]
+}

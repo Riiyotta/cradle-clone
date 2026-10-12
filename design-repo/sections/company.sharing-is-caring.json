@@ -1,0 +1,190 @@
+{
+  "id": "company.sharing-is-caring",
+  "category": "COMPANY",
+  "description": "Floating post cards that pop in on enter.",
+  "scope": "/lab only.",
+  "implementedBy": "src/components/company/LabSections.jsx > SharingIsCaring",
+  "measuredFrom": [
+    "src/components/company/LabSections.jsx:367-396"
+  ],
+  "allowedTemplates": [
+    "template.lab"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 59
+        },
+        "measuredMax": 39
+      },
+      "ctas": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 5
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/[A-Za-z0-9/_#:.-]*|#[A-Za-z0-9_-]*)$"
+            }
+          }
+        }
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "key": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "w": {
+              "type": "number"
+            },
+            "radius": {
+              "type": "number"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 18,
+              "measuredMax": 12
+            },
+            "titleCls": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "gap": {
+              "type": "number"
+            },
+            "to": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "img": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "ar": {
+              "type": "number"
+            },
+            "glow": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {}
+            },
+            "delay": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "key",
+            "title",
+            "titleCls",
+            "to",
+            "img"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/company/labData.js:34-39"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {
+      "base": 2
+    },
+    "measuredFrom": "src/components/company/LabSections.jsx:367-396"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Sharing is caring",
+    "paragraphs": [
+      "Placeholder paragraph about how most labs keep their work private, while this team takes a different approach and openly shares its workflows and insights with the wider community."
+    ],
+    "ctas": [
+      {
+        "label": "Explore blog posts",
+        "href": "/get-started"
+      }
+    ],
+    "items": [
+      {
+        "key": "tr",
+        "title": "Backbone of high-throughput experimentation: Design principles for ML-ready sample tracking",
+        "titleCls": "text-[13px] leading-[16.9px]",
+        "to": "/blog/sample-tracking",
+        "img": "/assets/blog-sample-tracking.jpg"
+      }
+    ]
+  }
+}

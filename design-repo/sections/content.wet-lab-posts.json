@@ -1,0 +1,106 @@
+{
+  "id": "content.wet-lab-posts",
+  "category": "CONTENT",
+  "description": "Four 'learnings from our wet lab' blog cards.",
+  "scope": "Homepage only.",
+  "implementedBy": "src/components/WetLabBlog.jsx",
+  "measuredFrom": [
+    "src/components/WetLabBlog.jsx:1-41"
+  ],
+  "allowedTemplates": [
+    "template.home"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 8,
+        "measuredMax": 5
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "img": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "href": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 18,
+              "measuredMax": 12
+            }
+          },
+          "required": [
+            "img",
+            "href",
+            "title"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 4,
+        "measuredFrom": "src/components/WetLabBlog.jsx:3-8"
+      }
+    },
+    "required": [
+      "heading",
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": null,
+    "gridColumns": {
+      "base": 2
+    },
+    "measuredFrom": "src/components/WetLabBlog.jsx:1-41"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Learnings from our wet lab",
+    "items": [
+      {
+        "img": "blog-beyond-the-bench.png",
+        "href": "./blog/beyond-the-bench",
+        "title": "We put our CTO in a lab coat. Here’s what happened next."
+      }
+    ]
+  }
+}

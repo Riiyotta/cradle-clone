@@ -1,0 +1,62 @@
+{
+  "id": "hero.whitepaper",
+  "category": "HERO",
+  "description": "'CRADLE-1' letters with scroll parallax, blurred blobs and description.",
+  "scope": "/whitepaper only.",
+  "implementedBy": "src/components/media/WhitepaperIntro.jsx",
+  "measuredFrom": [
+    "src/components/media/WhitepaperIntro.jsx:1-105"
+  ],
+  "allowedTemplates": [
+    "template.whitepaper"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": {
+    "roles": [
+      "page-graphic"
+    ],
+    "maxItems": 6
+  },
+  "motion": {
+    "patterns": [
+      "scroll-linked",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "scroll-linked": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "useScroll",
+        "useTransform"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": true,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/media/WhitepaperIntro.jsx:1-105"
+  },
+  "literalAssets": [
+    "/assets/pages/whitepaper/bottom-450x424-d1942a.svg",
+    "/assets/pages/whitepaper/bottom-900x848-fe16a0.svg",
+    "/assets/pages/whitepaper/left-389x313-bb8cc6.svg",
+    "/assets/pages/whitepaper/left-777x626-e4555f.svg",
+    "/assets/pages/whitepaper/right-290x259-e34be8.svg",
+    "/assets/pages/whitepaper/right-581x517-4318d1.svg"
+  ],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

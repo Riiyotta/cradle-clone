@@ -1,0 +1,13 @@
+{
+  "id": "primitive.badge",
+  "kind": "primitive",
+  "description": "Small white BETA tag shown beside a feature title.",
+  "implementedBy": "src/components/Enterprise.jsx > Feature",
+  "props": [
+    "beta: boolean"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/Enterprise.jsx:30-49"
+  ]
+}

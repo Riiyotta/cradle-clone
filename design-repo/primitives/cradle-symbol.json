@@ -1,0 +1,13 @@
+{
+  "id": "primitive.cradle-symbol",
+  "kind": "primitive",
+  "description": "The Cradle brand mark as inline SVG.",
+  "implementedBy": "src/components/media/shared.jsx > CradleSymbol",
+  "props": [
+    "className"
+  ],
+  "variants": {},
+  "measuredFrom": [
+    "src/components/media/shared.jsx:26-29"
+  ]
+}

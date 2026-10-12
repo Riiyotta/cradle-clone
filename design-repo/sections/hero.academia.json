@@ -1,0 +1,137 @@
+{
+  "id": "hero.academia",
+  "category": "HERO",
+  "description": "Green academia hero with logo tiles and a three-row checklist.",
+  "scope": "/solutions/academia only.",
+  "implementedBy": "src/components/solutions/AcademiaHero.jsx",
+  "measuredFrom": [
+    "src/components/solutions/AcademiaHero.jsx:1-87"
+  ],
+  "allowedTemplates": [
+    "template.academia"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 5,
+        "measuredMax": 3
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "src": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "measuredMax": 4
+            },
+            "cls": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 6,
+              "measuredMax": 4
+            }
+          },
+          "required": [
+            "src",
+            "alt",
+            "cls"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/solutions/AcademiaHero.jsx:15-19"
+      },
+      "groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 38,
+              "measuredMax": 25
+            }
+          },
+          "required": [
+            "title",
+            "body"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/solutions/AcademiaHero.jsx:21-25"
+      }
+    },
+    "required": [
+      "heading",
+      "items",
+      "groups"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 2
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": true,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/solutions/AcademiaHero.jsx:1-87"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "heading": "Cradle for Academia",
+    "items": [
+      {
+        "src": "${A}dtu-KWTpRW.png",
+        "alt": "DTU",
+        "cls": "h-[40.5px] w-[37px] md:h-20 md:w-[73px]"
+      }
+    ],
+    "groups": [
+      {
+        "title": "Unpaid access",
+        "body": "Cradle's license fee is waived for non-commercial research use."
+      }
+    ]
+  }
+}

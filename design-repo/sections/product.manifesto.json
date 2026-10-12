@@ -1,0 +1,92 @@
+{
+  "id": "product.manifesto",
+  "category": "PRODUCT",
+  "description": "Sentence-by-sentence manifesto reveal beside a UI screenshot that tilts upright on scroll.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/Manifesto.jsx",
+  "measuredFrom": [
+    "src/components/platform/Manifesto.jsx:1-93"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "em": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 8,
+              "measuredMax": 5
+            },
+            "br": {
+              "type": "boolean"
+            }
+          }
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "measuredFrom": "src/components/platform/Manifesto.jsx:6-16"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "ui-screenshot"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "scroll-linked",
+      "in-view-reveal",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "scroll-linked": "static",
+      "in-view-reveal": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "useInView",
+        "useScroll",
+        "useSpring",
+        "useTransform"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/components/platform/Manifesto.jsx:1-93"
+  },
+  "literalAssets": [
+    "/assets/ui-round.png"
+  ],
+  "exampleContent": {
+    "items": [
+      {
+        "em": "This is how it\\'s always",
+        "br": false
+      }
+    ]
+  }
+}

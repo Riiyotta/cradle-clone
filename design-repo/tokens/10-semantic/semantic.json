@@ -1,0 +1,189 @@
+{
+  "$description": "Semantic roles. $value is either a {color.*} foundation reference or a literal where the source uses one that is not in the palette.",
+  "semantic": {
+    "text.primary": {
+      "$type": "color",
+      "$value": "{color.gray.950}",
+      "$extensions": {
+        "role": "headings and body on light surfaces",
+        "measuredFrom": "CLONE_SPEC.md:28-32"
+      }
+    },
+    "text.secondary": {
+      "$type": "color",
+      "$value": "{color.muted}",
+      "$extensions": {
+        "role": "body, eyebrow and lead text on light surfaces",
+        "measuredFrom": "CLONE_SPEC.md:35"
+      }
+    },
+    "text.tertiary": {
+      "$type": "color",
+      "$value": "{color.gray.400}",
+      "$extensions": {
+        "role": "icons and inactive tab text",
+        "measuredFrom": "CLONE_SPEC.md:36"
+      }
+    },
+    "text.on-dark": {
+      "$type": "color",
+      "$value": "{color.white}",
+      "$extensions": {
+        "role": "headings on dark surfaces",
+        "measuredFrom": "CLONE_SPEC.md:28-32"
+      }
+    },
+    "text.on-dark-secondary": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.6)",
+      "$extensions": {
+        "role": "body on dark surfaces (white/60)",
+        "measuredFrom": "src/components/Enterprise.jsx:45"
+      }
+    },
+    "text.link-inline": {
+      "$type": "color",
+      "$value": "#0284c7",
+      "$extensions": {
+        "role": "inline links on light surfaces (hover #0ea5e9)",
+        "measuredFrom": "src/components/platform/shared.jsx:12"
+      }
+    },
+    "text.link-inline-hover": {
+      "$type": "color",
+      "$value": "{color.modality.enzyme}",
+      "$extensions": {
+        "role": "inline link hover",
+        "measuredFrom": "src/components/platform/shared.jsx:12"
+      }
+    },
+    "surface.page": {
+      "$type": "color",
+      "$value": "#ffffff",
+      "$extensions": {
+        "role": "page background",
+        "measuredFrom": "CLONE_SPEC.md:23"
+      }
+    },
+    "surface.alt": {
+      "$type": "color",
+      "$value": "{color.gray.50}",
+      "$extensions": {
+        "role": "alternate section background",
+        "measuredFrom": "CLONE_SPEC.md:40"
+      }
+    },
+    "surface.card": {
+      "$type": "color",
+      "$value": "{color.gray.100}",
+      "$extensions": {
+        "role": "card background",
+        "measuredFrom": "CLONE_SPEC.md:39"
+      }
+    },
+    "surface.dark": {
+      "$type": "color",
+      "$value": "{color.gray.950}",
+      "$extensions": {
+        "role": "dark section and footer background",
+        "measuredFrom": "CLONE_SPEC.md:31"
+      }
+    },
+    "surface.brand": {
+      "$type": "color",
+      "$value": "{color.brand}",
+      "$extensions": {
+        "role": "primary button, homepage footer",
+        "measuredFrom": "CLONE_SPEC.md:41"
+      }
+    },
+    "surface.brand-hover": {
+      "$type": "color",
+      "$value": "{color.brand.hover}",
+      "$extensions": {
+        "role": "primary button hover",
+        "measuredFrom": "CLONE_SPEC.md:42"
+      }
+    },
+    "surface.accent": {
+      "$type": "color",
+      "$value": "{color.accent}",
+      "$extensions": {
+        "role": "modality-page footer, bullets, active borders",
+        "measuredFrom": "CLONE_SPEC.md:43"
+      }
+    },
+    "surface.academia-nav": {
+      "$type": "color",
+      "$value": "#1f5f36",
+      "$extensions": {
+        "role": "navbar bar colour on /solutions/academia (desktop)",
+        "measuredFrom": "src/chrome.js:6"
+      }
+    },
+    "border.default": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.08)",
+      "$extensions": {
+        "role": "hairline borders and inset button ring",
+        "measuredFrom": "src/index.css:29"
+      }
+    },
+    "border.strong": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,.12)",
+      "$extensions": {
+        "role": "primary button inset ring",
+        "measuredFrom": "src/components/ui.jsx:45"
+      }
+    },
+    "border.on-dark": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,.08)",
+      "$extensions": {
+        "role": "dividers on dark surfaces",
+        "measuredFrom": "CLONE_SPEC.md:54"
+      }
+    },
+    "modality.antibody": {
+      "$type": "color",
+      "$value": "{color.modality.antibody}",
+      "$extensions": {
+        "role": "antibody modality colour",
+        "measuredFrom": "CLONE_SPEC.md:49"
+      }
+    },
+    "modality.enzyme": {
+      "$type": "color",
+      "$value": "{color.modality.enzyme}",
+      "$extensions": {
+        "role": "enzyme modality colour",
+        "measuredFrom": "CLONE_SPEC.md:50"
+      }
+    },
+    "modality.peptide": {
+      "$type": "color",
+      "$value": "{color.modality.peptide}",
+      "$extensions": {
+        "role": "peptide modality colour",
+        "measuredFrom": "CLONE_SPEC.md:51"
+      }
+    },
+    "modality.vaccine": {
+      "$type": "color",
+      "$value": "{color.modality.vaccine}",
+      "$extensions": {
+        "role": "vaccine modality colour",
+        "measuredFrom": "CLONE_SPEC.md:52"
+      }
+    },
+    "status.in-progress": {
+      "$type": "color",
+      "$value": "{color.status.progress}",
+      "$extensions": {
+        "role": "in-progress status icon",
+        "measuredFrom": "CLONE_SPEC.md:53"
+      }
+    }
+  }
+}

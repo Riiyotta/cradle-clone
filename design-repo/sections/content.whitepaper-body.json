@@ -1,0 +1,49 @@
+{
+  "id": "content.whitepaper-body",
+  "category": "CONTENT",
+  "description": "Whitepaper video poster and four fact rows.",
+  "scope": "/whitepaper only.",
+  "implementedBy": "src/components/media/WhitepaperSections.jsx > FactRows",
+  "measuredFrom": [
+    "src/components/media/WhitepaperSections.jsx:24-50"
+  ],
+  "allowedTemplates": [
+    "template.whitepaper"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "media": null,
+  "motion": {
+    "patterns": [
+      "in-view-reveal",
+      "load-appear",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "in-view-reveal": "static",
+      "load-appear": "static",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [
+        "whileInView"
+      ],
+      "hasHover": false,
+      "hasInitialAnimate": true
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/media/WhitepaperSections.jsx:24-50"
+  },
+  "literalAssets": [],
+  "exampleContent": {},
+  "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
+}

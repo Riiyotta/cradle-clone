@@ -1,0 +1,132 @@
+{
+  "id": "company.teams-cards-platform",
+  "category": "COMPANY",
+  "description": "Photo cards describing who uses the platform, with check badges.",
+  "scope": "/platform only.",
+  "implementedBy": "src/components/platform/Teams.jsx",
+  "measuredFrom": [
+    "src/components/platform/Teams.jsx:1-71"
+  ],
+  "allowedTemplates": [
+    "template.platform"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 30
+        },
+        "measuredMax": 20
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "img": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "dot": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 4,
+              "measuredMax": 2
+            },
+            "labelGradient": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3,
+              "measuredMax": 1
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 38,
+              "measuredMax": 25
+            }
+          },
+          "required": [
+            "img",
+            "label",
+            "title",
+            "dot",
+            "labelGradient",
+            "body"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 2,
+        "measuredFrom": "src/components/platform/Teams.jsx:5-18"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": "md",
+    "gridColumns": {},
+    "measuredFrom": "src/components/platform/Teams.jsx:1-71"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "paragraphs": [
+      "With everyone in the same workspace, results compound across your organization. Same data. Same models. Same learning loop. New results."
+    ],
+    "items": [
+      {
+        "img": "wetlab-riCniX.png",
+        "label": "Web Interface",
+        "title": "Wet lab",
+        "dot": "bg-sky400 shadow-[0_0_8px_0_#0ea5e9]",
+        "labelGradient": "bg-[linear-gradient(270deg,rgba(255,255,255,.9)_0%,#f0f9ff_100%)]",
+        "body": "Add your domain expertise and AI generate candidates for lab testing in just a few clicks. Upload experimental results to improve your project-specific AI automatically."
+      }
+    ]
+  }
+}

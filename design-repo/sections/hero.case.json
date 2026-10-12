@@ -1,0 +1,68 @@
+{
+  "id": "hero.case",
+  "category": "HERO",
+  "description": "Case-studies header with a press-logo grid.",
+  "scope": "/case only.",
+  "implementedBy": "src/pages/Case.jsx > PressTile",
+  "measuredFrom": [
+    "src/pages/Case.jsx:56-63"
+  ],
+  "allowedTemplates": [
+    "template.case"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "h": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/pages/Case.jsx:56-63",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      },
+      "kind": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 26,
+        "measuredFrom": "src/pages/Case.jsx:56-63",
+        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+      }
+    }
+  },
+  "media": {
+    "roles": [
+      "placeholder"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "hover-variant",
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "hover-variant": "instant",
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": true,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/pages/Case.jsx:56-63"
+  },
+  "literalAssets": [],
+  "exampleContent": {
+    "h": "Heading",
+    "kind": "Kind"
+  },
+  "contentBasis": "component props / member accesses (no literal copy found in source)"
+}

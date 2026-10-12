@@ -1,0 +1,75 @@
+{
+  "id": "hero.maturity",
+  "category": "HERO",
+  "description": "Maturity report hero with an on-page table-of-contents menu.",
+  "scope": "/blog/maturity only.",
+  "implementedBy": "src/pages/BlogMaturity.jsx > Hero",
+  "measuredFrom": [
+    "src/pages/BlogMaturity.jsx:16-38"
+  ],
+  "allowedTemplates": [
+    "template.blog-maturity"
+  ],
+  "variants": null,
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 15,
+        "measuredMax": 10
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 59
+        },
+        "measuredMax": 39
+      }
+    },
+    "required": [
+      "heading"
+    ]
+  },
+  "media": {
+    "roles": [
+      "person-photo"
+    ],
+    "maxItems": 1
+  },
+  "motion": {
+    "patterns": [
+      "none"
+    ],
+    "reducedMotionFallbackByPattern": {
+      "none": "static"
+    },
+    "evidence": {
+      "tokens": [],
+      "hasHover": false,
+      "hasInitialAnimate": false
+    }
+  },
+  "responsive": {
+    "phoneOnlyVariant": false,
+    "desktopOnlyVariant": false,
+    "stacksBelow": null,
+    "gridColumns": {},
+    "measuredFrom": "src/pages/BlogMaturity.jsx:16-38"
+  },
+  "literalAssets": [
+    "/assets/cms/authors/stef.png"
+  ],
+  "exampleContent": {
+    "heading": "Introducing an ‘ML maturity ladder’ for biologics discovery and development",
+    "paragraphs": [
+      "Many organizations confine machine learning in molecular discovery and design to isolated proof-of-concept projects. We propose a 5-level maturity ladder to illustrate how teams advance towards autonomous systems that learn from every experiment and guide discovery across entire pipelines."
+    ]
+  }
+}
