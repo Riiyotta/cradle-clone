@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts — CLONE_SPEC §15 */
+@font-face { font-family: "Rethink Sans"; src: url("/fonts/RethinkSans-500-all.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rethink Sans"; src: url("/fonts/RethinkSans-600-all.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rethink Sans"; src: url("/fonts/RethinkSans-700-all.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-400-latin.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-400-latin-ext.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-500-latin.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-500-latin-ext.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-600-latin.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-600-latin-ext.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-800-latin.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-800-latin-ext.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Spot Mono Medium"; src: url("/fonts/SpotMonoMedium-500-all.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Crimson Pro Regular"; src: url("/fonts/CrimsonProRegular-400-all.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { background: #fff; color: #030712; font-family: Inter, sans-serif; margin: 0; }
+  img, svg, video { display: block; }
+}
+
+@layer components {
+  /* Framer draws borders with an inset ::after */
+  .fborder { position: relative; }
+  .fborder::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; border: var(--fb, 1px solid rgba(0,0,0,.08)); }
+  /* Animated ::after border (live Framer variants tween it). Duration/ease via --fbt / --fbe. */
+  .fborder-bottom-half::after { border-width: 0 0 .5px 0; }
+  .fborder-anim::after { transition: border-color var(--fbt, .15s) var(--fbe, cubic-bezier(.12,.23,.5,1)), border-width var(--fbt, .15s) var(--fbe, cubic-bezier(.12,.23,.5,1)); }
+}
+
+/* Section components add their own keyframes/utilities below this line */
+
+/* ---- Benefits (§6) + Protein visual (§7) — CaseStudies/Benefits/ProteinVisual agent ---- */
+/* Card A grid pattern: desktop full-width, aspect 1.74771, centered; phone 430×246 centered, opacity .08 */
+.benefits-pattern {
+  width: 430px; height: 246px; top: calc(49.7791% - 123px); left: calc(50% - 214.8px); opacity: .08;
+  -webkit-mask: radial-gradient(45% 50% at 50% 50%, #000 0%, rgba(0,0,0,0) 100%); mask: radial-gradient(45% 50% at 50% 50%, #000 0%, rgba(0,0,0,0) 100%);
+}
+@media (min-width: 810px) {
+  .benefits-pattern { width: 100%; height: auto; aspect-ratio: 1.74771; top: 0; left: 50%; transform: translateX(-50%); opacity: .05; }
+}
+/* Protein bubbles: phone 43px, desktop 114px */
+.pv-bubble {
+  left: var(--pl); top: var(--pt); width: 43px; height: 43px; overflow: hidden; border-radius: 79%;
+  background-color: rgba(243,244,246,.6); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  box-shadow: inset 4px -12px 8px 2px rgba(3,7,18,.08), inset 2px 12px 12px 0 rgba(255,255,255,.5);
+}
+.pv-bubble--hl {
+  background-color: #dbe7fe; border-radius: 79.2%; -webkit-backdrop-filter: none; backdrop-filter: none;
+  box-shadow: inset 4px -24px 16px 3.6px rgba(3,7,18,.08), 2px 0 24px 0 rgba(45,102,247,0);
+}
+@media (min-width: 1200px) {
+  .pv-bubble { left: var(--l); top: var(--t); width: 114px; height: 114px; box-shadow: inset 4px -24px 16px 3.6px rgba(7,89,133,.16), inset 2px 12px 12px 0 rgba(255,255,255,.5); }
+  .pv-bubble--hl { box-shadow: inset 4px -24px 16px 3.6px rgba(3,7,18,.08), 2px 0 24px 0 rgba(45,102,247,0); }
+}
+/* Tablet (810–1199): 385×285 cluster = desktop coords × 0.521, 59px bubbles */
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .pv-bubble { left: calc(var(--l) * 0.521); top: calc(var(--t) * 0.521); width: 59px; height: 59px; border-radius: 100%; box-shadow: inset 4px -24px 16px 3.6px rgba(7,89,133,.16), inset 2px 12px 12px 0 rgba(255,255,255,.5); }
+  .pv-bubble--hl { border-radius: 79.2%; box-shadow: inset 4px -24px 16px 3.6px rgba(3,7,18,.08), 2px 0 24px 0 rgba(45,102,247,0); }
+}
+/* ---- end Benefits / Protein visual ---- */
+
+/* ---- Resources pages (/case, /security, /get-started, /contact) — PAGES_A ---- */
+.trust-ticker-mask {
+  -webkit-mask: linear-gradient(270deg, transparent 0%, #000 4.17%, #000 96.46%, transparent 100%);
+  mask: linear-gradient(270deg, transparent 0%, #000 4.17%, #000 96.46%, transparent 100%);
+}
+.lead-input::placeholder { color: rgba(160,167,181,.64); }
+/* ---- end Resources pages ---- */
+
+/* ---- Misc pages (/links /notebook /shirt /licensing /dpa) — PAGES_B §B8–B11 ---- */
+/* Single-side Framer ::after borders (used with .fborder + --fb) */
+.misc-bb::after { border-width: 0 0 1px 0; }
+.misc-bt::after { border-width: 1px 0 0 0; }
+/* ---- end Misc pages ---- */
+
+/* ---- Modality pages (/modality/antibody|enzyme|vaccine|peptide) — modality agent ---- */
+/* PropertyTicker (antibody M1): block radial mask + per-row horizontal fade */
+.ticker-block-mask { -webkit-mask: radial-gradient(62% 57% at 50% 50%, #000 20.26%, rgba(0,0,0,0) 100%); mask: radial-gradient(62% 57% at 50% 50%, #000 20.26%, rgba(0,0,0,0) 100%); }
+.ticker-row-mask { -webkit-mask: linear-gradient(to right, rgba(0,0,0,0) 0%, #000 12.5%, #000 87.5%, rgba(0,0,0,0) 100%); mask: linear-gradient(to right, rgba(0,0,0,0) 0%, #000 12.5%, #000 87.5%, rgba(0,0,0,0) 100%); }
+@media (min-width: 810px) {
+  .ticker-block-mask { -webkit-mask: radial-gradient(36% 100% at 50% 50%, #000 20.26%, rgba(0,0,0,0) 100%); mask: radial-gradient(36% 100% at 50% 50%, #000 20.26%, rgba(0,0,0,0) 100%); }
+}
+/* Peptide hero molecule backdrop */
+.molecule-mask { -webkit-mask: radial-gradient(41% 24% at 47% 41%, #000 0%, rgba(0,0,0,0) 100%); mask: radial-gradient(41% 24% at 47% 41%, #000 0%, rgba(0,0,0,0) 100%); }
+/* ProductMock glass frame: radial mask fading the bottom */
+.mock-frame {
+  -webkit-mask: radial-gradient(158% 75% at 50% 23.1%, #000 82.0471%, rgba(0,0,0,.95) 85%, rgba(0,0,0,.75) 88%, rgba(0,0,0,.55) 91.4277%, rgba(0,0,0,.35) 94.1967%, rgba(0,0,0,.2) 97.1918%, rgba(0,0,0,0) 100%);
+  mask: radial-gradient(158% 75% at 50% 23.1%, #000 82.0471%, rgba(0,0,0,.95) 85%, rgba(0,0,0,.75) 88%, rgba(0,0,0,.55) 91.4277%, rgba(0,0,0,.35) 94.1967%, rgba(0,0,0,.2) 97.1918%, rgba(0,0,0,0) 100%);
+}
+/* Feature-list grid pattern: 126px tiles (phone 82px), opacity .1, multiply, top fade */
+.modality-grid-pattern {
+  background: url("/assets/benefits-grid-pattern.svg") 0 0 / 82px 82px repeat;
+  opacity: .1; mix-blend-mode: multiply;
+  -webkit-mask: linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 40%); mask: linear-gradient(rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 40%);
+}
+@media (min-width: 810px) { .modality-grid-pattern { background-size: 126px 126px; } }
+/* Testimonial avatars */
+.avatar-mask { -webkit-mask: linear-gradient(#000 50%, rgba(0,0,0,.5) 100%); mask: linear-gradient(#000 50%, rgba(0,0,0,.5) 100%); }
+/* PhotoCard mirrored photo: phone box --pw×--ph at top −94, desktop --dw×--dh at top −62 */
+.photo-card-img { width: var(--pw); height: var(--ph); top: -94px; transform: translateX(-50%) rotateY(180deg); }
+@media (min-width: 810px) { .photo-card-img { width: var(--dw); height: var(--dh); top: -62px; } }
+/* Footer CTA blue screens (positions relative to the band centre) */
+.cta-screen { position: absolute; max-width: none; object-fit: cover; object-position: 50% 0; border-radius: 12px 12px 0 0; }
+.cta-report { left: calc(50% - 243px); top: 40px; width: 253.4px; height: 157.2px; }
+.cta-round { left: calc(50% - 127.1px); top: 0; width: 254.2px; height: 157.7px; box-shadow: 0 1px 16px 0 rgba(0,0,0,.25); }
+.cta-data { left: calc(50% - 10.5px); top: 80px; width: 253.4px; height: 157.2px; box-shadow: 0 1px 16px 0 rgba(0,0,0,.25); }
+@media (min-width: 810px) {
+  .cta-report { left: calc(50% - 689.7px); width: 719.4px; height: 446.3px; opacity: .9; }
+  .cta-round { left: calc(50% - 360.8px); width: 721.6px; height: 447.7px; }
+  .cta-data { left: calc(50% - 29.7px); width: 719.4px; height: 446.3px; opacity: .85; box-shadow: none; }
+}
+/* ---- end Modality pages ---- */
+
+/* ---- Company pages (/team, /careers, /lab) — company pages agent ---- */
+/* /team T1 bento: data screenshot (phone 249×156.6 @ 24,35; desktop 411.7×258.8 @ 48,48) */
+.team-data {
+  left: 24px; top: 35px; width: 249px; height: 156.6px; border-radius: 8px 8px 0 0;
+  -webkit-mask: linear-gradient(#000 9%, rgba(0,0,0,0) 79%); mask: linear-gradient(#000 9%, rgba(0,0,0,0) 79%);
+}
+@media (min-width: 810px) {
+  .team-data {
+    left: 48px; top: 48px; width: 411.7px; height: 258.8px; border-radius: 6px 6px 0 0;
+    -webkit-mask: linear-gradient(309deg, rgba(0,0,0,0) 21%, #000 91%); mask: linear-gradient(309deg, rgba(0,0,0,0) 21%, #000 91%);
+  }
+}
+/* /team T1 molecule bubbles: phone 18px blur 2 (coords ×0.5), desktop 36px blur 4 */
+.team-bubble {
+  left: calc(var(--bx) / 2); top: calc(var(--by) / 2); width: 18px; height: 18px;
+  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+}
+@media (min-width: 810px) {
+  .team-bubble { left: var(--bx); top: var(--by); width: 36px; height: 36px; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+}
+/* /team T1 pattern behind the molecule (1200×720, 126px tile) */
+.team-pattern {
+  background: url("/assets/benefits-grid-pattern.svg") repeat 0 0 / 126px 126px;
+  opacity: .05; filter: invert(1); mix-blend-mode: lighten;
+  -webkit-mask: radial-gradient(48% 50% at 50% 50%, #000 0%, rgba(0,0,0,0) 100%); mask: radial-gradient(48% 50% at 50% 50%, #000 0%, rgba(0,0,0,0) 100%);
+}
+/* /lab L1 coat mask, L2 aerial photo, L5 background video, L6 arrow glyph (mask) */
+.lab-coat { -webkit-mask: linear-gradient(#000 39%, rgba(0,0,0,0) 85%); mask: linear-gradient(#000 39%, rgba(0,0,0,0) 85%); }
+.lab-aerial { filter: blur(3px); -webkit-mask: linear-gradient(#000 50%, rgba(0,0,0,0) 100%); mask: linear-gradient(#000 50%, rgba(0,0,0,0) 100%); }
+.lab-auto-video { transform: rotateY(180deg); filter: blur(2px); mix-blend-mode: overlay; -webkit-mask: linear-gradient(#000 0%, rgba(0,0,0,0) 100%); mask: linear-gradient(#000 0%, rgba(0,0,0,0) 100%); }
+.lab-arrow { -webkit-mask: url("/assets/pages/lab/datauri-harmen-a7e570.svg") center / contain no-repeat; mask: url("/assets/pages/lab/datauri-harmen-a7e570.svg") center / contain no-repeat; }
+/* ---- end Company pages ---- */

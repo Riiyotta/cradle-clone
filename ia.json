@@ -1,0 +1,1057 @@
+{
+  "$comment": "Derived from the clone's source (src/routes.jsx, src/pages/*, src/chrome.js, src/data/cms.json). Section descriptions are original summaries, not site copy. Hand-edit this file only; IA.md and matrix.csv are generated.",
+  "meta": {
+    "source": "Local replica of https://www.cradle.bio (React/Vite clone in this folder)",
+    "status": "measured-from-codebase",
+    "totalRoutes": 99,
+    "totalTemplates": 25
+  },
+  "categories": {
+    "CHROME": "Site-wide navigation and footer, whose colour variant is chosen per route in src/chrome.js.",
+    "HERO": "Page-opening header block.",
+    "PROOF": "Customer logos, testimonials, quotes and case-study listings.",
+    "PRODUCT": "Explanation of the platform and its capabilities.",
+    "COMPANY": "Team, offices, hiring and lab content.",
+    "CONTENT": "Editorial and document bodies, such as articles, lists and policy text.",
+    "CONVERSION": "Calls to action, lead forms and newsletter capture."
+  },
+  "sections": {
+    "chrome.navbar": {
+      "category": "CHROME",
+      "description": "Fixed 64px top bar with the Cradle mark, Solutions/Company/Resources hover dropdowns, a Sign in control and a Discuss-your-project button; on phone it collapses to a hamburger menu. One component with dark, light and academia (green bar) variants.",
+      "scope": "On 96 routes: every route except the link-in-bio pages (links, notebook, shirt).",
+      "implementedBy": "src/components/Navbar.jsx"
+    },
+    "chrome.footer": {
+      "category": "CHROME",
+      "description": "Columned site footer: logo, link columns, a Connect column and a legal bar. One component whose only difference between variants is the background colour (blue, dark or accent).",
+      "scope": "On 96 routes: every route except the link-in-bio pages (links, notebook, shirt).",
+      "implementedBy": "src/components/Footer.jsx"
+    },
+    "hero.home": {
+      "category": "HERO",
+      "description": "Dark homepage hero: news pill, gradient-clipped H1, lead paragraph and two blurred blobs with scroll parallax.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Hero.jsx"
+    },
+    "product.platform-tabs": {
+      "category": "PRODUCT",
+      "description": "Click-only tabs that crossfade three app screenshots inside a masked frame; pills on phone.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/PlatformUI.jsx"
+    },
+    "proof.customers": {
+      "category": "PROOF",
+      "description": "Auto-advancing testimonial carousel with a progress bar, beside a 3x4 customer-logo grid with read-more badges.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Customers.jsx"
+    },
+    "proof.recent-case-studies": {
+      "category": "PROOF",
+      "description": "Row of four case-study cards (two on phone) with image, title and hover border.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/CaseStudies.jsx"
+    },
+    "product.benefits-bento": {
+      "category": "PRODUCT",
+      "description": "'Protein engineering 2.0' bento grid of animated mini-UIs, a video card and a radar chart.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Benefits.jsx"
+    },
+    "product.protein-visual": {
+      "category": "PRODUCT",
+      "description": "Field of 29 frosted bubbles with four molecule tiles that drift on scroll.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/ProteinVisual.jsx"
+    },
+    "product.modalities-grid": {
+      "category": "PRODUCT",
+      "description": "Four modality cards (antibody, enzyme, peptide, vaccine) with coloured icons.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Modalities.jsx"
+    },
+    "product.use-cases": {
+      "category": "PRODUCT",
+      "description": "Two 'explore use cases' cards with glow-on-hover shadows.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/UseCases.jsx"
+    },
+    "product.enterprise": {
+      "category": "PRODUCT",
+      "description": "Dark enterprise section with a fading background photo and a six-item feature grid.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Enterprise.jsx"
+    },
+    "company.lab-teaser": {
+      "category": "COMPANY",
+      "description": "Homepage teaser for the Cradle wet lab: photo plus short text and a button.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/Lab.jsx"
+    },
+    "content.wet-lab-posts": {
+      "category": "CONTENT",
+      "description": "Four 'learnings from our wet lab' blog cards.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/WetLabBlog.jsx"
+    },
+    "conversion.footer-cta-home": {
+      "category": "CONVERSION",
+      "description": "Closing call-to-action band with a two-tone heading, buttons and sliding app screens.",
+      "scope": "Homepage only.",
+      "implementedBy": "src/components/FooterCTA.jsx"
+    },
+    "hero.platform-intro": {
+      "category": "HERO",
+      "description": "Dark platform intro with a video trigger and heading that appears on load.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/Intro.jsx"
+    },
+    "product.manifesto": {
+      "category": "PRODUCT",
+      "description": "Sentence-by-sentence manifesto reveal beside a UI screenshot that tilts upright on scroll.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/Manifesto.jsx"
+    },
+    "proof.logo-wall": {
+      "category": "PROOF",
+      "description": "Static wall of customer logos.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/LogoWall.jsx"
+    },
+    "product.ui-collage": {
+      "category": "PRODUCT",
+      "description": "Parallax collage of product UI fragments.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/Collage.jsx"
+    },
+    "product.platform-benefits": {
+      "category": "PRODUCT",
+      "description": "Grid of platform benefit tiles.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/BenefitsGrid.jsx"
+    },
+    "product.feature-rows": {
+      "category": "PRODUCT",
+      "description": "Three alternating image/text feature rows that slide up on enter.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/FeatureRows.jsx"
+    },
+    "company.teams-cards-platform": {
+      "category": "COMPANY",
+      "description": "Photo cards describing who uses the platform, with check badges.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/Teams.jsx"
+    },
+    "product.workflow-tabs": {
+      "category": "PRODUCT",
+      "description": "Learn/Generate/Review tabs whose cards cascade in on every switch.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/TabbedCards.jsx"
+    },
+    "proof.quote-band": {
+      "category": "PROOF",
+      "description": "Full-width quote revealed word by word.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/QuoteBand.jsx"
+    },
+    "content.latest-updates": {
+      "category": "CONTENT",
+      "description": "Sticky-title 'latest updates' list of recent posts.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/LatestUpdates.jsx"
+    },
+    "conversion.footer-cta-light": {
+      "category": "CONVERSION",
+      "description": "Light closing call-to-action band with sliding screens.",
+      "scope": "/platform only.",
+      "implementedBy": "src/components/platform/FooterCTALight.jsx"
+    },
+    "hero.solution": {
+      "category": "HERO",
+      "description": "Split hero with a 3D-tilted screenshot; accent colour green (biopharma) or sky (industrial).",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/SolutionHero.jsx"
+    },
+    "proof.logo-ticker": {
+      "category": "PROOF",
+      "description": "Horizontally scrolling marquee of customer logos.",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/LogoTicker.jsx"
+    },
+    "product.pipeline-benefits": {
+      "category": "PRODUCT",
+      "description": "Before vs. with-Cradle pipeline animation followed by three benefit blocks (toggles, file ticker, positions illustration).",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/PipelineBenefits.jsx"
+    },
+    "product.modality-tabs": {
+      "category": "PRODUCT",
+      "description": "Tabs switching between modality panels.",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/ModalityTabs.jsx"
+    },
+    "proof.case-quote": {
+      "category": "PROOF",
+      "description": "Single customer quote with avatar, name and role.",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/CaseQuote.jsx"
+    },
+    "product.workflow-tabs-solution": {
+      "category": "PRODUCT",
+      "description": "Workflow tabs with cascading cards, solution-page variant.",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/TabbedCards.jsx"
+    },
+    "product.security-list": {
+      "category": "PRODUCT",
+      "description": "Security and compliance checklist block.",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/SecurityBlock.jsx"
+    },
+    "conversion.footer-cta-dark": {
+      "category": "CONVERSION",
+      "description": "Dark closing call-to-action band with sliding screens.",
+      "scope": "The 2 solution pages (biopharma and industrial).",
+      "implementedBy": "src/components/solutions/FooterCTADark.jsx"
+    },
+    "hero.academia": {
+      "category": "HERO",
+      "description": "Green academia hero with logo tiles and a three-row checklist.",
+      "scope": "/solutions/academia only.",
+      "implementedBy": "src/components/solutions/AcademiaHero.jsx"
+    },
+    "conversion.academia-form": {
+      "category": "CONVERSION",
+      "description": "Static local application form (submit is inert).",
+      "scope": "/solutions/academia only.",
+      "implementedBy": "src/components/solutions/AcademiaForm.jsx"
+    },
+    "hero.modality-ticker": {
+      "category": "HERO",
+      "description": "Modality hero with scrolling property tickers.",
+      "scope": "Antibody modality page only.",
+      "implementedBy": "src/components/modality/Heroes.jsx > PropertyTickerHero"
+    },
+    "hero.modality-text": {
+      "category": "HERO",
+      "description": "Text-led modality hero with a video poster or molecule backdrop.",
+      "scope": "The 3 text-hero modality pages (enzyme, vaccine, peptide).",
+      "implementedBy": "src/components/modality/Heroes.jsx > TextHero"
+    },
+    "product.problem-statement": {
+      "category": "PRODUCT",
+      "description": "Problem-statement block that precedes the pipeline.",
+      "scope": "Enzyme modality page only.",
+      "implementedBy": "src/components/modality/Pipeline.jsx > ProblemStatement"
+    },
+    "product.modality-pipeline": {
+      "category": "PRODUCT",
+      "description": "'What if' copy plus a pipeline bar that shrinks when fully in view and replays on return.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/Pipeline.jsx"
+    },
+    "product.feature-list": {
+      "category": "PRODUCT",
+      "description": "Feature list whose items replay on scroll.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/Features.jsx > FeatureList"
+    },
+    "product.dark-band": {
+      "category": "PRODUCT",
+      "description": "Dark interstitial band between features and the product mock.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/ModalityPage.jsx > DarkBand"
+    },
+    "product.product-mock": {
+      "category": "PRODUCT",
+      "description": "Product video or image that scales up as it scrolls into view.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/Features.jsx > ProductMock"
+    },
+    "product.properties-grid": {
+      "category": "PRODUCT",
+      "description": "Grid of optimisable protein properties.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/Features.jsx > Properties"
+    },
+    "proof.modality-cases": {
+      "category": "PROOF",
+      "description": "Modality case studies: logos, a quote or a featured card, plus case cards.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/Cases.jsx"
+    },
+    "company.teams-cards-modality": {
+      "category": "COMPANY",
+      "description": "Photo cards describing teams who use this modality.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/TeamsCTA.jsx > Teams"
+    },
+    "conversion.footer-cta-blue": {
+      "category": "CONVERSION",
+      "description": "Blue closing call-to-action band with sliding screens.",
+      "scope": "All 4 modality pages.",
+      "implementedBy": "src/components/modality/TeamsCTA.jsx > FooterCTABlue"
+    },
+    "hero.team-intro": {
+      "category": "HERO",
+      "description": "Team page intro bento with video and data tile.",
+      "scope": "/team only.",
+      "implementedBy": "src/components/company/TeamIntro.jsx"
+    },
+    "company.offices": {
+      "category": "COMPANY",
+      "description": "Sticky 'our offices' section with office cards and a static weather pill.",
+      "scope": "/team only.",
+      "implementedBy": "src/components/company/TeamSections.jsx > Offices"
+    },
+    "company.our-team": {
+      "category": "COMPANY",
+      "description": "Team members grouped as photo pills with bio tooltips.",
+      "scope": "/team only.",
+      "implementedBy": "src/components/company/TeamSections.jsx > OurTeam"
+    },
+    "company.investors": {
+      "category": "COMPANY",
+      "description": "Investors and advisors grid.",
+      "scope": "/team only.",
+      "implementedBy": "src/components/company/TeamSections.jsx > Investors"
+    },
+    "hero.careers": {
+      "category": "HERO",
+      "description": "Careers page header.",
+      "scope": "/careers only.",
+      "implementedBy": "src/components/company/CareersSections.jsx > CareersHeader"
+    },
+    "company.photo-mosaic": {
+      "category": "COMPANY",
+      "description": "Mosaic of office and team photos that load in.",
+      "scope": "/careers only.",
+      "implementedBy": "src/components/company/CareersSections.jsx > PhotoMosaic"
+    },
+    "company.life-at-cradle": {
+      "category": "COMPANY",
+      "description": "Life-at-Cradle video poster plus interview rows.",
+      "scope": "/careers only.",
+      "implementedBy": "src/components/company/CareersSections.jsx > LifeAtCradle"
+    },
+    "company.open-positions": {
+      "category": "COMPANY",
+      "description": "Open positions list (placeholder rows in the clone).",
+      "scope": "/careers only.",
+      "implementedBy": "src/components/company/CareersSections.jsx > OpenPositions"
+    },
+    "company.scam-notice": {
+      "category": "COMPANY",
+      "description": "Recruitment-scam warning band.",
+      "scope": "/careers only.",
+      "implementedBy": "src/components/company/CareersSections.jsx > ScamNotice"
+    },
+    "conversion.newsletter": {
+      "category": "CONVERSION",
+      "description": "Static local newsletter signup band (submit is inert).",
+      "scope": "/careers and /case.",
+      "implementedBy": "src/components/company/CareersSections.jsx > Newsletter; src/components/resources/NewsletterForm.jsx"
+    },
+    "hero.lab": {
+      "category": "HERO",
+      "description": "Lab header with a parallax lab coat and visitor badge.",
+      "scope": "/lab only.",
+      "implementedBy": "src/components/company/LabSections.jsx > LabHeader"
+    },
+    "company.aerial-photo": {
+      "category": "COMPANY",
+      "description": "Aerial lab photo that scales down on scroll.",
+      "scope": "/lab only.",
+      "implementedBy": "src/components/company/LabSections.jsx > AerialPhoto"
+    },
+    "company.lab-intro": {
+      "category": "COMPANY",
+      "description": "Lab intro text with a circle that draws itself on enter.",
+      "scope": "/lab only.",
+      "implementedBy": "src/components/company/LabSections.jsx > LabIntro"
+    },
+    "company.perks": {
+      "category": "COMPANY",
+      "description": "Lab perks list.",
+      "scope": "/lab only.",
+      "implementedBy": "src/components/company/LabSections.jsx > Perks"
+    },
+    "company.automation": {
+      "category": "COMPANY",
+      "description": "Blue automation section with a background video and four post cards.",
+      "scope": "/lab only.",
+      "implementedBy": "src/components/company/LabSections.jsx > Automation"
+    },
+    "company.lab-team-selector": {
+      "category": "COMPANY",
+      "description": "Click-to-select lab team member viewer.",
+      "scope": "/lab only.",
+      "implementedBy": "src/components/company/LabSections.jsx > MeetTheTeam"
+    },
+    "company.sharing-is-caring": {
+      "category": "COMPANY",
+      "description": "Floating post cards that pop in on enter.",
+      "scope": "/lab only.",
+      "implementedBy": "src/components/company/LabSections.jsx > SharingIsCaring"
+    },
+    "hero.case": {
+      "category": "HERO",
+      "description": "Case-studies header with a press-logo grid.",
+      "scope": "/case only.",
+      "implementedBy": "src/pages/Case.jsx > PressTile"
+    },
+    "proof.case-grid": {
+      "category": "PROOF",
+      "description": "Eleven-card case grid beside a sticky subscribe card, with a subscribe modal.",
+      "scope": "/case only.",
+      "implementedBy": "src/pages/Case.jsx > CaseCard"
+    },
+    "hero.security": {
+      "category": "HERO",
+      "description": "Dark security header with a chat-bubble letter and sticky avatar.",
+      "scope": "/security only.",
+      "implementedBy": "src/pages/Security.jsx > About"
+    },
+    "content.policy-body": {
+      "category": "CONTENT",
+      "description": "Long policy body with sticky H4 headings (placeholder paragraphs).",
+      "scope": "/security only.",
+      "implementedBy": "src/pages/Security.jsx > PolicyItem"
+    },
+    "hero.form-page": {
+      "category": "HERO",
+      "description": "Form-page header with an avatar trio.",
+      "scope": "The 2 form pages (get-started and contact).",
+      "implementedBy": "src/components/resources/FormPage.jsx > AvatarTrio"
+    },
+    "conversion.lead-form": {
+      "category": "CONVERSION",
+      "description": "Static local lead form card (submit shows a thanks state).",
+      "scope": "The 2 form pages (get-started and contact).",
+      "implementedBy": "src/components/resources/LeadForm.jsx"
+    },
+    "proof.trust-ticker": {
+      "category": "PROOF",
+      "description": "Trust-logo ticker; a static 4x2 grid on phone.",
+      "scope": "The 2 form pages (get-started and contact).",
+      "implementedBy": "src/components/resources/TrustTicker.jsx"
+    },
+    "hero.blog": {
+      "category": "HERO",
+      "description": "Blog heading with a blinking caret, plus a featured latest-post card.",
+      "scope": "/blog only.",
+      "implementedBy": "src/components/blog/BlogIndexParts.jsx > BlogHeading"
+    },
+    "content.blog-rails": {
+      "category": "CONTENT",
+      "description": "Three post rails (case studies, news, meet the team) and the maturity promo card.",
+      "scope": "/blog only.",
+      "implementedBy": "src/components/blog/BlogIndexParts.jsx > GroupRail"
+    },
+    "content.all-posts": {
+      "category": "CONTENT",
+      "description": "Date-sorted list of all posts beside a sticky subscribe card, followed by a newsletter band.",
+      "scope": "/blog only.",
+      "implementedBy": "src/components/blog/PostRow.jsx > PostRowIndex"
+    },
+    "hero.post": {
+      "category": "HERO",
+      "description": "Post header with title, intro, date, author chips and cover image.",
+      "scope": "The 53 blog post routes.",
+      "implementedBy": "src/components/blog/PostParts.jsx > PostHeader"
+    },
+    "content.post-body": {
+      "category": "CONTENT",
+      "description": "Rich-text article body (placeholder copy) exercising h2/h3/list/quote/table/callout.",
+      "scope": "The 53 blog post routes.",
+      "implementedBy": "src/components/blog/PostParts.jsx > RichText"
+    },
+    "content.recent-posts": {
+      "category": "CONTENT",
+      "description": "Recent-posts row of post cards.",
+      "scope": "On 54 routes: every blog post plus /blog/maturity.",
+      "implementedBy": "src/components/blog/RecentPosts.jsx"
+    },
+    "hero.maturity": {
+      "category": "HERO",
+      "description": "Maturity report hero with an on-page table-of-contents menu.",
+      "scope": "/blog/maturity only.",
+      "implementedBy": "src/pages/BlogMaturity.jsx > Hero"
+    },
+    "content.maturity-report": {
+      "category": "CONTENT",
+      "description": "Interactive maturity ladder, ledger, framework, coloured strand bands and common patterns (placeholder paragraphs).",
+      "scope": "/blog/maturity only.",
+      "implementedBy": "src/pages/BlogMaturity.jsx > Framework"
+    },
+    "content.video-index": {
+      "category": "CONTENT",
+      "description": "Video index with a locally filtered category select, video rows and Load More.",
+      "scope": "/video only.",
+      "implementedBy": "src/components/media/VideoIndexParts.jsx"
+    },
+    "hero.video-post": {
+      "category": "HERO",
+      "description": "Dark video hero with title and a poster-only player.",
+      "scope": "The 20 video routes.",
+      "implementedBy": "src/components/media/shared.jsx > PosterPlayer"
+    },
+    "hero.whitepaper": {
+      "category": "HERO",
+      "description": "'CRADLE-1' letters with scroll parallax, blurred blobs and description.",
+      "scope": "/whitepaper only.",
+      "implementedBy": "src/components/media/WhitepaperIntro.jsx"
+    },
+    "content.whitepaper-body": {
+      "category": "CONTENT",
+      "description": "Whitepaper video poster and four fact rows.",
+      "scope": "/whitepaper only.",
+      "implementedBy": "src/components/media/WhitepaperSections.jsx > FactRows"
+    },
+    "conversion.whitepaper-cta": {
+      "category": "CONVERSION",
+      "description": "Whitepaper closing call to action with side sheets.",
+      "scope": "/whitepaper only.",
+      "implementedBy": "src/components/media/WhitepaperSections.jsx > WhitepaperCTA"
+    },
+    "hero.presskit": {
+      "category": "HERO",
+      "description": "Press kit title with a popping, shimmering icon cluster.",
+      "scope": "/presskit only.",
+      "implementedBy": "src/components/media/Presskit.jsx > PresskitTitle"
+    },
+    "content.presskit-files": {
+      "category": "CONTENT",
+      "description": "Three press file lists (download items are inert).",
+      "scope": "/presskit only.",
+      "implementedBy": "src/components/media/Presskit.jsx > PresskitFileList"
+    },
+    "hero.licensing": {
+      "category": "HERO",
+      "description": "Licensing hero with a logo grid.",
+      "scope": "/licensing only.",
+      "implementedBy": "src/components/misc/Licensing.jsx > LicensingHero"
+    },
+    "conversion.license-tiers": {
+      "category": "CONVERSION",
+      "description": "License tier cards.",
+      "scope": "/licensing only.",
+      "implementedBy": "src/components/misc/Licensing.jsx > LicenseGrid"
+    },
+    "product.included-list": {
+      "category": "PRODUCT",
+      "description": "'Included in all licenses' checklist.",
+      "scope": "/licensing only.",
+      "implementedBy": "src/components/misc/Licensing.jsx > IncludedList"
+    },
+    "proof.partners-band": {
+      "category": "PROOF",
+      "description": "Partnerships band.",
+      "scope": "/licensing only.",
+      "implementedBy": "src/components/misc/Licensing.jsx > PartnersBand"
+    },
+    "content.doc-viewer": {
+      "category": "CONTENT",
+      "description": "Scrolling document viewer of 17 placeholder pages.",
+      "scope": "/dpa only.",
+      "implementedBy": "src/components/misc/DocViewer.jsx"
+    },
+    "hero.shirt": {
+      "category": "HERO",
+      "description": "Dark t-shirt hero with parallax squiggles.",
+      "scope": "/shirt only.",
+      "implementedBy": "src/components/misc/ShirtHero.jsx"
+    },
+    "hero.link-in-bio": {
+      "category": "HERO",
+      "description": "Centred brand block (logo tile and name) opening a link-in-bio page.",
+      "scope": "The 3 link-in-bio pages.",
+      "implementedBy": "src/components/misc/LinkInBio.jsx > BrandBlock"
+    },
+    "conversion.link-buttons": {
+      "category": "CONVERSION",
+      "description": "Stack of link buttons; same-site ones navigate, external ones are inert.",
+      "scope": "The 3 link-in-bio pages.",
+      "implementedBy": "src/components/misc/LinkInBio.jsx > LinkButtons"
+    },
+    "conversion.form-placeholder": {
+      "category": "CONVERSION",
+      "description": "Empty form box at the measured size where the live page embeds a form.",
+      "scope": "/notebook and /shirt.",
+      "implementedBy": "src/components/misc/LinkInBio.jsx > FormPlaceholder"
+    },
+    "proof.case-grid-compact": {
+      "category": "PROOF",
+      "description": "Compact recent case-study grid.",
+      "scope": "/links only.",
+      "implementedBy": "src/components/misc/LinkInBio.jsx > CaseGrid"
+    },
+    "content.wet-lab-videos": {
+      "category": "CONTENT",
+      "description": "Wet-lab video cards (poster only).",
+      "scope": "The 3 link-in-bio pages.",
+      "implementedBy": "src/components/misc/LinkInBio.jsx > WetLab"
+    },
+    "content.footer-graphic": {
+      "category": "CONTENT",
+      "description": "Footer graphic that slides up on enter.",
+      "scope": "The 3 link-in-bio pages.",
+      "implementedBy": "src/components/misc/LinkInBio.jsx > FooterGraphic"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Homepage",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "chrome": "nav:dark / footer:blue",
+      "sections": [
+        "chrome.navbar",
+        "hero.home",
+        "product.platform-tabs",
+        "proof.customers",
+        "proof.recent-case-studies",
+        "product.benefits-bento",
+        "product.protein-visual",
+        "product.modalities-grid",
+        "product.use-cases",
+        "product.enterprise",
+        "company.lab-teaser",
+        "content.wet-lab-posts",
+        "conversion.footer-cta-home",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.platform",
+      "name": "Platform",
+      "routeCount": 1,
+      "routes": [
+        "/platform"
+      ],
+      "chrome": "nav:dark / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.platform-intro",
+        "product.manifesto",
+        "proof.logo-wall",
+        "product.ui-collage",
+        "product.platform-benefits",
+        "product.feature-rows",
+        "company.teams-cards-platform",
+        "product.workflow-tabs",
+        "proof.quote-band",
+        "content.latest-updates",
+        "conversion.footer-cta-light",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.solution",
+      "name": "Solution (biopharma / industrial)",
+      "routeCount": 2,
+      "routes": [
+        "/solutions/biopharma",
+        "/solutions/industrial"
+      ],
+      "chrome": "nav:dark / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.solution",
+        "proof.logo-ticker",
+        "product.pipeline-benefits",
+        "product.modality-tabs",
+        "proof.case-quote",
+        "product.workflow-tabs-solution",
+        "product.security-list",
+        "conversion.footer-cta-dark",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.academia",
+      "name": "Solution (academia)",
+      "routeCount": 1,
+      "routes": [
+        "/solutions/academia"
+      ],
+      "chrome": "nav:academia (light on phone) / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.academia",
+        "conversion.academia-form",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.modality-ticker",
+      "name": "Modality (ticker hero)",
+      "routeCount": 1,
+      "routes": [
+        "/modality/antibody"
+      ],
+      "chrome": "nav:dark / footer:accent",
+      "sections": [
+        "chrome.navbar",
+        "hero.modality-ticker",
+        "product.modality-pipeline",
+        "product.feature-list",
+        "product.dark-band",
+        "product.product-mock",
+        "product.properties-grid",
+        "proof.modality-cases",
+        "company.teams-cards-modality",
+        "conversion.footer-cta-blue",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.modality-problem",
+      "name": "Modality (text hero + problem statement)",
+      "routeCount": 1,
+      "routes": [
+        "/modality/enzyme"
+      ],
+      "chrome": "nav:dark / footer:accent",
+      "sections": [
+        "chrome.navbar",
+        "hero.modality-text",
+        "product.problem-statement",
+        "product.modality-pipeline",
+        "product.feature-list",
+        "product.dark-band",
+        "product.product-mock",
+        "product.properties-grid",
+        "proof.modality-cases",
+        "company.teams-cards-modality",
+        "conversion.footer-cta-blue",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.modality-text",
+      "name": "Modality (text hero)",
+      "routeCount": 2,
+      "routes": [
+        "/modality/vaccine",
+        "/modality/peptide"
+      ],
+      "chrome": "nav:dark / footer:accent",
+      "sections": [
+        "chrome.navbar",
+        "hero.modality-text",
+        "product.modality-pipeline",
+        "product.feature-list",
+        "product.dark-band",
+        "product.product-mock",
+        "product.properties-grid",
+        "proof.modality-cases",
+        "company.teams-cards-modality",
+        "conversion.footer-cta-blue",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.team",
+      "name": "Team",
+      "routeCount": 1,
+      "routes": [
+        "/team"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.team-intro",
+        "company.offices",
+        "company.our-team",
+        "company.investors",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.careers",
+      "name": "Careers",
+      "routeCount": 1,
+      "routes": [
+        "/careers"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.careers",
+        "company.photo-mosaic",
+        "company.life-at-cradle",
+        "company.open-positions",
+        "conversion.newsletter",
+        "company.scam-notice",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.lab",
+      "name": "Lab",
+      "routeCount": 1,
+      "routes": [
+        "/lab"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.lab",
+        "company.aerial-photo",
+        "company.lab-intro",
+        "company.perks",
+        "company.automation",
+        "company.lab-team-selector",
+        "company.sharing-is-caring",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.case",
+      "name": "Case studies",
+      "routeCount": 1,
+      "routes": [
+        "/case"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.case",
+        "proof.case-grid",
+        "conversion.newsletter",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.security",
+      "name": "Security",
+      "routeCount": 1,
+      "routes": [
+        "/security"
+      ],
+      "chrome": "nav:dark (light on phone) / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.security",
+        "content.policy-body",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.form-page",
+      "name": "Form page",
+      "routeCount": 2,
+      "routes": [
+        "/get-started",
+        "/contact"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.form-page",
+        "conversion.lead-form",
+        "proof.trust-ticker",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "routeCount": 1,
+      "routes": [
+        "/blog"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.blog",
+        "content.blog-rails",
+        "content.all-posts",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog post",
+      "routeCount": 53,
+      "routes": [
+        "/blog/aintibody",
+        "/blog/hansa",
+        "/blog/optimizing-entire-batch"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/blog/{slug}",
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.post",
+        "content.post-body",
+        "content.recent-posts",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.blog-maturity",
+      "name": "Maturity report",
+      "routeCount": 1,
+      "routes": [
+        "/blog/maturity"
+      ],
+      "chrome": "nav:dark / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.maturity",
+        "content.maturity-report",
+        "content.recent-posts",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.video-index",
+      "name": "Video index",
+      "routeCount": 1,
+      "routes": [
+        "/video"
+      ],
+      "chrome": "nav:dark (light on phone) / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "content.video-index",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.video-post",
+      "name": "Video page",
+      "routeCount": 20,
+      "routes": [
+        "/video/guided-rounds",
+        "/video/sankey",
+        "/video/launch"
+      ],
+      "routesTruncated": true,
+      "routePattern": "/video/{slug}",
+      "chrome": "nav:dark (light on phone) / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.video-post",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.whitepaper",
+      "name": "Whitepaper",
+      "routeCount": 1,
+      "routes": [
+        "/whitepaper"
+      ],
+      "chrome": "nav:dark / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.whitepaper",
+        "content.whitepaper-body",
+        "conversion.whitepaper-cta",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.presskit",
+      "name": "Press kit",
+      "routeCount": 1,
+      "routes": [
+        "/presskit"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.presskit",
+        "content.presskit-files",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.licensing",
+      "name": "Licensing",
+      "routeCount": 1,
+      "routes": [
+        "/licensing"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "hero.licensing",
+        "conversion.license-tiers",
+        "product.included-list",
+        "proof.partners-band",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.dpa",
+      "name": "DPA",
+      "routeCount": 1,
+      "routes": [
+        "/dpa"
+      ],
+      "chrome": "nav:light / footer:dark",
+      "sections": [
+        "chrome.navbar",
+        "content.doc-viewer",
+        "chrome.footer"
+      ]
+    },
+    {
+      "id": "template.link-in-bio-links",
+      "name": "Link-in-bio (links)",
+      "routeCount": 1,
+      "routes": [
+        "/links"
+      ],
+      "chrome": "none",
+      "sections": [
+        "hero.link-in-bio",
+        "conversion.link-buttons",
+        "proof.case-grid-compact",
+        "content.wet-lab-videos",
+        "content.footer-graphic"
+      ]
+    },
+    {
+      "id": "template.link-in-bio-form",
+      "name": "Link-in-bio with form (notebook)",
+      "routeCount": 1,
+      "routes": [
+        "/notebook"
+      ],
+      "chrome": "none",
+      "sections": [
+        "hero.link-in-bio",
+        "conversion.form-placeholder",
+        "conversion.link-buttons",
+        "content.wet-lab-videos",
+        "content.footer-graphic"
+      ]
+    },
+    {
+      "id": "template.shirt",
+      "name": "Link-in-bio with shirt hero",
+      "routeCount": 1,
+      "routes": [
+        "/shirt"
+      ],
+      "chrome": "none",
+      "sections": [
+        "hero.shirt",
+        "hero.link-in-bio",
+        "conversion.form-placeholder",
+        "conversion.link-buttons",
+        "content.wet-lab-videos",
+        "content.footer-graphic"
+      ]
+    }
+  ]
+}

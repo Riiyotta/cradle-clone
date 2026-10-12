@@ -1,0 +1,1296 @@
+{
+ "_meta": {
+  "source": "https://www.cradle.bio (Framer CMS collections 'blog posts' yD_N71EPa, 'video' u6bs0RBQX, 'category' Te6zKDR7Z, 'team' dQBOZecbe), read 2026-10-12",
+  "notes": [
+   "blog: 53 CMS items, ordered exactly as the /blog 'All posts' list (date desc). /blog/maturity is a bespoke page, not a CMS item; it is listed under 'pages'.",
+   "readTime: the CMS has no read-time field and no CMS post renders one, so it is null everywhere. Only the bespoke /blog/maturity shows '15 min read'.",
+   "categories: Framer 'Categories' multi-reference (titles). modality: Framer enum (rendered as the small uppercase tag on /links case-study cards).",
+   "cover: local full-resolution copy of the CMS Image field. coverSource is the original URL (EXTERNAL, reference only).",
+   "video: the CMS has no date or author fields, so 'date' is null and 'createdAt' is the CMS record creation date. 'poster' is the mave.io player poster shown on the page. 'cover' is the CMS Thumbnail field.",
+   "Paths here are same-site local paths. Every *Source field and every embed URL is EXTERNAL."
+  ]
+ },
+ "blog": [
+  {
+   "slug": "aintibody",
+   "path": "/blog/aintibody",
+   "title": "A tight antibody that also passed developability: Our performance in the AIntibody Challenge",
+   "categories": [
+    "News"
+   ],
+   "modality": "Antibody",
+   "date": "2026-10-12",
+   "authors": [
+    "Franzi",
+    "Paul"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/aintibody.png",
+   "coverSource": "https://framerusercontent.com/images/pK2uYUG3fJdcDZzwsZQ07AnS3I.png"
+  },
+  {
+   "slug": "hansa",
+   "path": "/blog/hansa",
+   "title": "Hansa Biopharma Partners with Cradle to Advance AI-Driven Protein Design and Engineering",
+   "categories": [
+    "News"
+   ],
+   "modality": "Antibody",
+   "date": "2026-10-01",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/hansa.png",
+   "coverSource": "https://framerusercontent.com/images/LGYdozzF6O0j1007IO4myAdIY.png"
+  },
+  {
+   "slug": "optimizing-entire-batch",
+   "path": "/blog/optimizing-entire-batch",
+   "title": "Optimizing across the entire batch is one secret to better proteins",
+   "categories": [
+    "Guides"
+   ],
+   "modality": "Not specified",
+   "date": "2026-08-11",
+   "authors": [
+    "Nicolas"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/optimizing-entire-batch.png",
+   "coverSource": "https://framerusercontent.com/images/JipxhiqSo0ZOCyqbHd29FhgyBk.png"
+  },
+  {
+   "slug": "variant-selection-with-ml",
+   "path": "/blog/variant-selection-with-ml",
+   "title": "From picking favorites to designing experiments: how ML rethinks variant selection",
+   "categories": [
+    "Guides"
+   ],
+   "modality": "Not specified",
+   "date": "2026-07-06",
+   "authors": [
+    "Nicolas",
+    "Nicolò"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/variant-selection-with-ml.png",
+   "coverSource": "https://framerusercontent.com/images/IMvEP1no7o1S2MVbcAdIAvWjOM.png"
+  },
+  {
+   "slug": "antibody-first-round",
+   "path": "/blog/antibody-first-round",
+   "title": "How does AI change the first round of antibody optimization? ",
+   "categories": [
+    "Guides"
+   ],
+   "modality": "Antibody",
+   "date": "2026-06-24",
+   "authors": [
+    "Nicolas",
+    "Jonathan"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/antibody-first-round.png",
+   "coverSource": "https://framerusercontent.com/images/7LXf4GlkeDtQsPuLzpyBK4ATTlc.png"
+  },
+  {
+   "slug": "guided-rounds",
+   "path": "/blog/guided-rounds",
+   "title": "Introducing Guided Rounds",
+   "categories": [
+    "Product"
+   ],
+   "modality": "Not specified",
+   "date": "2026-06-16",
+   "authors": [
+    "Emanuele",
+    "Toby"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/guided-rounds.png",
+   "coverSource": "https://framerusercontent.com/images/ek8Q03JefhPPWbz9UeiM1ypO0zs.png"
+  },
+  {
+   "slug": "zero-shot",
+   "path": "/blog/zero-shot",
+   "title": "Zero-shot antibody diversification with Cradle",
+   "categories": [
+    "Guides"
+   ],
+   "modality": "Antibody",
+   "date": "2026-06-09",
+   "authors": [
+    "Jonathan",
+    "Nicolas"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/zero-shot.png",
+   "coverSource": "https://framerusercontent.com/images/p58PfRHDwBzCT6euTQ7y4zA5YK8.png"
+  },
+  {
+   "slug": "lundbeck",
+   "path": "/blog/lundbeck",
+   "title": "Lundbeck partners with Cradle to discover and optimize brain disorder treatments",
+   "categories": [
+    "News"
+   ],
+   "modality": "Antibody",
+   "date": "2026-06-03",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/lundbeck.png",
+   "coverSource": "https://framerusercontent.com/images/58sCE2CIYQ2Gy0Sr6cniqPDrCo.png"
+  },
+  {
+   "slug": "keasling-qs21",
+   "path": "/blog/keasling-qs21",
+   "title": "Using AI to produce vaccine adjuvants without cutting down rainforest",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Enzyme",
+   "date": "2026-03-23",
+   "authors": [
+    "Elise"
+   ],
+   "readTime": null,
+   "cover": "/assets/case-keasling-qs21.png",
+   "coverSource": "https://framerusercontent.com/images/3xanLcT3TJPy6Zy2FYx9nwRU.png"
+  },
+  {
+   "slug": "visualizing-trade-offs-in-multi-property-protein-optimization",
+   "path": "/blog/visualizing-trade-offs-in-multi-property-protein-optimization",
+   "title": "Visualizing trade-offs in multi-property protein optimization",
+   "categories": [
+    "Guides",
+    "Product"
+   ],
+   "modality": "Not specified",
+   "date": "2026-03-12",
+   "authors": [
+    "Dave"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/visualizing-trade-offs-in-multi-property-protein-optimization.png",
+   "coverSource": "https://framerusercontent.com/images/zbhpkblGiV1nNxaeWysLoEM36E.png"
+  },
+  {
+   "slug": "marcus-schindler",
+   "path": "/blog/marcus-schindler",
+   "title": "Drug discovery leader Marcus Schindler joins Cradle’s Advisory Board",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2026-03-03",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/marcus-schindler.jpg",
+   "coverSource": "https://framerusercontent.com/images/hIVP2zsBLgkkIO0BcsfFco9ni9w.jpg"
+  },
+  {
+   "slug": "beyond-the-bench",
+   "path": "/blog/beyond-the-bench",
+   "title": "We put our CTO in a lab coat. Here’s what happened next.",
+   "categories": [
+    "Spotlight",
+    "Lab"
+   ],
+   "modality": "Not specified",
+   "date": "2026-02-20",
+   "authors": [
+    "Jinel"
+   ],
+   "readTime": null,
+   "cover": "/assets/blog-beyond-the-bench.png",
+   "coverSource": "https://framerusercontent.com/images/bGwzodiFTanxuEUdEmGVycl1E.png"
+  },
+  {
+   "slug": "therapeutic-peptides",
+   "path": "/blog/therapeutic-peptides",
+   "title": "Engineering therapeutic peptides with 50% success rate under tight multi-property constraints, 5× faster than prior efforts",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Peptide",
+   "date": "2026-02-18",
+   "authors": [
+    "Daniel"
+   ],
+   "readTime": null,
+   "cover": "/assets/case-therapeutic-peptides.png",
+   "coverSource": "https://framerusercontent.com/images/zFxJKxnPIK4SNB2TDWo7XlzTCPY.png"
+  },
+  {
+   "slug": "staphylococcus-aureus-vaccine",
+   "path": "/blog/staphylococcus-aureus-vaccine",
+   "title": "Improving Staphylococcus aureus vaccine thermostability by 2.5 °C in a single round, 7× faster than rational design",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Vaccine",
+   "date": "2026-02-17",
+   "authors": [
+    "Daniel"
+   ],
+   "readTime": null,
+   "cover": "/assets/case-staph-aureus-vaccine.png",
+   "coverSource": "https://framerusercontent.com/images/CRRFF43xDoJUsY42UgD9vzcuAM.png"
+  },
+  {
+   "slug": "igg-campaign",
+   "path": "/blog/igg-campaign",
+   "title": "Rescuing a stalled IgG campaign: 10 candidates meeting potency and developability criteria in 3 rounds",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Antibody",
+   "date": "2026-02-17",
+   "authors": [
+    "Daniel"
+   ],
+   "readTime": null,
+   "cover": "/assets/case-igg-campaign.png",
+   "coverSource": "https://framerusercontent.com/images/BxXtrMbTWl6eupW0bp1qEL5ZI.png"
+  },
+  {
+   "slug": "haloalkane-dehalogenase-thermostability",
+   "path": "/blog/haloalkane-dehalogenase-thermostability",
+   "title": "Improving haloalkane dehalogenase thermostability by +20 °C while enhancing activity and expression",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Enzyme",
+   "date": "2026-02-17",
+   "authors": [
+    "Daniel"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/haloalkane-dehalogenase-thermostability.png",
+   "coverSource": "https://framerusercontent.com/images/Oy964YRBRqXuJe8u1q4htgILas.png"
+  },
+  {
+   "slug": "polyspecific-anti-venom-vhhs",
+   "path": "/blog/polyspecific-anti-venom-vhhs",
+   "title": "Engineering polyspecific anti-venom VHHs with sub-nanomolar binding and high thermostability",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Antibody",
+   "date": "2026-02-17",
+   "authors": [
+    "Daniel"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/polyspecific-anti-venom-vhhs.png",
+   "coverSource": "https://framerusercontent.com/images/rkmKWhBIqCVp5PkbS2NXYMHemQ.png"
+  },
+  {
+   "slug": "polyspecific-vhhs-sars-cov-2",
+   "path": "/blog/polyspecific-vhhs-sars-cov-2",
+   "title": "Engineering polyspecific VHHs with picomolar binding to SARS-CoV-2 wild type and Omicron",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Antibody",
+   "date": "2026-02-17",
+   "authors": [
+    "Daniel"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/polyspecific-vhhs-sars-cov-2.png",
+   "coverSource": "https://framerusercontent.com/images/IZZ2BYMQhuRJMkkT4XMs4jiKM.png"
+  },
+  {
+   "slug": "bayer-collaboration",
+   "path": "/blog/bayer-collaboration",
+   "title": "Bayer and Cradle enter collaboration to enhance AI-enabled antibody discovery and optimization",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2026-01-07",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/bayer-collaboration.png",
+   "coverSource": "https://framerusercontent.com/images/t5iZsRKpmj15ODw3dOPTI7LoBCQ.png"
+  },
+  {
+   "slug": "cradle-2025",
+   "path": "/blog/cradle-2025",
+   "title": "Cradle AI-powered protein engineering platform serving six of top 25 pharma leaders",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2025-12-12",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/cradle-2025.png",
+   "coverSource": "https://framerusercontent.com/images/OJNTDPoSaYDEj7BlzdMRKb1wYU.png"
+  },
+  {
+   "slug": "sample-tracking",
+   "path": "/blog/sample-tracking",
+   "title": "Backbone of high-throughput experimentation: Design principles for ML-ready sample tracking",
+   "categories": [
+    "Lab",
+    "Guides"
+   ],
+   "modality": "Not specified",
+   "date": "2025-10-17",
+   "authors": [
+    "Harmen",
+    "Daan"
+   ],
+   "readTime": null,
+   "cover": "/assets/blog-sample-tracking.jpg",
+   "coverSource": "https://framerusercontent.com/images/Qapk2ea1kvA4MNhAvq4dfNglA.jpg"
+  },
+  {
+   "slug": "webinar-lab-automation",
+   "path": "/blog/webinar-lab-automation",
+   "title": "Lab automation for faster ML-driven protein engineering",
+   "categories": [
+    "Webinar",
+    "Lab"
+   ],
+   "modality": "Not specified",
+   "date": "2025-09-19",
+   "authors": [
+    "Michelle",
+    "Jack"
+   ],
+   "readTime": null,
+   "cover": "/assets/blog-webinar-lab-automation.jpg",
+   "coverSource": "https://framerusercontent.com/images/Dwe28QpR2vpOX1aNrfV8bsUVGY.jpg"
+  },
+  {
+   "slug": "company-culture",
+   "path": "/blog/company-culture",
+   "title": "We were intentional about our company culture from day one. Here’s why that matters.",
+   "categories": [
+    "Stories"
+   ],
+   "modality": "Not specified",
+   "date": "2025-08-26",
+   "authors": [
+    "Thijs"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/company-culture.jpg",
+   "coverSource": "https://framerusercontent.com/images/dgybbNSnCycCPTOhQaCwrihJgZI.jpg"
+  },
+  {
+   "slug": "webinar-maturity",
+   "path": "/blog/webinar-maturity",
+   "title": "Is your drug discovery ready for AI? A maturity model for GenAI in drug discovery [Live webinar]",
+   "categories": [
+    "Webinar"
+   ],
+   "modality": "Not specified",
+   "date": "2025-08-18",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/webinar-maturity.png",
+   "coverSource": "https://framerusercontent.com/images/nw9EHJfUhEc2yT6FLl7GvCx2qNE.png"
+  },
+  {
+   "slug": "from-lab-rat-to-data-detective-how-this-scientist-turned-sales-into-an-art-form",
+   "path": "/blog/from-lab-rat-to-data-detective-how-this-scientist-turned-sales-into-an-art-form",
+   "title": "From lab rat to data detective: How this scientist turned Sales into an art form. ",
+   "categories": [
+    "Stories",
+    "Spotlight"
+   ],
+   "modality": "Not specified",
+   "date": "2025-05-19",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/from-lab-rat-to-data-detective-how-this-scientist-turned-sales-into-an-art-form.png",
+   "coverSource": "https://framerusercontent.com/images/PbdOLDNavFxSDenj88z7fIHus.png"
+  },
+  {
+   "slug": "benchmarking-at-cradle",
+   "path": "/blog/benchmarking-at-cradle",
+   "title": "Cradle’s innovation engine: How benchmarking powers breakthrough protein design",
+   "categories": [
+    "Product"
+   ],
+   "modality": "Not specified",
+   "date": "2025-05-13",
+   "authors": [
+    "Thomas",
+    "Noé"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/benchmarking-at-cradle.png",
+   "coverSource": "https://framerusercontent.com/images/Bwsi6z4Monj9EaaaJtTS66Wn6Io.png"
+  },
+  {
+   "slug": "adaptyv2",
+   "path": "/blog/adaptyv2",
+   "title": "Optimizing Cetuximab: An update on our win of the Adaptyv 2024 competition",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Antibody",
+   "date": "2025-03-31",
+   "authors": [
+    "Constance"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/adaptyv2.png",
+   "coverSource": "https://framerusercontent.com/images/oPewENrrJiCR2BbhRRQDhsEks.png"
+  },
+  {
+   "slug": "ab4s",
+   "path": "/blog/ab4s",
+   "title": "Cradle Announces Launch of Advanced Biotechnology Report with Industry Coalition",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2025-03-11",
+   "authors": [
+    "Luba"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/ab4s.png",
+   "coverSource": "https://framerusercontent.com/images/2PociH9VQ653I3XFanqFGb1h3Wo.png"
+  },
+  {
+   "slug": "how-protein-tags-revolutionize-lab-automation",
+   "path": "/blog/how-protein-tags-revolutionize-lab-automation",
+   "title": "Next-level high throughput workflows: Gotta tag 'em all",
+   "categories": [
+    "Lab"
+   ],
+   "modality": "Not specified",
+   "date": "2025-03-06",
+   "authors": [
+    "Nicolò",
+    "Michelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/blog-protein-tags.png",
+   "coverSource": "https://framerusercontent.com/images/ZpyturaxK2Nt8Q37vEyq3caito.png"
+  },
+  {
+   "slug": "slas2025",
+   "path": "/blog/slas2025",
+   "title": "SLAS 2025: A Peek at The Future of Lab Automation",
+   "categories": [
+    "Lab"
+   ],
+   "modality": "Not specified",
+   "date": "2025-02-26",
+   "authors": [
+    "Harmen",
+    "Jack",
+    "Daan",
+    "Richard"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/slas2025.jpg",
+   "coverSource": "https://framerusercontent.com/images/Jyybc4Az8Ee6bKerfDq0AVojyc.jpg"
+  },
+  {
+   "slug": "adaptyv-protein-design-competition",
+   "path": "/blog/adaptyv-protein-design-competition",
+   "title": "8x improvement in EGFR binding affinity: winning the Adaptyv Bio protein design competition",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Antibody",
+   "date": "2024-12-10",
+   "authors": [
+    "Constance",
+    "Gino",
+    "Patrick",
+    "Jonathan"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/adaptyv-protein-design-competition.jpg",
+   "coverSource": "https://framerusercontent.com/images/4UdCTbTNeeNo0TyNDeXL0GNKa1k.jpg"
+  },
+  {
+   "slug": "series-b",
+   "path": "/blog/series-b",
+   "title": "Cradle raises $73M Series B to Put AI-Powered Protein Engineering in Every Lab",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2024-11-26",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/series-b.jpg",
+   "coverSource": "https://framerusercontent.com/images/SLM7IQy9SpQUXcixT52wnloEj0.jpg"
+  },
+  {
+   "slug": "antibody-ngs-data-initiative",
+   "path": "/blog/antibody-ngs-data-initiative",
+   "title": "We're Funding the Creation of an Open-Source Antibody Dataset",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2024-11-11",
+   "authors": [
+    "Harmen"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/antibody-ngs-data-initiative.jpg",
+   "coverSource": "https://framerusercontent.com/images/P54dT1NnEOcoAQ9KnV60XSt08R4.jpg"
+  },
+  {
+   "slug": "align-to-innovate-benchmark",
+   "path": "/blog/align-to-innovate-benchmark",
+   "title": "'Align to Innovate' benchmark: state-of-the-art enzyme engineering with fully-automated GenAI",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Enzyme",
+   "date": "2024-10-03",
+   "authors": [
+    "Patrick",
+    "Gino"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/align-to-innovate-benchmark.jpg",
+   "coverSource": "https://framerusercontent.com/images/ln7s2Sj6jJsFHUNZpa6Yk8ujA.jpg"
+  },
+  {
+   "slug": "cultural-values",
+   "path": "/blog/cultural-values",
+   "title": "Cultural values at Cradle",
+   "categories": [
+    "Stories"
+   ],
+   "modality": "Not specified",
+   "date": "2024-10-02",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/cultural-values.jpeg",
+   "coverSource": "https://framerusercontent.com/images/yJJrR188nf9KHGRTFrQyDBITtP0.jpeg"
+  },
+  {
+   "slug": "sam-partovi-joins-cradle-as-cco",
+   "path": "/blog/sam-partovi-joins-cradle-as-cco",
+   "title": "We Welcome Sam Partovi as Our Chief Commercial Officer",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2024-09-25",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/sam-partovi-joins-cradle-as-cco.jpg",
+   "coverSource": "https://framerusercontent.com/images/912FOd5mwNlsTuwHEZLbRg8oY8Y.jpg"
+  },
+  {
+   "slug": "affordable-high-throughput-protein-purification",
+   "path": "/blog/affordable-high-throughput-protein-purification",
+   "title": "Affordable High-Throughput Protein Purification",
+   "categories": [
+    "Lab",
+    "Guides"
+   ],
+   "modality": "Not specified",
+   "date": "2024-07-30",
+   "authors": [
+    "Jinel",
+    "Michelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/affordable-high-throughput-protein-purification.gif",
+   "coverSource": "https://framerusercontent.com/images/Z2eudh8TCxavXlEW0eR9S4zbc.gif"
+  },
+  {
+   "slug": "the-art-of-assays-part-2",
+   "path": "/blog/the-art-of-assays-part-2",
+   "title": "The Art of Assays, Part 2: Tips and Tricks for Developing Great Assays",
+   "categories": [
+    "Lab",
+    "Guides"
+   ],
+   "modality": "Not specified",
+   "date": "2024-07-09",
+   "authors": [
+    "Michelle",
+    "Jinel"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/the-art-of-assays-part-2.jpg",
+   "coverSource": "https://framerusercontent.com/images/li7twQgbH1wZunonUeH154SuJmU.jpg"
+  },
+  {
+   "slug": "the-art-of-assays-part-1",
+   "path": "/blog/the-art-of-assays-part-1",
+   "title": "The Art of Assays, Part 1: Insights From Our Lab Into Enzymatic Assay Development",
+   "categories": [
+    "Guides",
+    "Lab"
+   ],
+   "modality": "Not specified",
+   "date": "2024-07-09",
+   "authors": [
+    "Michelle",
+    "Jinel"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/the-art-of-assays-part-1.jpg",
+   "coverSource": "https://framerusercontent.com/images/KZzRj8L6zfA9gls1O7AcOk9xFkw.jpg"
+  },
+  {
+   "slug": "interviews-franzi",
+   "path": "/blog/interviews-franzi",
+   "title": "Designing the future, one protein at a time: A chat with Franzi",
+   "categories": [
+    "Stories",
+    "Spotlight"
+   ],
+   "modality": "Not specified",
+   "date": "2024-07-03",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/interviews-franzi.jpg",
+   "coverSource": "https://framerusercontent.com/images/4NSjVd3ZuFNDoeXvOXAf3qDN094.jpg"
+  },
+  {
+   "slug": "from-prisons-to-proteins",
+   "path": "/blog/from-prisons-to-proteins",
+   "title": "From Prisons to Proteins: The Unexpected Journey of a UX Researcher",
+   "categories": [
+    "Stories",
+    "Spotlight"
+   ],
+   "modality": "Not specified",
+   "date": "2024-06-25",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/from-prisons-to-proteins.jpg",
+   "coverSource": "https://framerusercontent.com/images/W0wS15ywz1H8qAlGp26A3so9nc.jpg"
+  },
+  {
+   "slug": "cradle-partners-with-google-cloud-on-security-for-protein-engineering",
+   "path": "/blog/cradle-partners-with-google-cloud-on-security-for-protein-engineering",
+   "title": "Cradle partners with Google Cloud on security for protein engineering. ",
+   "categories": [
+    "Product",
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2024-06-25",
+   "authors": [
+    "Noé"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/cradle-partners-with-google-cloud-on-security-for-protein-engineering.gif",
+   "coverSource": "https://framerusercontent.com/images/RUDNxsrgozZBrSb5nEeMSfVwgc.gif"
+  },
+  {
+   "slug": "the-rise-of-the-bioneers-innovating-with-proteins-to-transform-industries-part-2",
+   "path": "/blog/the-rise-of-the-bioneers-innovating-with-proteins-to-transform-industries-part-2",
+   "title": "The Rise of The Pioneers. Innovating with Proteins to Transform Industries. Part 2.",
+   "categories": [
+    "Stories"
+   ],
+   "modality": "Not specified",
+   "date": "2024-06-14",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/the-rise-of-the-bioneers-innovating-with-proteins-to-transform-industries-part-2.png",
+   "coverSource": "https://framerusercontent.com/images/ZSZN3MyAXoFpI9D0iGChfOUii4.png"
+  },
+  {
+   "slug": "interviews-jinel",
+   "path": "/blog/interviews-jinel",
+   "title": "From Bench to Bytes: Why This Protein Engineer Joined an AI Startup, an Interview with Jinel Shah",
+   "categories": [
+    "Stories",
+    "Spotlight"
+   ],
+   "modality": "Not specified",
+   "date": "2024-06-05",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/interviews-jinel.jpg",
+   "coverSource": "https://framerusercontent.com/images/wUjFRHdnKHYLNhA24EUC9jgZQI.jpg"
+  },
+  {
+   "slug": "the-rise-of-the-bioneers-part-1",
+   "path": "/blog/the-rise-of-the-bioneers-part-1",
+   "title": "The Rise of The Pioneers. Innovating with Proteins to Transform Industries. Part 1.",
+   "categories": [
+    "Stories"
+   ],
+   "modality": "Not specified",
+   "date": "2024-05-30",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/the-rise-of-the-bioneers-part-1.gif",
+   "coverSource": "https://framerusercontent.com/images/wfQEpYbqplyblpGM2In26HXnYs.gif"
+  },
+  {
+   "slug": "exploring-darwin-assembly",
+   "path": "/blog/exploring-darwin-assembly",
+   "title": "Exploring Darwin Assembly: Insights from Cradle's Research on Efficient Gene Mutagenesis",
+   "categories": [
+    "Lab",
+    "Guides"
+   ],
+   "modality": "Not specified",
+   "date": "2024-05-22",
+   "authors": [
+    "Daan",
+    "Harmen"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/exploring-darwin-assembly.jpg",
+   "coverSource": "https://framerusercontent.com/images/HNCsk4bJFs7O7Zf1X0IGGYvIopI.jpg"
+  },
+  {
+   "slug": "interviews-jonathan",
+   "path": "/blog/interviews-jonathan",
+   "title": "Synthetic Symphonies: How an Audio Expert is Revolutionizing Biotech with AI, an Interview with Jonathan. ",
+   "categories": [
+    "Stories",
+    "Spotlight"
+   ],
+   "modality": "Not specified",
+   "date": "2024-05-09",
+   "authors": [
+    "Jelle"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/interviews-jonathan.jpg",
+   "coverSource": "https://framerusercontent.com/images/Wp382S9QhloDCXSlb36kh8XHQQ.jpg"
+  },
+  {
+   "slug": "case-study-combining-ai-generated-mutations-with-human-expertise-for-better-enzyme-designs",
+   "path": "/blog/case-study-combining-ai-generated-mutations-with-human-expertise-for-better-enzyme-designs",
+   "title": "Case study: design better P450s 4X faster by combining AI-generated mutations with human expertise",
+   "categories": [
+    "Case studies"
+   ],
+   "modality": "Enzyme",
+   "date": "2024-03-14",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/case-study-combining-ai-generated-mutations-with-human-expertise-for-better-enzyme-designs.jpg",
+   "coverSource": "https://framerusercontent.com/images/7wk2YAfyZdDZhtZLJH4FS1a0DzE.jpg"
+  },
+  {
+   "slug": "ginkgo-partnership",
+   "path": "/blog/ginkgo-partnership",
+   "title": "Cradle partners with Ginkgo and becomes part of the Ginkgo Technology Network ",
+   "categories": [
+    "Product",
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2024-02-28",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/ginkgo-partnership.jpg",
+   "coverSource": "https://framerusercontent.com/images/nXHqb1Jhlb1dASIT2KOuX9AHU.jpg"
+  },
+  {
+   "slug": "data-collection-guide",
+   "path": "/blog/data-collection-guide",
+   "title": "How to Get Started Using AI for Protein Design: A Guide to Data Collection",
+   "categories": [
+    "Lab",
+    "Guides"
+   ],
+   "modality": "Not specified",
+   "date": "2024-02-07",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/data-collection-guide.jpg",
+   "coverSource": "https://framerusercontent.com/images/EKZnr3LCGQ2tcjIgIZpQhNsYeQs.jpg"
+  },
+  {
+   "slug": "cradle-raises-24m-series-a-and-signs-partnerships-with-industry-leaders",
+   "path": "/blog/cradle-raises-24m-series-a-and-signs-partnerships-with-industry-leaders",
+   "title": "Cradle raises $24M Series A and signs partnerships with industry leaders",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2023-11-28",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/cradle-raises-24m-series-a-and-signs-partnerships-with-industry-leaders.jpg",
+   "coverSource": "https://framerusercontent.com/images/TlvGHEl8oUX8zfzDK6HIFoPWoc.jpg"
+  },
+  {
+   "slug": "2022-bio-developer-survey-results",
+   "path": "/blog/2022-bio-developer-survey-results",
+   "title": "2022 Bio Developer survey results",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2023-05-11",
+   "authors": [
+    "Sytske"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/2022-bio-developer-survey-results.jpg",
+   "coverSource": "https://framerusercontent.com/images/qAcgzo5ngseBoQasodweVQkzdY.jpg"
+  },
+  {
+   "slug": "cradle-raises-5m",
+   "path": "/blog/cradle-raises-5m",
+   "title": "We've raised $5.5M to design protein-machines and cell-factories with AI",
+   "categories": [
+    "News"
+   ],
+   "modality": "Not specified",
+   "date": "2022-11-17",
+   "authors": [
+    "Stef"
+   ],
+   "readTime": null,
+   "cover": "/assets/cms/cradle-raises-5m.webp",
+   "coverSource": "https://framerusercontent.com/images/Mk4xLAZqsOJEpXvs6ZG01G68Jiw.webp"
+  }
+ ],
+ "pages": [
+  {
+   "slug": "maturity",
+   "path": "/blog/maturity",
+   "title": "Introducing an ‘ML maturity ladder’ for biologics discovery and development",
+   "categories": [],
+   "date": null,
+   "authors": [
+    "Stef van Grieken"
+   ],
+   "readTime": "15 min read",
+   "cover": null,
+   "note": "Bespoke page, not in the CMS. Featured on /blog as the 'maturity' card. No category or date is rendered."
+  }
+ ],
+ "video": [
+  {
+   "slug": "guided-rounds",
+   "path": "/video/guided-rounds",
+   "title": "Guided Rounds in Cradle",
+   "category": "Academy",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awaukgOYWgAvm",
+    "external": true
+   },
+   "poster": "/assets/cms/video-guided-rounds-poster.jpg",
+   "cover": "/assets/cms/video-guided-rounds.jpg",
+   "coverSource": "https://framerusercontent.com/images/woaaMcp81BwumNUA7oyl0dthQ.jpg"
+  },
+  {
+   "slug": "sankey",
+   "path": "/video/sankey",
+   "title": "Visualizing Multi-property Protein Optimization With Sankey Plots",
+   "category": "Academy",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awadqTo2OnO7V",
+    "external": true
+   },
+   "poster": "/assets/cms/video-sankey-poster.jpg",
+   "cover": "/assets/cms/video-sankey.jpg",
+   "coverSource": "https://framerusercontent.com/images/Iz5IvaTin0EIpX3F63FH0Z5OXo.jpg"
+  },
+  {
+   "slug": "launch",
+   "path": "/video/launch",
+   "title": "Cradle Launch 2026",
+   "category": "Keynote",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awa2ee5qnYZBG",
+    "external": true
+   },
+   "poster": "/assets/cms/video-launch-poster.jpg",
+   "cover": "/assets/cms/video-launch.jpg",
+   "coverSource": "https://framerusercontent.com/images/Tda3YKFs2SIai6lWPFMFsXgDFtU.jpg"
+  },
+  {
+   "slug": "launch-sm",
+   "path": "/video/launch-sm",
+   "title": "Cradle Launch 2026 - Small",
+   "category": "Keynote",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awa4Ygu3aLnBX",
+    "external": true
+   },
+   "poster": "/assets/cms/video-launch-sm-poster.jpg",
+   "cover": "/assets/cms/video-launch-sm.jpg",
+   "coverSource": "https://framerusercontent.com/images/Tda3YKFs2SIai6lWPFMFsXgDFtU.jpg"
+  },
+  {
+   "slug": "cradle-1",
+   "path": "/video/cradle-1",
+   "title": "Introducing CRADLE-1",
+   "category": "Keynote",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awanqC6cPGa7M",
+    "external": true
+   },
+   "poster": "/assets/cms/video-cradle-1-poster.jpg",
+   "cover": "/assets/cms/video-cradle-1.jpg",
+   "coverSource": "https://framerusercontent.com/images/P5GSpSG8Xq71lXz8RTqKIIW4NfU.jpg"
+  },
+  {
+   "slug": "pegs-stef",
+   "path": "/video/pegs-stef",
+   "title": "Lessons in building a platform for biologics discovery - Stef van Grieken, PEGS 2025",
+   "category": "Keynote",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awa8WCCJHToBT",
+    "external": true
+   },
+   "poster": "/assets/cms/video-pegs-stef-poster.jpg",
+   "cover": "/assets/cms/video-pegs-stef.jpg",
+   "coverSource": "https://framerusercontent.com/images/nz57C1nfnCjZwlSV3ztgDtRxiY.jpg"
+  },
+  {
+   "slug": "pegs-jonathan",
+   "path": "/video/pegs-jonathan",
+   "title": "Scalable, robust and easy to use biologics discovery & development with Generative AI - Jonathan-Ziegler @PEGS Lisbon 2025",
+   "category": "Keynote",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awaq0xcjPui0D",
+    "external": true
+   },
+   "poster": "/assets/cms/video-pegs-jonathan-poster.jpg",
+   "cover": "/assets/cms/video-pegs-jonathan.jpg",
+   "coverSource": "https://framerusercontent.com/images/dIEvcLhSs3KwR5zssbewhmW4.jpg"
+  },
+  {
+   "slug": "ai-maturity",
+   "path": "/video/ai-maturity",
+   "title": "Is your drug discovery ready for AI? A maturity model for GenAI in drug discovery",
+   "category": "Webinar",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awatRkDB1YOz0",
+    "external": true
+   },
+   "poster": "/assets/cms/video-ai-maturity-poster.jpg",
+   "cover": "/assets/cms/video-ai-maturity.jpg",
+   "coverSource": "https://framerusercontent.com/images/PTmgCmijCitOZ1BomyQPR3baalw.jpg"
+  },
+  {
+   "slug": "lab-automation",
+   "path": "/video/lab-automation",
+   "title": "Lab automation for faster ML-driven protein engineering",
+   "category": "Webinar",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awahCuNk2lMcN",
+    "external": true
+   },
+   "poster": "/assets/cms/video-lab-automation-poster.jpg",
+   "cover": "/assets/cms/video-lab-automation.jpg",
+   "coverSource": "https://framerusercontent.com/images/qJ3beSOuOonLvTZARm2qhd1wYXk.jpg"
+  },
+  {
+   "slug": "cetuximab",
+   "path": "/video/cetuximab",
+   "title": "Optimizing Cetuximab: Winning Adaptyv's Protein Design Competition",
+   "category": "Webinar",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awas7IKtvuwFs",
+    "external": true
+   },
+   "poster": "/assets/cms/video-cetuximab-poster.jpg",
+   "cover": "/assets/cms/video-cetuximab.jpg",
+   "coverSource": "https://framerusercontent.com/images/e3uW0iak2iqpKy7uoD6peBd3AA.jpg"
+  },
+  {
+   "slug": "keasling",
+   "path": "/video/keasling",
+   "title": "Keasling Lab x Cradle",
+   "category": "Case study",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awavqPB1r3SIK",
+    "external": true
+   },
+   "poster": "/assets/cms/video-keasling-poster.jpg",
+   "cover": "/assets/cms/video-keasling.jpg",
+   "coverSource": "https://framerusercontent.com/images/uQ9KAw66juUqFg8p6Cjo2jq63yY.jpg"
+  },
+  {
+   "slug": "benchling-demo",
+   "path": "/video/benchling-demo",
+   "title": "Benchling x Tecan Fluent Demo",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awamJa8zGHRl2",
+    "external": true
+   },
+   "poster": "/assets/cms/video-benchling-demo-poster.jpg",
+   "cover": "/assets/cms/video-benchling-demo.jpg",
+   "coverSource": "https://framerusercontent.com/images/3RDThS56lwjXNZJ35l4mLVpbAc.jpg"
+  },
+  {
+   "slug": "culture",
+   "path": "/video/culture",
+   "title": "Cradle - Offsites and Culture",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awaD8TD7Ik2Ab",
+    "external": true
+   },
+   "poster": "/assets/cms/video-culture-poster.jpg",
+   "cover": "/assets/cms/video-culture.jpg",
+   "coverSource": "https://framerusercontent.com/images/c4W3dA4q2WnywLe62qYfPWORA9w.jpg"
+  },
+  {
+   "slug": "outro",
+   "path": "/video/outro",
+   "title": "Cradle Outro 1080p - Rectangle",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awawN73oN3ucP",
+    "external": true
+   },
+   "poster": "/assets/cms/video-outro-poster.jpg",
+   "cover": "/assets/cms/video-outro.jpg",
+   "coverSource": "https://framerusercontent.com/images/kjY9SQxbGiOlK7zxMRWVbSdGM34.jpg"
+  },
+  {
+   "slug": "turntable",
+   "path": "/video/turntable",
+   "title": "Cradle turntable 1",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awafnA5bY1dqR",
+    "external": true
+   },
+   "poster": "/assets/cms/video-turntable-poster.jpg",
+   "cover": "/assets/cms/video-turntable.jpg",
+   "coverSource": "https://framerusercontent.com/images/fpsxHp7QArtcu1r6vSyO3ZfIU.jpg"
+  },
+  {
+   "slug": "lab-normalization",
+   "path": "/video/lab-normalization",
+   "title": "Inside the Cradle Lab - Automating Protein Sample Normalization",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awaQEyXdVl1cC",
+    "external": true
+   },
+   "poster": "/assets/cms/video-lab-normalization-poster.jpg",
+   "cover": "/assets/cms/video-lab-normalization.jpg",
+   "coverSource": "https://framerusercontent.com/images/21FZv0Y4QI36K2nVWMMZ6uHqDto.jpg"
+  },
+  {
+   "slug": "lab-tracking",
+   "path": "/video/lab-tracking",
+   "title": "Inside the Cradle Lab - Design principles for ML-ready sample tracking",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awaEZBMqekBww",
+    "external": true
+   },
+   "poster": "/assets/cms/video-lab-tracking-poster.jpg",
+   "cover": "/assets/cms/video-lab-tracking.jpg",
+   "coverSource": "https://framerusercontent.com/images/hiQgbVk7iayG7tbm4HK93lVwc.jpg"
+  },
+  {
+   "slug": "clip-1",
+   "path": "/video/clip-1",
+   "title": "Naamloze video ‐ Gemaakt met Clipchamp cradle1",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awa07NgAgUmTt",
+    "external": true
+   },
+   "poster": "/assets/cms/video-clip-1-poster.jpg",
+   "cover": "/assets/cms/video-clip-1.jpg",
+   "coverSource": "https://framerusercontent.com/images/4toWqp5vzp9yCpHtnzm6l6HRik.jpg"
+  },
+  {
+   "slug": "plate-butler",
+   "path": "/video/plate-butler",
+   "title": "Plate Butler Demo",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awa6fIky8l0rS",
+    "external": true
+   },
+   "poster": "/assets/cms/video-plate-butler-poster.jpg",
+   "cover": "/assets/cms/video-plate-butler.jpg",
+   "coverSource": "https://framerusercontent.com/images/8LPehcZY0jB8W9D0FICn2NTLG80.jpg"
+  },
+  {
+   "slug": "welcome-marcus",
+   "path": "/video/welcome-marcus",
+   "title": "Welcome to team Cradle, Marcus Schindler",
+   "category": "Other",
+   "date": null,
+   "createdAt": "2026-07-30",
+   "authors": [],
+   "readTime": null,
+   "embed": {
+    "provider": "mave.io",
+    "element": "<mave-player embed=…>",
+    "maveEmbedId": "o6awaP5Lx3qbHhJ",
+    "external": true
+   },
+   "poster": "/assets/cms/video-welcome-marcus-poster.jpg",
+   "cover": "/assets/cms/video-welcome-marcus.jpg",
+   "coverSource": "https://framerusercontent.com/images/Fj2JnFufVWxZWMK1yH9dQ2k1rHY.jpg"
+  }
+ ]
+}
