@@ -1,9 +1,9 @@
 {
   "repositoryId": "cradle-bio-design-repo",
-  "repositoryVersion": "1.0.0",
-  "pageSpecVersion": "1.0.0",
-  "allowlistVersion": "1.0.0",
-  "versionFieldNote": "allowlistVersion is machine-checked: extraction/verify_all.py fails if it differs from tokens/llm/component-allowlist.json. repositoryVersion and pageSpecVersion are documentation-only, hand-maintained markers; pageSpecVersion is additionally pinned by the schema (const) but nothing compares it to this field.",
+  "repositoryVersion": "1.1.0",
+  "pageSpecVersion": "1.1.0",
+  "allowlistVersion": "1.1.0",
+  "versionFieldNote": "allowlistVersion is machine-checked: extraction/verify_all.py fails if it differs from tokens/llm/component-allowlist.json. pageSpecVersion is pinned by the schema (const) and used by the adversarial controls, but nothing compares this manifest field to it. repositoryVersion, and the catalogVersion/policyVersion fields inside tokens/llm/, are documentation-only, hand-maintained markers. The token catalog itself is machine-checked by content (rebuilt and compared), not by version.",
   "status": "design-review-pending",
   "productionApproved": false,
   "defaultTheme": "light",
@@ -11,14 +11,19 @@
     "light",
     "dark"
   ],
+  "defaultMode": "generation",
+  "modes": {
+    "generation": "default; new pages for the AI team (RAG/Remix). Generation-safe asset roles only, token references only, no real Cradle brand/customer/person content.",
+    "clone": "opt-in with \"mode\": \"clone\"; exact reproduction of the local clone for fidelity QA only."
+  },
   "source": {
     "description": "Local React/Vite replica of the public Cradle marketing site (www.cradle.bio), measured 2026-10-12",
     "realCompanySource": true
   },
   "counts": {
-    "foundationTokens": 185,
+    "foundationTokens": 189,
     "semanticTokens": 23,
-    "componentTokenGroups": 11,
+    "componentTokenGroups": 42,
     "layoutTokens": 9,
     "themes": 2,
     "primitives": 8,
@@ -26,9 +31,13 @@
     "sections": 98,
     "templates": 26,
     "routes": 101,
-    "graphRules": 15,
-    "assetRoles": 15,
-    "registeredAssets": 457
+    "graphRules": 20,
+    "assetRoles": 19,
+    "registeredAssets": 457,
+    "cloneOnlyAssetRoles": 12,
+    "generationSafeAssetRoles": 7,
+    "catalogTokens": 263,
+    "styleFields": 17
   },
   "entryPoints": {
     "readme": "README.md",
@@ -38,12 +47,16 @@
     "semanticValidator": "schema/semantic_validate.py",
     "adversarialTests": "schema/tests/adversarial_test.py",
     "verifyAll": "extraction/verify_all.py",
+    "tokenCatalogBuilder": "extraction/build_token_catalog.py",
+    "proveDrift": "extraction/prove_drift.py",
     "measuredValues": "extraction/measured-values.json",
     "templates": "templates/templates.json",
     "routes": "templates/routes.json",
     "compatibilityGraph": "compatibility/graph.json",
     "allowlist": "tokens/llm/component-allowlist.json",
     "assetRoles": "tokens/llm/asset-roles.json",
+    "tokenCatalog": "tokens/llm/token-catalog.json",
+    "tokenPolicy": "tokens/llm/token-policy.json",
     "foundationTokens": "tokens/00-foundation",
     "semanticTokens": "tokens/10-semantic/semantic.json",
     "themes": "tokens/themes",

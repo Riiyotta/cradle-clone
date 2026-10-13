@@ -1,0 +1,384 @@
+{
+  "$description": "What a PageSpec may say about style. The only style values a PageSpec carries are the closed list of styleFields below; each must be a token reference object {\"token\": \"<id>\"} whose id exists in tokens/llm/token-catalog.json, belongs to a pageSpecReferenceable category, is one of the field's categories and starts with one of its allowedPrefixes. Raw values (hex, rgb()/rgba()/hsl(), px/rem lengths, shadows, gradients, cubic-bezier()/ms easing, Tailwind arbitrary-value or palette classes) are rejected in every string of a PageSpec, in both modes. Enforced by schema/pagespec.schema.json (per-field token enums) and schema/semantic_validate.py (TOKEN_REFS_RESOLVE, NO_RAW_STYLE_LITERALS); parity with the catalog and the section contracts is checked by extraction/verify_all.py.",
+  "policyVersion": "1.1.0",
+  "catalog": "tokens/llm/token-catalog.json",
+  "referenceForm": {
+    "shape": {
+      "token": "<catalog id>"
+    },
+    "example": {
+      "token": "color.modality.antibody"
+    },
+    "rejectedForms": [
+      "a bare string, including \"$token:...\" or \"{color.modality.antibody}\" alias syntax",
+      "{\"$token\": ...} or any object with keys other than \"token\"",
+      "an id that is not in token-catalog.json",
+      "any raw CSS/Tailwind value"
+    ]
+  },
+  "categories": {
+    "color": {
+      "pageSpecReferenceable": true,
+      "note": "Foundation palette, alpha tints and semantic colour roles."
+    },
+    "elevation": {
+      "pageSpecReferenceable": true,
+      "note": "Shadows and coloured glows."
+    },
+    "radius": {
+      "pageSpecReferenceable": true,
+      "note": "Corner radius scale."
+    },
+    "spacing": {
+      "pageSpecReferenceable": true,
+      "note": "Gap/padding steps and page-frame measurements."
+    },
+    "typography": {
+      "pageSpecReferenceable": true,
+      "note": "Families, weights, sizes, tracking and named text styles."
+    },
+    "component": {
+      "pageSpecReferenceable": true,
+      "note": "Composite presets measured from one component (a dot = colour + glow, a size preset, a padding preset). Only reachable through the styleFields that name them."
+    },
+    "sizing": {
+      "pageSpecReferenceable": false,
+      "note": "Icon/element sizes are owned by primitives and components."
+    },
+    "motion": {
+      "pageSpecReferenceable": false,
+      "note": "Easing, springs and durations are owned by section contracts; a PageSpec picks motion only through motion.pattern (closed enum) and reducedMotionFallback."
+    },
+    "breakpoint": {
+      "pageSpecReferenceable": false,
+      "note": "Responsive behaviour is owned by each section's structured responsive block."
+    },
+    "layout": {
+      "pageSpecReferenceable": false,
+      "note": "Container widths, gutters and nav height are owned by templates and chrome."
+    }
+  },
+  "styleFields": [
+    {
+      "section": "product.protein-visual",
+      "path": "items/[]/bg",
+      "categories": [
+        "color"
+      ],
+      "allowedPrefixes": [
+        "color.modality."
+      ]
+    },
+    {
+      "section": "product.modalities-grid",
+      "path": "items/[]/color",
+      "categories": [
+        "color"
+      ],
+      "allowedPrefixes": [
+        "color.modality."
+      ]
+    },
+    {
+      "section": "product.use-cases",
+      "path": "items/[]/color",
+      "categories": [
+        "color"
+      ],
+      "allowedPrefixes": [
+        "color.modality."
+      ]
+    },
+    {
+      "section": "product.use-cases",
+      "path": "items/[]/hover",
+      "categories": [
+        "elevation"
+      ],
+      "allowedPrefixes": [
+        "elevation.glow-"
+      ]
+    },
+    {
+      "section": "company.teams-cards-platform",
+      "path": "items/[]/dot",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.teams-card.dot."
+      ]
+    },
+    {
+      "section": "company.teams-cards-platform",
+      "path": "items/[]/labelGradient",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.teams-card.label-gradient."
+      ]
+    },
+    {
+      "section": "hero.academia",
+      "path": "items/[]/cls",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.academia-logo.size."
+      ]
+    },
+    {
+      "section": "product.feature-rows",
+      "path": "items/[]/section",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.feature-row.padding."
+      ]
+    },
+    {
+      "section": "product.feature-rows",
+      "path": "items/[]/inner",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.feature-row.inner."
+      ]
+    },
+    {
+      "section": "company.sharing-is-caring",
+      "path": "items/[]/radius",
+      "categories": [
+        "radius"
+      ],
+      "allowedPrefixes": [
+        "radius."
+      ]
+    },
+    {
+      "section": "company.sharing-is-caring",
+      "path": "items/[]/gap",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.lab-floating-card.gap."
+      ]
+    },
+    {
+      "section": "company.sharing-is-caring",
+      "path": "items/[]/titleCls",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.lab-floating-card.title."
+      ]
+    },
+    {
+      "section": "content.latest-updates",
+      "path": "items/[]/titleColor",
+      "categories": [
+        "color"
+      ],
+      "allowedPrefixes": [
+        "color.gray.",
+        "semantic.text."
+      ]
+    },
+    {
+      "section": "product.pipeline-benefits",
+      "path": "block/featureCls/[]",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.pipeline-feature."
+      ]
+    },
+    {
+      "section": "product.pipeline-benefits",
+      "path": "block/tileHPhone",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.pipeline-tile.phone-height."
+      ]
+    },
+    {
+      "section": "proof.customers",
+      "path": "items/[]/bg",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.testimonial-slide.bg."
+      ]
+    },
+    {
+      "section": "conversion.footer-cta-blue",
+      "path": "items/[]/cls",
+      "categories": [
+        "component"
+      ],
+      "allowedPrefixes": [
+        "component.cta-screen."
+      ]
+    }
+  ],
+  "rawValuePatterns": {
+    "hex-color": {
+      "regex": "(?<![\\w&/#])#(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{3,4})(?![\\w-])",
+      "example": "#3cab57"
+    },
+    "color-function": {
+      "regex": "\\b(?:rgba?|hsla?|hwb|lab|lch|oklch|oklab|color-mix)\\s*\\(",
+      "example": "rgba(60,171,87,0.4)"
+    },
+    "gradient-function": {
+      "regex": "\\b(?:linear|radial|conic)-gradient\\s*\\(",
+      "example": "linear-gradient(180deg,#fff 0%,#f9fafb 100%)"
+    },
+    "css-length": {
+      "regex": "(?<![\\w.#-])-?(?:\\d+\\.?\\d*|\\.\\d+)(?:px|rem|em|vh|vw|vmin|vmax|pt)\\b",
+      "example": "8px"
+    },
+    "css-math": {
+      "regex": "\\b(?:calc|var|clamp|min|max)\\s*\\(\\s*[-\\w.(]",
+      "example": "calc(50% - 243px)"
+    },
+    "easing-function": {
+      "regex": "\\b(?:cubic-bezier|steps)\\s*\\(",
+      "example": "cubic-bezier(0.12,0.23,0.5,1)"
+    },
+    "css-duration": {
+      "regex": "(?<![\\w.])\\d+(?:\\.\\d+)?ms\\b",
+      "example": "100ms"
+    },
+    "tailwind-arbitrary-class": {
+      "regex": "\\b[a-z][a-z0-9:-]*-\\[[^\\]\\s]+\\]",
+      "example": "shadow-[0_0_8px_0_#0ea5e9]"
+    },
+    "tailwind-palette-class": {
+      "regex": "\\b(?:bg|text|shadow|border|ring|fill|stroke|from|via|to|decoration|outline)-(?:antibody|enzyme|vaccine|peptide|sky400|ink|brand|accent|muted|gray-\\d{2,3}|blue-\\d{2,3}|white|black)\\b",
+      "example": "bg-antibody"
+    }
+  },
+  "rawValueRestrictions": {
+    "color": [
+      "hex-color",
+      "color-function",
+      "tailwind-palette-class",
+      "tailwind-arbitrary-class"
+    ],
+    "elevation": [
+      "color-function",
+      "hex-color",
+      "css-length",
+      "tailwind-arbitrary-class"
+    ],
+    "radius": [
+      "css-length",
+      "tailwind-arbitrary-class"
+    ],
+    "spacing": [
+      "css-length",
+      "css-math",
+      "tailwind-arbitrary-class"
+    ],
+    "typography": [
+      "css-length",
+      "tailwind-arbitrary-class"
+    ],
+    "component": [
+      "gradient-function",
+      "css-math",
+      "tailwind-arbitrary-class"
+    ],
+    "sizing": [
+      "css-length",
+      "tailwind-arbitrary-class"
+    ],
+    "motion": [
+      "easing-function",
+      "css-duration"
+    ],
+    "breakpoint": [
+      "css-length"
+    ],
+    "layout": [
+      "css-length",
+      "css-math"
+    ]
+  },
+  "rawLiteralScanExemptKeys": {
+    "keys": [
+      "href",
+      "to"
+    ],
+    "reason": "Link fields are constrained by their own path pattern and by NO_EXTERNAL_LINKS; an in-page anchor such as \"#faq\" is not a colour."
+  },
+  "numericGeometryParams": {
+    "note": "Unitless numbers that position or choreograph one measured composition (collage offsets, travel distances, delays, counters). There is no token scale for them; they are not style tokens and may not carry units (a unit-bearing string is a schema type error). They are listed so nothing else numeric is silently treated as a style value.",
+    "fields": [
+      {
+        "section": "company.sharing-is-caring",
+        "path": "items/[]/x"
+      },
+      {
+        "section": "company.sharing-is-caring",
+        "path": "items/[]/y"
+      },
+      {
+        "section": "company.sharing-is-caring",
+        "path": "items/[]/w"
+      },
+      {
+        "section": "company.sharing-is-caring",
+        "path": "items/[]/ar"
+      },
+      {
+        "section": "company.sharing-is-caring",
+        "path": "items/[]/delay"
+      },
+      {
+        "section": "conversion.footer-cta-blue",
+        "path": "items/[]/x"
+      },
+      {
+        "section": "conversion.footer-cta-blue",
+        "path": "items/[]/delay"
+      },
+      {
+        "section": "product.protein-visual",
+        "path": "items/[]/travel"
+      },
+      {
+        "section": "product.protein-visual",
+        "path": "items/[]/phoneTravel"
+      },
+      {
+        "section": "product.protein-visual",
+        "path": "items/[]/scaleTo"
+      },
+      {
+        "section": "content.maturity-report",
+        "path": "items/[]/p"
+      },
+      {
+        "section": "product.benefits-bento",
+        "path": "items/[]/blue"
+      },
+      {
+        "section": "product.benefits-bento",
+        "path": "items/[]/gray"
+      }
+    ]
+  },
+  "overrides": "There is no free-form per-instance override mechanism: a PageSpec cannot restyle a section. The styleFields above are the complete set of style-bearing content fields found by enumerating every section contract (17 fields in 11 sections); each was a raw CSS/Tailwind literal in v1.0.0 and is now a token reference."
+}

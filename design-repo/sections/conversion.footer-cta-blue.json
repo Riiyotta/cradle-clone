@@ -30,10 +30,29 @@
               "measuredMax": 1
             },
             "cls": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 4,
-              "measuredMax": 2
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.cta-screen.data",
+                    "component.cta-screen.report",
+                    "component.cta-screen.round"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.cta-screen."
+                ]
+              }
             },
             "delay": {
               "type": "number"
@@ -84,11 +103,14 @@
     "measuredFrom": "src/components/modality/TeamsCTA.jsx:90-132"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "items": [
       {
         "src": "/assets/ui-report-cta.png",
-        "cls": "cta-screen cta-report"
+        "cls": {
+          "token": "component.cta-screen.report"
+        }
       }
     ]
   }

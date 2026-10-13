@@ -20,11 +20,37 @@
         "additionalProperties": false,
         "properties": {
           "featureCls": {
-            "type": "string",
-            "minLength": 1,
-            "maxWords": 26,
-            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
-            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.pipeline-feature.default",
+                    "component.pipeline-feature.inset",
+                    "component.pipeline-feature.narrow",
+                    "component.pipeline-feature.narrow-hairline",
+                    "component.pipeline-feature.narrow-inset"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.pipeline-feature."
+                ]
+              }
+            },
+            "measuredFrom": "src/components/solutions/solutionData.jsx:59"
           },
           "features": {
             "type": "string",
@@ -48,11 +74,28 @@
             "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
           },
           "tileHPhone": {
-            "type": "string",
-            "minLength": 1,
-            "maxWords": 26,
-            "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
-            "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "token"
+            ],
+            "properties": {
+              "token": {
+                "type": "string",
+                "enum": [
+                  "component.pipeline-tile.phone-height.default",
+                  "component.pipeline-tile.phone-height.tall"
+                ]
+              }
+            },
+            "styleField": {
+              "categories": [
+                "component"
+              ],
+              "allowedPrefixes": [
+                "component.pipeline-tile.phone-height."
+              ]
+            }
           },
           "title": {
             "type": "string",
@@ -70,11 +113,9 @@
           }
         },
         "required": [
-          "featureCls",
           "features",
           "files",
           "lead",
-          "tileHPhone",
           "title",
           "toggles"
         ]
@@ -108,13 +149,26 @@
     "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "block": {
-      "featureCls": "Text",
+      "featureCls": [
+        {
+          "token": "component.pipeline-feature.narrow"
+        },
+        {
+          "token": "component.pipeline-feature.narrow"
+        },
+        {
+          "token": "component.pipeline-feature.narrow-inset"
+        }
+      ],
       "features": "Text",
       "files": "Text",
       "lead": "Lead paragraph text",
-      "tileHPhone": "Text",
+      "tileHPhone": {
+        "token": "component.pipeline-tile.phone-height.tall"
+      },
       "title": "Section title",
       "toggles": "Text"
     }

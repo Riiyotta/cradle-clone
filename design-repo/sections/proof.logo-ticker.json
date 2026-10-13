@@ -20,7 +20,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -47,6 +50,7 @@
     "measuredFrom": "src/components/solutions/LogoTicker.jsx:1-49"
   },
   "literalAssets": [],
-  "exampleContent": {},
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {},
   "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
 }

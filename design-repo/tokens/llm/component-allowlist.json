@@ -1,6 +1,6 @@
 {
-  "allowlistVersion": "1.0.0",
-  "$description": "Closed list of what a generator may use or set. Parity with the contract files and the PageSpec schema is machine-checked by extraction/verify_all.py.",
+  "allowlistVersion": "1.1.0",
+  "$description": "Closed list of what a generator may use or set. Parity with the contract files, the PageSpec schema, tokens/llm/asset-roles.json and tokens/llm/token-policy.json is machine-checked by extraction/verify_all.py. A PageSpec without \"mode\" is a generation PageSpec: only generationSafeAssetRoles may appear; cloneOnlyAssetRoles are for \"mode\": \"clone\" only.",
   "components": [
     "primitive.button",
     "primitive.eyebrow",
@@ -148,6 +148,18 @@
     "template.shirt",
     "template.legal"
   ],
+  "pageSpecProperties": [
+    "pageSpecVersion",
+    "mode",
+    "template",
+    "route",
+    "nodes"
+  ],
+  "modes": [
+    "generation",
+    "clone"
+  ],
+  "defaultMode": "generation",
   "nodeProperties": [
     "section",
     "variant",
@@ -182,8 +194,6 @@
     "brand-mark",
     "customer-logo",
     "ui-screenshot",
-    "hero-blob",
-    "ui-icon",
     "modality-illustration",
     "editorial-cover",
     "video-poster",
@@ -193,8 +203,67 @@
     "social-image",
     "page-graphic",
     "page-image",
-    "placeholder"
+    "hero-blob",
+    "ui-icon",
+    "generated-illustration",
+    "placeholder",
+    "placeholder-logo",
+    "placeholder-avatar",
+    "placeholder-brand-mark"
+  ],
+  "generationSafeAssetRoles": [
+    "hero-blob",
+    "ui-icon",
+    "generated-illustration",
+    "placeholder",
+    "placeholder-logo",
+    "placeholder-avatar",
+    "placeholder-brand-mark"
+  ],
+  "cloneOnlyAssetRoles": [
+    "brand-mark",
+    "customer-logo",
+    "ui-screenshot",
+    "modality-illustration",
+    "editorial-cover",
+    "video-poster",
+    "video",
+    "lab-photo",
+    "person-photo",
+    "social-image",
+    "page-graphic",
+    "page-image"
+  ],
+  "tokenReferenceForm": {
+    "token": "<id from tokens/llm/token-catalog.json>"
+  },
+  "pageSpecTokenCategories": [
+    "color",
+    "elevation",
+    "radius",
+    "spacing",
+    "typography",
+    "component"
+  ],
+  "styleFields": [
+    "product.protein-visual:items/[]/bg",
+    "product.modalities-grid:items/[]/color",
+    "product.use-cases:items/[]/color",
+    "product.use-cases:items/[]/hover",
+    "company.teams-cards-platform:items/[]/dot",
+    "company.teams-cards-platform:items/[]/labelGradient",
+    "hero.academia:items/[]/cls",
+    "product.feature-rows:items/[]/section",
+    "product.feature-rows:items/[]/inner",
+    "company.sharing-is-caring:items/[]/radius",
+    "company.sharing-is-caring:items/[]/gap",
+    "company.sharing-is-caring:items/[]/titleCls",
+    "content.latest-updates:items/[]/titleColor",
+    "product.pipeline-benefits:block/featureCls/[]",
+    "product.pipeline-benefits:block/tileHPhone",
+    "proof.customers:items/[]/bg",
+    "conversion.footer-cta-blue:items/[]/cls"
   ],
   "tokenOverrides": [],
-  "tokenOverridesNote": "The PageSpec schema has no per-instance token override field, so nothing is overridable; tokens are read-only inputs."
+  "tokenOverridesNote": "No free-form per-instance overrides. The only style values a PageSpec carries are the styleFields listed here, each a {\"token\": id} reference validated against tokens/llm/token-catalog.json and tokens/llm/token-policy.json."
 }

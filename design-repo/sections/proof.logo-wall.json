@@ -32,7 +32,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -57,7 +60,8 @@
     "measuredFrom": "src/components/platform/LogoWall.jsx:1-45"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "paragraphs": [
       "Scientists in pharma and industrial bio use Cradle to shorten protein R&D timelines up to 12x while growing overall pipeline success."
     ]

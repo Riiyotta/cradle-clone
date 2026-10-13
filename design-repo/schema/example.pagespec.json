@@ -1,5 +1,6 @@
 {
-  "pageSpecVersion": "1.0.0",
+  "pageSpecVersion": "1.1.0",
+  "mode": "generation",
   "template": "template.home",
   "route": "/",
   "nodes": [
@@ -15,9 +16,9 @@
       "variant": "dark",
       "media": [
         {
-          "assetRole": "brand-mark",
-          "assetRef": "/assets/cradle-symbol.svg",
-          "alt": ""
+          "assetRole": "placeholder-brand-mark",
+          "generationBrief": "Plain text wordmark reading Quillfern Bio in the heading font, no symbol",
+          "alt": "Quillfern Bio"
         }
       ]
     },
@@ -25,7 +26,7 @@
       "section": "hero.home",
       "content": {
         "paragraphs": [
-          "Leverage AI to generate protein candidates and improve their properties. More breakthroughs in fewer experiments — guided by your own experimental data."
+          "Design better proteins with machine learning that learns from every experiment you run. Fewer rounds, clearer decisions, and data that stays yours."
         ]
       },
       "motion": {
@@ -35,7 +36,7 @@
       "media": [
         {
           "assetRole": "hero-blob",
-          "generationBrief": "Simple glyph in the existing stroke style"
+          "generationBrief": "New abstract blurred gradient blob built from the catalog blue and modality colour tokens"
         }
       ]
     },
@@ -44,10 +45,10 @@
       "content": {
         "items": [
           {
-            "title": "Generate candidates",
-            "pill": "Generation",
-            "img": "round",
-            "desc": "Track round status easily, from generating candidates to uploading experimental results."
+            "title": "Plan a round",
+            "pill": "Planning",
+            "img": "placeholder:round-planner",
+            "desc": "Set goals, choose the properties to optimise and follow every round from design to uploaded results."
           }
         ]
       },
@@ -59,20 +60,23 @@
     {
       "section": "proof.customers",
       "content": {
-        "heading": "Trusted by the world's top Biopharma and Industrial Bio R&D teams",
-        "eyebrow": "OUR CUSTOMERS",
+        "heading": "Protein teams of every size use Quillfern to reach better candidates sooner",
+        "eyebrow": "CUSTOMER STORIES",
         "items": [
           {
-            "logo": "testimonial-logo-novonesis.png",
-            "quote": "Through our partnership with Cradle, we are embedding advanced Al directly into how we innovate, enabling our teams to shorten development time and bring real-world biosolutions faster to market.",
-            "name": "Placeholder text",
-            "title": "Chief Scientific Officer, Novonesis"
+            "bg": {
+              "token": "component.testimonial-slide.bg.mint"
+            },
+            "logo": "placeholder:customer-logo-1",
+            "quote": "Quillfern helped our small team narrow thousands of variants to a shortlist we could actually test, and our second round was clearly better than the first.",
+            "name": "Rowan Vale",
+            "title": "Head of Protein Science, Tallowmere Biologics"
           }
         ],
         "groups": [
           {
-            "file": "novonesis",
-            "alt": "novonesis"
+            "file": "placeholder:customer-logo-1",
+            "alt": "Tallowmere Biologics"
           }
         ]
       },
@@ -82,13 +86,13 @@
       },
       "media": [
         {
-          "assetRole": "customer-logo",
-          "assetRef": "/assets/customer-logo-abbvie.svg",
-          "alt": ""
+          "assetRole": "placeholder-logo",
+          "generationBrief": "Neutral grey rounded rectangle with the invented word Tallowmere, no symbol",
+          "alt": "Tallowmere Biologics"
         },
         {
           "assetRole": "ui-icon",
-          "generationBrief": "Simple glyph in the existing stroke style"
+          "generationBrief": "Simple arrow glyph, thin rounded stroke"
         }
       ]
     },
@@ -98,9 +102,9 @@
         "heading": "Recent case studies",
         "items": [
           {
-            "img": "case-keasling-qs21.png",
-            "href": "./blog/keasling-qs21",
-            "title": "Using AI to produce vaccine adjuvants without cutting down rainforest"
+            "img": "placeholder:case-cover-1",
+            "href": "/blog/example-case-study",
+            "title": "How an enzyme team halved its screening rounds"
           }
         ]
       },
@@ -111,18 +115,18 @@
       "media": [
         {
           "assetRole": "placeholder",
-          "generationBrief": "Neutral abstract stand-in in the site palette"
+          "generationBrief": "Flat tinted cover with simple geometric shapes, no text, no photo"
         }
       ]
     },
     {
       "section": "product.benefits-bento",
       "content": {
-        "heading": "Compounding results",
-        "subheading": "Breakthroughs on repeat",
-        "eyebrow": "PROTEIN ENGINEERING 2.0",
+        "heading": "Results that compound",
+        "subheading": "Every round teaches the model",
+        "eyebrow": "ITERATIVE ENGINEERING",
         "paragraphs": [
-          "Round Progress"
+          "Round progress"
         ],
         "items": [
           {
@@ -133,9 +137,9 @@
         ],
         "groups": [
           {
-            "name": "Placeholder text",
-            "icon": "icon-antibody-mask.svg",
-            "status": "icon-status-in-progress.svg",
+            "name": "Binder",
+            "icon": "placeholder:icon-1",
+            "status": "placeholder:status-1",
             "label": "Round 4"
           }
         ]
@@ -146,19 +150,12 @@
       },
       "media": [
         {
-          "assetRole": "modality-illustration",
-          "assetRef": "/assets/benefits-grid-pattern.svg",
-          "alt": ""
+          "assetRole": "generated-illustration",
+          "generationBrief": "Original abstract grid of rounded squares tinted with modality colour tokens"
         },
         {
-          "assetRole": "video",
-          "assetRef": "/assets/benefits-video.mp4",
-          "alt": ""
-        },
-        {
-          "assetRole": "video-poster",
-          "assetRef": "/assets/benefits-video-poster.png",
-          "alt": ""
+          "assetRole": "placeholder",
+          "generationBrief": "Static neutral frame standing in for a short product loop, no UI text"
         }
       ]
     },
@@ -167,8 +164,10 @@
       "content": {
         "items": [
           {
-            "name": "Placeholder text",
-            "bg": "#3cab57"
+            "name": "Binder",
+            "bg": {
+              "token": "color.modality.antibody"
+            }
           }
         ]
       },
@@ -179,31 +178,33 @@
       "media": [
         {
           "assetRole": "placeholder",
-          "generationBrief": "Neutral abstract stand-in in the site palette"
+          "generationBrief": "Soft abstract protein-like blob shape, flat tint"
         }
       ]
     },
     {
       "section": "product.modalities-grid",
       "content": {
-        "eyebrow": "WORK ON ANY PROTEIN",
+        "eyebrow": "ANY PROTEIN CLASS",
         "paragraphs": [
-          "Accelerate your journey from hit identification to lead optimization and beyond. If you can measure it, you can optimize it with Cradle."
+          "From first hits to optimised leads, bring your own assay data and improve the properties that matter to your programme."
         ],
         "ctas": [
           {
-            "label": "Explore Cradle Platform",
+            "label": "Explore the platform",
             "href": "/get-started"
           }
         ],
         "items": [
           {
             "title": "Antibodies",
-            "color": "bg-antibody",
-            "icon": "modality-icon-antibody.svg",
-            "hover": "modality-icon-hover-antibody-enzyme.svg",
-            "href": "./modality/antibody",
-            "body": "Craft mature and developable binders that avoid unwanted immunogenicity."
+            "color": {
+              "token": "color.modality.antibody"
+            },
+            "icon": "placeholder:icon-2",
+            "hover": "placeholder:icon-3",
+            "href": "/modality/antibody",
+            "body": "Improve affinity and developability without trading one for the other."
           }
         ]
       },
@@ -214,22 +215,26 @@
       "media": [
         {
           "assetRole": "placeholder",
-          "generationBrief": "Neutral abstract stand-in in the site palette"
+          "generationBrief": "Simple outlined molecule glyph on a flat tint"
         }
       ]
     },
     {
       "section": "product.use-cases",
       "content": {
-        "heading": "Explore uses cases",
+        "heading": "Explore use cases",
         "items": [
           {
-            "title": "Biopharma",
-            "body": "See how Cradle works for pharma",
-            "href": "./solutions/biopharma",
-            "mask": "icon-antibody-mask.svg",
-            "color": "bg-antibody",
-            "hover": "rgba(60,171,87,0.4) 0px 0px 8px 0px"
+            "title": "Therapeutics",
+            "body": "See how therapeutics teams use the platform",
+            "href": "/solutions/biopharma",
+            "mask": "placeholder:mask-1",
+            "color": {
+              "token": "color.modality.antibody"
+            },
+            "hover": {
+              "token": "elevation.glow-antibody-8"
+            }
           }
         ]
       },
@@ -241,18 +246,18 @@
     {
       "section": "product.enterprise",
       "content": {
-        "heading": "Private. Secure. Yours.",
-        "eyebrow": "BUILT FOR ENTERPRISE",
+        "heading": "Private by design.",
+        "eyebrow": "FOR ENTERPRISE",
         "ctas": [
           {
-            "label": "Security at Cradle",
+            "label": "Read about security",
             "href": "/get-started"
           }
         ],
         "items": [
           {
-            "title": "Privacy-first AI",
-            "body": "You experimental data is only used to train your organizations custom models."
+            "title": "Your data, your models",
+            "body": "Experimental data trains only your organisation's own models and is never shared with other customers."
           }
         ]
       },
@@ -262,26 +267,25 @@
       },
       "media": [
         {
-          "assetRole": "lab-photo",
-          "assetRef": "/assets/enterprise-bg.png",
-          "alt": ""
+          "assetRole": "placeholder",
+          "generationBrief": "Dark abstract background of soft gradient bands, no photo"
         },
         {
           "assetRole": "ui-icon",
-          "generationBrief": "Simple glyph in the existing stroke style"
+          "generationBrief": "Simple padlock glyph, thin rounded stroke"
         }
       ]
     },
     {
       "section": "company.lab-teaser",
       "content": {
-        "eyebrow": "THE CRADLE LAB",
+        "eyebrow": "OUR LAB",
         "paragraphs": [
-          "Much like a self-driving car company: they wouldn’t just design algorithms and cross their fingers. They need to test real-world scenarios and collect data in order to fine-tune performance. We take the same approach, ensuring our models are performant even before seeing your data."
+          "We run our own wet-lab experiments, so every model is tested against real measurements before it ever sees your data."
         ],
         "ctas": [
           {
-            "label": "Get to know our wet lab",
+            "label": "Visit the lab page",
             "href": "/get-started"
           }
         ]
@@ -292,21 +296,20 @@
       },
       "media": [
         {
-          "assetRole": "lab-photo",
-          "assetRef": "/assets/lab-photo.jpg",
-          "alt": ""
+          "assetRole": "placeholder",
+          "generationBrief": "Flat illustration of generic lab glassware, no people, no real premises"
         }
       ]
     },
     {
       "section": "content.wet-lab-posts",
       "content": {
-        "heading": "Learnings from our wet lab",
+        "heading": "Notes from the lab",
         "items": [
           {
-            "img": "blog-beyond-the-bench.png",
-            "href": "./blog/beyond-the-bench",
-            "title": "We put our CTO in a lab coat. Here’s what happened next."
+            "img": "placeholder:post-cover-1",
+            "href": "/blog/example-lab-note",
+            "title": "What we learned running our first automated plate"
           }
         ]
       },
@@ -317,7 +320,7 @@
       "media": [
         {
           "assetRole": "placeholder",
-          "generationBrief": "Neutral abstract stand-in in the site palette"
+          "generationBrief": "Flat tinted cover with a simple plate grid motif, no text"
         }
       ]
     },
@@ -326,7 +329,7 @@
       "content": {
         "ctas": [
           {
-            "label": "I'm interested",
+            "label": "Talk to us",
             "href": "/get-started"
           }
         ]
@@ -337,9 +340,8 @@
       },
       "media": [
         {
-          "assetRole": "ui-screenshot",
-          "assetRef": "/assets/ui-data.png",
-          "alt": ""
+          "assetRole": "placeholder",
+          "generationBrief": "Generic dashboard blocks with lorem labels, not a real product screen"
         }
       ]
     },
@@ -353,9 +355,9 @@
       "variant": "blue",
       "media": [
         {
-          "assetRole": "brand-mark",
-          "assetRef": "/assets/cradle-symbol-footer.svg",
-          "alt": ""
+          "assetRole": "placeholder-brand-mark",
+          "generationBrief": "Plain text wordmark reading Quillfern Bio, white on blue",
+          "alt": "Quillfern Bio"
         }
       ]
     }

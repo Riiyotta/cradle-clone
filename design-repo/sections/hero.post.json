@@ -44,7 +44,10 @@
     "roles": [
       "page-graphic"
     ],
-    "maxItems": 3
+    "maxItems": 3,
+    "generationRoles": [
+      "generated-illustration"
+    ]
   },
   "motion": {
     "patterns": [
@@ -71,7 +74,8 @@
   "literalAssets": [
     "/assets/pages/blog-post/date-18x18-8dbda2.svg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "post": {
       "collection": "blog",
       "slug": "aintibody"

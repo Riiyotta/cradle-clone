@@ -28,10 +28,31 @@
               "measuredMax": 1
             },
             "bg": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 3,
-              "measuredMax": 1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "color.modality.antibody",
+                    "color.modality.enzyme",
+                    "color.modality.peptide",
+                    "color.modality.sky400",
+                    "color.modality.vaccine"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "color"
+                ],
+                "allowedPrefixes": [
+                  "color.modality."
+                ]
+              }
             },
             "travel": {
               "type": "number"
@@ -76,7 +97,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -105,11 +129,14 @@
     "measuredFrom": "src/components/ProteinVisual.jsx:1-131"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "items": [
       {
         "name": "Placeholder text",
-        "bg": "#3cab57"
+        "bg": {
+          "token": "color.modality.antibody"
+        }
       }
     ]
   }

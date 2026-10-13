@@ -40,10 +40,29 @@
               "measuredMax": 4
             },
             "cls": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 6,
-              "measuredMax": 4
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.academia-logo.size.medium",
+                    "component.academia-logo.size.narrow",
+                    "component.academia-logo.size.wide"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.academia-logo.size."
+                ]
+              }
             }
           },
           "required": [
@@ -95,7 +114,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -118,13 +140,16 @@
     "measuredFrom": "src/components/solutions/AcademiaHero.jsx:1-87"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Cradle for Academia",
     "items": [
       {
         "src": "${A}dtu-KWTpRW.png",
         "alt": "DTU",
-        "cls": "h-[40.5px] w-[37px] md:h-20 md:w-[73px]"
+        "cls": {
+          "token": "component.academia-logo.size.narrow"
+        }
       }
     ],
     "groups": [

@@ -34,7 +34,10 @@
       "ui-screenshot",
       "video"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -68,7 +71,8 @@
     "/assets/pages/team/intro-DCTQ1c.png",
     "/assets/ui-data.png"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "paragraphs": [
       "Building on the latest technological breakthroughs in AI, Cradle helps scientists decode and rewrite biology to unlock new food sources, materials, and therapeutics."
     ]

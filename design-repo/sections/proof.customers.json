@@ -34,10 +34,30 @@
           "additionalProperties": false,
           "properties": {
             "bg": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 8,
-              "measuredMax": 5
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.testimonial-slide.bg.lime",
+                    "component.testimonial-slide.bg.mint",
+                    "component.testimonial-slide.bg.rose",
+                    "component.testimonial-slide.bg.sky"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.testimonial-slide.bg."
+                ]
+              }
             },
             "logo": {
               "type": "string",
@@ -127,7 +147,11 @@
       "customer-logo",
       "ui-icon"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder-logo",
+      "ui-icon"
+    ]
   },
   "motion": {
     "patterns": [
@@ -167,7 +191,8 @@
   "literalAssets": [
     "/assets/icon-arrow-up-right.svg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Trusted by the world's top Biopharma and Industrial Bio R&D teams",
     "eyebrow": "OUR CUSTOMERS",
     "items": [

@@ -54,7 +54,10 @@
     "roles": [
       "page-graphic"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "generated-illustration"
+    ]
   },
   "motion": {
     "patterns": [
@@ -81,7 +84,8 @@
     "/assets/pages/presskit/page-title-56x56-12bca5.svg",
     "/assets/pages/presskit/page-title-96x96-ae7a4c.svg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Press kit",
     "ctas": [
       {

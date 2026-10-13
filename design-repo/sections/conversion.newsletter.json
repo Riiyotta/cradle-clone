@@ -76,7 +76,8 @@
     "measuredFrom": "src/components/company/CareersSections.jsx:176-198"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Sign up for our email list",
     "paragraphs": [
       "Placeholder text inviting readers to subscribe to the email list, which is also where new open roles are announced as soon as they are published."

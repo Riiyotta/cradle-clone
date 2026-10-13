@@ -63,7 +63,11 @@
       "lab-photo",
       "person-photo"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder",
+      "placeholder-avatar"
+    ]
   },
   "motion": {
     "patterns": [
@@ -92,7 +96,8 @@
   "literalAssets": [
     "/assets/lab-photo.jpg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "eyebrow": "THE CRADLE LAB",
     "paragraphs": [
       "Much like a self-driving car company: they wouldn’t just design algorithms and cross their fingers. They need to test real-world scenarios and collect data in order to fine-tune performance. We take the same approach, ensuring our models are performant even before seeing your data."

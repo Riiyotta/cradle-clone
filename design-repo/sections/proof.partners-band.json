@@ -83,7 +83,8 @@
     "measuredFrom": "src/components/misc/Licensing.jsx:195-210"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Partnerships",
     "paragraphs": [
       "CRO or service provider? If you wish to use or deploy Cradle as part of your service offering, please contact us here to discuss options."

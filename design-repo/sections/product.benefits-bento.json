@@ -123,7 +123,11 @@
       "video",
       "video-poster"
     ],
-    "maxItems": 8
+    "maxItems": 8,
+    "generationRoles": [
+      "generated-illustration",
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -171,7 +175,8 @@
     "/assets/radar-polygon-blue.svg",
     "/assets/radar-polygon-yellow.svg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Compounding results",
     "subheading": "Breakthroughs on repeat",
     "eyebrow": "PROTEIN ENGINEERING 2.0",

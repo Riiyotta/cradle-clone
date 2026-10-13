@@ -65,7 +65,10 @@
     "roles": [
       "page-image"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -93,7 +96,8 @@
     "/assets/pages/licensing/license-grid-FRS8jcOd.jpg",
     "/assets/pages/licensing/license-grid-FwU6ZVTs.jpg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Our licenses",
     "paragraphs": [
       "Licensing for every research need."

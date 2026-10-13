@@ -51,16 +51,52 @@
               "measuredMax": 2
             },
             "dot": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 4,
-              "measuredMax": 2
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.teams-card.dot.green",
+                    "component.teams-card.dot.sky"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.teams-card.dot."
+                ]
+              }
             },
             "labelGradient": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 3,
-              "measuredMax": 1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.teams-card.label-gradient.green",
+                    "component.teams-card.label-gradient.sky"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.teams-card.label-gradient."
+                ]
+              }
             },
             "body": {
               "type": "string",
@@ -91,7 +127,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -114,7 +153,8 @@
     "measuredFrom": "src/components/platform/Teams.jsx:1-71"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "paragraphs": [
       "With everyone in the same workspace, results compound across your organization. Same data. Same models. Same learning loop. New results."
     ],
@@ -123,8 +163,12 @@
         "img": "wetlab-riCniX.png",
         "label": "Web Interface",
         "title": "Wet lab",
-        "dot": "bg-sky400 shadow-[0_0_8px_0_#0ea5e9]",
-        "labelGradient": "bg-[linear-gradient(270deg,rgba(255,255,255,.9)_0%,#f0f9ff_100%)]",
+        "dot": {
+          "token": "component.teams-card.dot.sky"
+        },
+        "labelGradient": {
+          "token": "component.teams-card.label-gradient.sky"
+        },
         "body": "Add your domain expertise and AI generate candidates for lab testing in just a few clicks. Upload experimental results to improve your project-specific AI automatically."
       }
     ]

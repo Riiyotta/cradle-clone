@@ -127,6 +127,283 @@
       "$extensions": {
         "measuredFrom": "src/components/Enterprise.jsx:16"
       }
+    },
+    "teams-card.dot.sky": {
+      "props": {
+        "background": "{color.modality.sky400}",
+        "shadow": "{elevation.glow-dot-enzyme}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/Teams.jsx:8"
+      }
+    },
+    "teams-card.dot.green": {
+      "props": {
+        "background": "{color.extra.61c779}",
+        "shadow": "{elevation.glow-dot-antibody}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/Teams.jsx:14"
+      }
+    },
+    "teams-card.label-gradient.sky": {
+      "props": {
+        "background": "linear-gradient(270deg,rgba(255,255,255,.9) 0%,#f0f9ff 100%)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/Teams.jsx:9"
+      }
+    },
+    "teams-card.label-gradient.green": {
+      "props": {
+        "background": "linear-gradient(90deg,#e1f7e6 0%,rgba(255,255,255,.9) 100%)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/Teams.jsx:15"
+      }
+    },
+    "academia-logo.size.narrow": {
+      "props": {
+        "height": "40.5px",
+        "width": "37px",
+        "mdHeight": "80px",
+        "mdWidth": "73px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/AcademiaHero.jsx:16"
+      }
+    },
+    "academia-logo.size.medium": {
+      "props": {
+        "height": "40px",
+        "width": "79px",
+        "mdHeight": "80px",
+        "mdWidth": "158px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/AcademiaHero.jsx:17"
+      }
+    },
+    "academia-logo.size.wide": {
+      "props": {
+        "height": "30.1px",
+        "width": "102px",
+        "mdHeight": "49.9px",
+        "mdWidth": "169px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/AcademiaHero.jsx:18"
+      }
+    },
+    "feature-row.padding.first": {
+      "props": {
+        "paddingTop": "{spacing.padding-40px}",
+        "paddingBottom": "60px",
+        "mdPaddingY": "{spacing.padding-80px}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/FeatureRows.jsx:10"
+      }
+    },
+    "feature-row.padding.middle": {
+      "props": {
+        "paddingBottom": "60px",
+        "mdPaddingBottom": "{spacing.padding-80px}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/FeatureRows.jsx:17"
+      }
+    },
+    "feature-row.padding.last": {
+      "props": {
+        "paddingBottom": "60px",
+        "mdPaddingBottom": "120px",
+        "lgPaddingBottom": "160px",
+        "shadow": "inset 0 -1px 0 0 rgba(0,0,0,.04)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/FeatureRows.jsx:25"
+      }
+    },
+    "feature-row.inner.pad-right": {
+      "props": {
+        "mdPaddingRight": "{spacing.padding-40px}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/FeatureRows.jsx:11"
+      }
+    },
+    "feature-row.inner.pad-left": {
+      "props": {
+        "mdPaddingLeft": "{spacing.padding-40px}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/platform/FeatureRows.jsx:18"
+      }
+    },
+    "lab-floating-card.title.lg": {
+      "props": {
+        "fontSize": "{fontSize.size-13}",
+        "lineHeight": "16.9px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/company/labData.js:35"
+      }
+    },
+    "lab-floating-card.title.md": {
+      "props": {
+        "fontSize": "{fontSize.size-10}",
+        "lineHeight": "13px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/company/labData.js:36"
+      }
+    },
+    "lab-floating-card.title.sm": {
+      "props": {
+        "fontSize": "{fontSize.size-9}",
+        "lineHeight": "11.7px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/company/labData.js:37"
+      }
+    },
+    "lab-floating-card.gap.md": {
+      "props": {
+        "gap": "{spacing.gap-8px}"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/company/labData.js:35"
+      }
+    },
+    "lab-floating-card.gap.sm": {
+      "props": {
+        "gap": "6px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/company/labData.js:36"
+      }
+    },
+    "pipeline-feature.default": {
+      "props": {},
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:26",
+        "note": "no extra classes (the empty string entry in featureCls)"
+      }
+    },
+    "pipeline-feature.narrow": {
+      "props": {
+        "mdMaxWidth": "360px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/solutionData.jsx:59"
+      }
+    },
+    "pipeline-feature.narrow-inset": {
+      "props": {
+        "mdMaxWidth": "360px",
+        "mdPaddingLeft": "20px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/solutionData.jsx:59"
+      }
+    },
+    "pipeline-feature.narrow-hairline": {
+      "props": {
+        "mdMaxWidth": "360px",
+        "mdPaddingLeft": "2px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/solutionData.jsx:70"
+      }
+    },
+    "pipeline-feature.inset": {
+      "props": {
+        "mdPaddingLeft": "20px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/solutionData.jsx:82"
+      }
+    },
+    "pipeline-tile.phone-height.default": {
+      "props": {
+        "phoneHeight": "220px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:11"
+      }
+    },
+    "pipeline-tile.phone-height.tall": {
+      "props": {
+        "phoneHeight": "250px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/solutions/solutionData.jsx:76"
+      }
+    },
+    "testimonial-slide.bg.mint": {
+      "props": {
+        "background": "linear-gradient(180deg, #fff 60%, rgba(241,255,241,.5) 100%)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/Customers.jsx:18"
+      }
+    },
+    "testimonial-slide.bg.sky": {
+      "props": {
+        "background": "linear-gradient(179deg, #fff 60%, rgba(20,116,205,.08) 100%)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/Customers.jsx:25"
+      }
+    },
+    "testimonial-slide.bg.lime": {
+      "props": {
+        "background": "linear-gradient(180deg, #fff 60%, rgba(137,211,42,.08) 100%)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/Customers.jsx:14"
+      }
+    },
+    "testimonial-slide.bg.rose": {
+      "props": {
+        "background": "linear-gradient(180deg, #fff 60%, rgba(175,1,3,.08) 100%)"
+      },
+      "$extensions": {
+        "measuredFrom": "src/components/Customers.jsx:39"
+      }
+    },
+    "cta-screen.report": {
+      "props": {
+        "base": "position:absolute; max-width:none; object-fit:cover; object-position:50% 0; border-radius:12px 12px 0 0",
+        "phone": "left:calc(50% - 243px); top:40px; width:253.4px; height:157.2px",
+        "md": "left:calc(50% - 689.7px); width:719.4px; height:446.3px; opacity:.9"
+      },
+      "$extensions": {
+        "measuredFrom": "src/index.css:108-113"
+      }
+    },
+    "cta-screen.round": {
+      "props": {
+        "base": "position:absolute; max-width:none; object-fit:cover; object-position:50% 0; border-radius:12px 12px 0 0",
+        "phone": "left:calc(50% - 127.1px); top:0; width:254.2px; height:157.7px",
+        "shadow": "{elevation.shadow-4}",
+        "md": "left:calc(50% - 360.8px); width:721.6px; height:447.7px"
+      },
+      "$extensions": {
+        "measuredFrom": "src/index.css:108-114"
+      }
+    },
+    "cta-screen.data": {
+      "props": {
+        "base": "position:absolute; max-width:none; object-fit:cover; object-position:50% 0; border-radius:12px 12px 0 0",
+        "phone": "left:calc(50% - 10.5px); top:80px; width:253.4px; height:157.2px",
+        "shadow": "{elevation.shadow-4}",
+        "md": "left:calc(50% - 29.7px); width:719.4px; height:446.3px; opacity:.85; box-shadow:none"
+      },
+      "$extensions": {
+        "measuredFrom": "src/index.css:108-115"
+      }
     }
   }
 }

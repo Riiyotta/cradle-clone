@@ -46,7 +46,11 @@
       "modality-illustration",
       "page-image"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "generated-illustration",
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -83,7 +87,8 @@
     "/assets/benefits-grid-pattern.svg",
     "/assets/pages/solutions-biopharma/cta-iWZePD.png"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "ctas": [
       {
         "label": "Contact our sales team",

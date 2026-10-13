@@ -46,7 +46,10 @@
     "roles": [
       "brand-mark"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder-brand-mark"
+    ]
   },
   "motion": {
     "patterns": [
@@ -73,5 +76,6 @@
   "literalAssets": [
     "/assets/cradle-symbol-footer.svg"
   ],
-  "exampleContent": {}
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {}
 }

@@ -212,7 +212,7 @@
     {
       "id": "ASSET_ROLE_POLICY",
       "severity": "error",
-      "description": "media[].assetRole must be allowed for the section. Roles whose policy is must-reuse-exact or must-not-fabricate require assetRef to be one of that role's registered files (pinned-value check) and must not carry generationBrief; may-generate-new roles require generationBrief and must not carry assetRef. Roles with no registered files cannot be referenced."
+      "description": "Clone mode only (generation mode is covered by GENERATION_SAFE_ASSETS). media[].assetRole must be one of the section's measured roles. clone-only roles (policy clone-exact-reuse) require assetRef to be one of that role's registered files (pinned-value check) and must not carry generationBrief; generation-safe roles (policy generate-original / placeholder) require generationBrief and must never carry assetRef. clone-only roles with no registered files cannot be referenced."
     },
     {
       "id": "CMS_SLUG_MATCHES_ROUTE",
@@ -223,6 +223,31 @@
       "id": "MAX_WORDS",
       "severity": "error",
       "description": "Every string field carrying maxWords in its section contract must not exceed it."
+    },
+    {
+      "id": "GENERATION_SAFE_ASSETS",
+      "severity": "error",
+      "description": "In generation mode (the default when \"mode\" is absent) every media[].assetRole must have contract generation-safe in tokens/llm/asset-roles.json and be one of the section's media.generationRoles; it must carry a generationBrief and no assetRef. clone-only roles (brand-mark, customer-logo, person-photo, ui-screenshot, ...) are rejected."
+    },
+    {
+      "id": "NO_REAL_ASSET_IN_GENERATION",
+      "severity": "error",
+      "description": "In generation mode no string anywhere in the PageSpec (assetRef, content image/logo/icon fields, briefs) may name a file registered in tokens/llm/asset-roles.json - every registered file is a real Cradle asset, including the files observed for generation-safe roles."
+    },
+    {
+      "id": "NO_REAL_ENTITY_NAMES_IN_GENERATION",
+      "severity": "error",
+      "description": "In generation mode no string outside link fields may contain a name from asset-roles.json nameDenylist (the Cradle brand, registered customer names, registered full-name authors), matched case-insensitively as a whole word."
+    },
+    {
+      "id": "TOKEN_REFS_RESOLVE",
+      "severity": "error",
+      "description": "Every style field declared in tokens/llm/token-policy.json styleFields must hold {\"token\": id} where id exists in tokens/llm/token-catalog.json, its category is pageSpecReferenceable and listed for the field, and it starts with one of the field's allowedPrefixes."
+    },
+    {
+      "id": "NO_RAW_STYLE_LITERALS",
+      "severity": "error",
+      "description": "No string in a PageSpec (except link fields) may contain a raw style value matching token-policy.json rawValuePatterns: hex colours, rgb()/rgba()/hsl(), gradients, px/rem lengths, calc(), cubic-bezier()/ms easing, Tailwind arbitrary-value or palette classes. Applies in both modes."
     }
   ]
 }

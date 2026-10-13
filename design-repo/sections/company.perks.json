@@ -21,7 +21,10 @@
       "page-image",
       "video"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -49,6 +52,7 @@
     "/assets/pages/team/intro-3xPwhR.mp4",
     "/assets/pages/team/intro-DCTQ1c.png"
   ],
-  "exampleContent": {},
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {},
   "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
 }

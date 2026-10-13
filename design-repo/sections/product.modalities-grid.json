@@ -69,10 +69,31 @@
               "measuredMax": 1
             },
             "color": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 3,
-              "measuredMax": 1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "color.modality.antibody",
+                    "color.modality.enzyme",
+                    "color.modality.peptide",
+                    "color.modality.sky400",
+                    "color.modality.vaccine"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "color"
+                ],
+                "allowedPrefixes": [
+                  "color.modality."
+                ]
+              }
             },
             "icon": {
               "type": "string",
@@ -121,7 +142,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -150,7 +174,8 @@
     "measuredFrom": "src/components/Modalities.jsx:1-67"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "eyebrow": "WORK ON ANY PROTEIN",
     "paragraphs": [
       "Accelerate your journey from hit identification to lead optimization and beyond. If you can measure it, you can optimize it with Cradle."
@@ -164,7 +189,9 @@
     "items": [
       {
         "title": "Antibodies",
-        "color": "bg-antibody",
+        "color": {
+          "token": "color.modality.antibody"
+        },
         "icon": "modality-icon-antibody.svg",
         "hover": "modality-icon-hover-antibody-enzyme.svg",
         "href": "./modality/antibody",

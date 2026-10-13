@@ -66,7 +66,10 @@
       "page-image",
       "video"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -96,7 +99,8 @@
     "/assets/pages/platform/intro-yChT7D.mp4",
     "/assets/pages/platform/video-trigger-evbqum.png"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "The AI protein engineering software built for scientists",
     "paragraphs": [
       "Cradle makes it easy for scientists to train and run protein AI that produces successful candidates 2 - 12x faster than traditional workflows."

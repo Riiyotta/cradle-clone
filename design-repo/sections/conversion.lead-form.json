@@ -80,7 +80,8 @@
     "measuredFrom": "src/components/resources/LeadForm.jsx:1-127"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "ctas": [
       {
         "label": "Learn more",

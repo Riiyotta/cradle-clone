@@ -945,6 +945,126 @@
     {
       "ref": "tailwind.config.js:5",
       "anchor": "screens: { md: '810px'"
+    },
+    {
+      "ref": "src/components/UseCases.jsx:17",
+      "anchor": "hover: 'rgba(60,171,87,0.4) 0px 0px 8px 0px'"
+    },
+    {
+      "ref": "src/components/UseCases.jsx:25",
+      "anchor": "hover: 'rgba(14,165,233,0.4) 0px 0px 8px 0px'"
+    },
+    {
+      "ref": "src/components/platform/Teams.jsx:8",
+      "anchor": "shadow-[0_0_8px_0_#0ea5e9]"
+    },
+    {
+      "ref": "src/components/platform/Teams.jsx:14",
+      "anchor": "shadow-[0_0_8px_0_#3cab57]"
+    },
+    {
+      "ref": "src/components/platform/Teams.jsx:9",
+      "anchor": "linear-gradient(270deg,rgba(255,255,255,.9)_0%,#f0f9ff_100%)"
+    },
+    {
+      "ref": "src/components/platform/Teams.jsx:15",
+      "anchor": "linear-gradient(90deg,#e1f7e6_0%,rgba(255,255,255,.9)_100%)"
+    },
+    {
+      "ref": "src/components/solutions/AcademiaHero.jsx:16",
+      "anchor": "cls: 'h-[40.5px] w-[37px] md:h-20 md:w-[73px]'"
+    },
+    {
+      "ref": "src/components/solutions/AcademiaHero.jsx:17",
+      "anchor": "cls: 'h-10 w-[79px] md:h-20 md:w-[158px]'"
+    },
+    {
+      "ref": "src/components/solutions/AcademiaHero.jsx:18",
+      "anchor": "cls: 'h-[30.1px] w-[102px] md:h-[49.9px] md:w-[169px]'"
+    },
+    {
+      "ref": "src/components/platform/FeatureRows.jsx:10",
+      "anchor": "section: 'pt-10 pb-[60px] md:py-20'"
+    },
+    {
+      "ref": "src/components/platform/FeatureRows.jsx:17",
+      "anchor": "section: 'pb-[60px] md:pb-20'"
+    },
+    {
+      "ref": "src/components/platform/FeatureRows.jsx:25",
+      "anchor": "section: 'pb-[60px] md:pb-[120px] lg:pb-40 shadow-[inset_0_-1px_0_0_rgba(0,0,0,.04)]'"
+    },
+    {
+      "ref": "src/components/platform/FeatureRows.jsx:11",
+      "anchor": "inner: 'md:pr-10'"
+    },
+    {
+      "ref": "src/components/platform/FeatureRows.jsx:18",
+      "anchor": "inner: 'md:pl-10'"
+    },
+    {
+      "ref": "src/components/company/labData.js:35",
+      "anchor": "titleCls: 'text-[13px] leading-[16.9px]'"
+    },
+    {
+      "ref": "src/components/company/labData.js:36",
+      "anchor": "titleCls: 'text-[10px] leading-[13px]'"
+    },
+    {
+      "ref": "src/components/company/labData.js:37",
+      "anchor": "titleCls: 'text-[9px] leading-[11.7px]'"
+    },
+    {
+      "ref": "src/components/solutions/PipelineBenefits.jsx:26",
+      "anchor": "block.featureCls?.[i] ?? ''"
+    },
+    {
+      "ref": "src/components/solutions/solutionData.jsx:59",
+      "anchor": "'md:max-w-[360px]'"
+    },
+    {
+      "ref": "src/components/solutions/solutionData.jsx:70",
+      "anchor": "'md:max-w-[360px] md:pl-[2px]'"
+    },
+    {
+      "ref": "src/components/solutions/solutionData.jsx:82",
+      "anchor": "['', '', 'md:pl-5']"
+    },
+    {
+      "ref": "src/components/solutions/PipelineBenefits.jsx:11",
+      "anchor": "block.tileHPhone ?? 'h-[220px]'"
+    },
+    {
+      "ref": "src/components/solutions/solutionData.jsx:76",
+      "anchor": "tileHPhone: 'h-[250px]'"
+    },
+    {
+      "ref": "src/components/Customers.jsx:18",
+      "anchor": "bg: 'linear-gradient(180deg, #fff 60%, rgba(241,255,241,.5) 100%)'"
+    },
+    {
+      "ref": "src/components/Customers.jsx:25",
+      "anchor": "bg: 'linear-gradient(179deg, #fff 60%, rgba(20,116,205,.08) 100%)'"
+    },
+    {
+      "ref": "src/components/Customers.jsx:14",
+      "anchor": "SLIDE_BG3 = 'linear-gradient(180deg, #fff 60%, rgba(137,211,42,.08) 100%)'"
+    },
+    {
+      "ref": "src/components/Customers.jsx:39",
+      "anchor": "bg: 'linear-gradient(180deg, #fff 60%, rgba(175,1,3,.08) 100%)'"
+    },
+    {
+      "ref": "src/index.css:108-113",
+      "anchor": ".cta-report { left: calc(50% - 243px)"
+    },
+    {
+      "ref": "src/index.css:108-114",
+      "anchor": ".cta-round { left: calc(50% - 127.1px)"
+    },
+    {
+      "ref": "src/index.css:108-115",
+      "anchor": ".cta-data { left: calc(50% - 10.5px)"
     }
   ]
 }

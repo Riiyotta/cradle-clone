@@ -52,16 +52,57 @@
               "measuredMax": 1
             },
             "color": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 3,
-              "measuredMax": 1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "color.modality.antibody",
+                    "color.modality.enzyme",
+                    "color.modality.peptide",
+                    "color.modality.sky400",
+                    "color.modality.vaccine"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "color"
+                ],
+                "allowedPrefixes": [
+                  "color.modality."
+                ]
+              }
             },
             "hover": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 8,
-              "measuredMax": 5
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "elevation.glow-antibody-8",
+                    "elevation.glow-dot-antibody",
+                    "elevation.glow-dot-enzyme",
+                    "elevation.glow-enzyme-8"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "elevation"
+                ],
+                "allowedPrefixes": [
+                  "elevation.glow-"
+                ]
+              }
             }
           },
           "required": [
@@ -109,7 +150,8 @@
     "measuredFrom": "src/components/UseCases.jsx:1-82"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Explore uses cases",
     "items": [
       {
@@ -117,8 +159,12 @@
         "body": "See how Cradle works for pharma",
         "href": "./solutions/biopharma",
         "mask": "icon-antibody-mask.svg",
-        "color": "bg-antibody",
-        "hover": "rgba(60,171,87,0.4) 0px 0px 8px 0px"
+        "color": {
+          "token": "color.modality.antibody"
+        },
+        "hover": {
+          "token": "elevation.glow-antibody-8"
+        }
       }
     ]
   }

@@ -78,7 +78,39 @@
               "type": "number"
             },
             "radius": {
-              "type": "number"
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "radius.r-0",
+                    "radius.r-1",
+                    "radius.r-10",
+                    "radius.r-100",
+                    "radius.r-12",
+                    "radius.r-2",
+                    "radius.r-20",
+                    "radius.r-3",
+                    "radius.r-4",
+                    "radius.r-6",
+                    "radius.r-7",
+                    "radius.r-8",
+                    "radius.r-full"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "radius"
+                ],
+                "allowedPrefixes": [
+                  "radius."
+                ]
+              }
             },
             "title": {
               "type": "string",
@@ -87,13 +119,53 @@
               "measuredMax": 12
             },
             "titleCls": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 4,
-              "measuredMax": 2
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.lab-floating-card.title.lg",
+                    "component.lab-floating-card.title.md",
+                    "component.lab-floating-card.title.sm"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.lab-floating-card.title."
+                ]
+              }
             },
             "gap": {
-              "type": "number"
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.lab-floating-card.gap.md",
+                    "component.lab-floating-card.gap.sm"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.lab-floating-card.gap."
+                ]
+              }
             },
             "to": {
               "type": "string",
@@ -141,7 +213,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -166,7 +241,8 @@
     "measuredFrom": "src/components/company/LabSections.jsx:367-396"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Sharing is caring",
     "paragraphs": [
       "Placeholder paragraph about how most labs keep their work private, while this team takes a different approach and openly shares its workflows and insights with the wider community."
@@ -181,7 +257,9 @@
       {
         "key": "tr",
         "title": "Backbone of high-throughput experimentation: Design principles for ML-ready sample tracking",
-        "titleCls": "text-[13px] leading-[16.9px]",
+        "titleCls": {
+          "token": "component.lab-floating-card.title.lg"
+        },
         "to": "/blog/sample-tracking",
         "img": "/assets/blog-sample-tracking.jpg"
       }

@@ -140,7 +140,8 @@
     "measuredFrom": "src/components/blog/PostParts.jsx:91-139"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "blocks": [
       {
         "cite": "Text",

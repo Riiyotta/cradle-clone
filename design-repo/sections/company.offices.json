@@ -92,7 +92,10 @@
       "ui-screenshot",
       "video"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -125,7 +128,8 @@
     "/assets/pages/team/content-l8k0T7.png",
     "/assets/pages/team/content-yygvM8.mp4"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "ctas": [
       {
         "label": "state-of-the art lab",

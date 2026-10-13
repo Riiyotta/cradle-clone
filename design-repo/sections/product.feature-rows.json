@@ -51,16 +51,53 @@
               "measuredMax": 50
             },
             "section": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 6,
-              "measuredMax": 4
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.feature-row.padding.first",
+                    "component.feature-row.padding.last",
+                    "component.feature-row.padding.middle"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.feature-row.padding."
+                ]
+              }
             },
             "inner": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 3,
-              "measuredMax": 1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "component.feature-row.inner.pad-left",
+                    "component.feature-row.inner.pad-right"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "component"
+                ],
+                "allowedPrefixes": [
+                  "component.feature-row.inner."
+                ]
+              }
             },
             "imageRight": {
               "type": "boolean"
@@ -89,7 +126,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -118,7 +158,8 @@
     "measuredFrom": "src/components/platform/FeatureRows.jsx:1-72"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "paragraphs": [
       "See how Cradle handles multiple complex objectives in parallel, adapts to your data and automatically de-risks every plate."
     ],
@@ -126,8 +167,12 @@
       {
         "img": "ui-Ty4HuN.png",
         "body": "Placeholder copy for this feature. This neutral paragraph stands in for the original description and keeps a similar length, so the layout wraps across the same number of lines. Additional plain sentences continue here to fill the remaining space without restating any claims from the source page. It stays generic.",
-        "section": "pt-10 pb-[60px] md:py-20",
-        "inner": "md:pr-10"
+        "section": {
+          "token": "component.feature-row.padding.first"
+        },
+        "inner": {
+          "token": "component.feature-row.inner.pad-right"
+        }
       }
     ]
   }

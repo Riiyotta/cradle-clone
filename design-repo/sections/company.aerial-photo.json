@@ -32,7 +32,10 @@
     "roles": [
       "page-image"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -67,7 +70,8 @@
   "literalAssets": [
     "/assets/pages/lab/img-piUfsp.jpg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "paragraphs": [
       "Cradle Amsterdam HQ"
     ]

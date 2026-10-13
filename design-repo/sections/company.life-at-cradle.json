@@ -74,7 +74,8 @@
     "measuredFrom": "src/components/company/CareersSections.jsx:114-141"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "paragraphs": [
       "Placeholder paragraph about how a team spread across several countries and time zones meets up in person on a regular basis to step back, look at the bigger picture together and have longer conversations."
     ],

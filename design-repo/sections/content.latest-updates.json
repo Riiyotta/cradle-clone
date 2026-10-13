@@ -43,10 +43,43 @@
               "maxItems": 10
             },
             "titleColor": {
-              "type": "string",
-              "minLength": 1,
-              "maxWords": 3,
-              "measuredMax": 1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "token"
+              ],
+              "properties": {
+                "token": {
+                  "type": "string",
+                  "enum": [
+                    "color.gray.100",
+                    "color.gray.200",
+                    "color.gray.300",
+                    "color.gray.400",
+                    "color.gray.50",
+                    "color.gray.700",
+                    "color.gray.800",
+                    "color.gray.900",
+                    "color.gray.950",
+                    "semantic.text.link-inline",
+                    "semantic.text.link-inline-hover",
+                    "semantic.text.on-dark",
+                    "semantic.text.on-dark-secondary",
+                    "semantic.text.primary",
+                    "semantic.text.secondary",
+                    "semantic.text.tertiary"
+                  ]
+                }
+              },
+              "styleField": {
+                "categories": [
+                  "color"
+                ],
+                "allowedPrefixes": [
+                  "color.gray.",
+                  "semantic.text."
+                ]
+              }
             }
           },
           "required": [
@@ -67,7 +100,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -90,7 +126,8 @@
     "measuredFrom": "src/components/platform/LatestUpdates.jsx:1-73"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "items": [
       {
         "icon": "data-XQPahj.png",

@@ -57,7 +57,10 @@
     "roles": [
       "person-photo"
     ],
-    "maxItems": 1
+    "maxItems": 1,
+    "generationRoles": [
+      "placeholder-avatar"
+    ]
   },
   "motion": {
     "patterns": [
@@ -82,7 +85,8 @@
     "measuredFrom": "src/components/company/TeamSections.jsx:155-179"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "items": [
       {
         "label": "Co-founders"

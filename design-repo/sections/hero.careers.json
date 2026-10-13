@@ -85,7 +85,8 @@
     "measuredFrom": "src/components/company/CareersSections.jsx:9-37"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Build the thing scientists use to build the next big thing.",
     "paragraphs": [
       "Join the best minds in biology, design, engineering and machine learning building better tools for scientists."

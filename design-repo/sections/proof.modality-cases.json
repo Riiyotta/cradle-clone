@@ -40,7 +40,10 @@
     "roles": [
       "placeholder"
     ],
-    "maxItems": 4
+    "maxItems": 4,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -72,7 +75,8 @@
     "measuredFrom": "src/components/modality/Cases.jsx:1-119"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "eyebrow": "Case studies",
     "paragraphs": [
       "Case studies"

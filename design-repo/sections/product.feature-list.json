@@ -93,7 +93,8 @@
     "measuredFrom": "src/components/modality/Features.jsx:10-41"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "title": "Section title",
     "blocks": [
       {

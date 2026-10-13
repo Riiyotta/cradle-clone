@@ -3,7 +3,12 @@
 
 Enforces what JSON Schema cannot: template/node cross-referencing, route and chrome
 agreement, graph rhythm rules (with severity), reduced-motion fallbacks, per-instance
-maxWords, asset-role policy and the no-external-links constraint.
+maxWords, the no-external-links constraint, the clone/generation asset contract
+(tokens/llm/asset-roles.json) and the token-reference style contract
+(tokens/llm/token-catalog.json + tokens/llm/token-policy.json).
+
+A PageSpec without "mode" is a generation PageSpec (the default): clone-only asset roles,
+assetRefs, registered Cradle files and denylisted brand/customer/person names are rejected.
 
 Usage:  python3 semantic_validate.py [pagespec.json ...]   (default: schema/example.pagespec.json)
 Exit code 1 if any error-severity finding exists.
@@ -27,7 +32,21 @@ class Repo:
         self.templates = {t['id']: t for t in _load('templates/templates.json')['templates']}
         self.routes = {r['route']: r for r in _load('templates/routes.json')['routes']}
         self.graph = {r['id']: r for r in _load('compatibility/graph.json')['rules']}
-        self.assets = _load('tokens/llm/asset-roles.json')['roles']
+        reg = _load('tokens/llm/asset-roles.json')
+        self.assets = reg['roles']
+        self.default_mode = reg['defaultMode']
+        self.denylist = reg['nameDenylist']
+        self.registered_files = {f for r in self.assets.values() for f in r['files']}
+        self.registered_basenames = {f.rsplit('/', 1)[-1].lower() for f in self.registered_files}
+        self.catalog = {t['id']: t for t in _load('tokens/llm/token-catalog.json')['tokens']}
+        self.policy = _load('tokens/llm/token-policy.json')
+        self.raw_patterns = {k: re.compile(v['regex']) for k, v in self.policy['rawValuePatterns'].items()}
+        self.name_res = []
+        for group in ('brand', 'customers', 'people'):
+            for ent in self.denylist[group]:
+                for nm in ent['names']:
+                    pat = r'[\s-]+'.join(re.escape(w) for w in re.split(r'[\s-]+', nm.strip()))
+                    self.name_res.append((group, nm, re.compile(r'(?<![A-Za-z0-9])' + pat + r'(?![A-Za-z0-9])', re.I)))
         self.sections = {}
         d = os.path.join(REPO, 'sections')
         for fn in sorted(os.listdir(d)):
@@ -73,6 +92,45 @@ def all_strings(inst):
     elif isinstance(inst, list):
         for v in inst:
             yield from all_strings(v)
+
+
+def keyed_strings(inst, key=None, path=''):
+    """Yield (key, path, string) for every string in an instance; key is the nearest dict key."""
+    if isinstance(inst, str):
+        yield key, path, inst
+    elif isinstance(inst, dict):
+        for k, v in inst.items():
+            yield from keyed_strings(v, k, path + '/' + str(k))
+    elif isinstance(inst, list):
+        for i, v in enumerate(inst):
+            yield from keyed_strings(v, key, '%s/%d' % (path, i))
+
+
+def node_strings(n, i):
+    """Strings a page renders or a generator authors: content and media. section/variant/motion are closed enums (ids, not copy)."""
+    for k in ('content', 'media'):
+        if k in n:
+            yield from keyed_strings(n[k], None, 'nodes/%d/%s' % (i, k))
+
+
+def mode_of(repo, spec):
+    m = spec.get('mode', repo.default_mode)
+    return m if m in ('clone', 'generation') else 'generation'  # an invalid mode is a schema error; treat it as the stricter mode
+
+
+def walk_style(schema, inst, path, out):
+    """Yield (styleField, instance, path) for every style-bearing field present in an instance."""
+    if not isinstance(schema, dict):
+        return
+    if 'styleField' in schema:
+        out.append((schema['styleField'], inst, path))
+        return
+    if isinstance(inst, dict):
+        for k, v in inst.items():
+            walk_style(schema.get('properties', {}).get(k), v, path + '/' + k, out)
+    if isinstance(inst, list) and 'items' in schema:
+        for i, v in enumerate(inst):
+            walk_style(schema['items'], v, '%s/%d' % (path, i), out)
 
 
 EXTERNAL = re.compile(r'(?i)(?<![\w:/])(?:https?:)?//[^\s/]+\.[a-z]{2,}|\bmailto:|\bhttps?://')
@@ -211,6 +269,8 @@ def r_NO_EXTERNAL_LINKS(repo, spec, ctx):
 
 
 def r_ASSET_ROLE_POLICY(repo, spec, ctx):
+    if mode_of(repo, spec) != 'clone':
+        return []  # generation mode: GENERATION_SAFE_ASSETS
     out = []
     for i, n in enumerate(spec['nodes']):
         sec = repo.sections.get(n.get('section'))
@@ -222,9 +282,9 @@ def r_ASSET_ROLE_POLICY(repo, spec, ctx):
                 continue  # schema reports unknown roles
             if sec and sec['media'] and role not in sec['media']['roles']:
                 out.append(('error', 'ASSET_ROLE_POLICY', p, 'role %s not allowed in %s (allowed: %s)' % (role, n['section'], sec['media']['roles'])))
-            if reg['policy'] == 'may-generate-new':
+            if reg['contract'] == 'generation-safe':
                 if 'assetRef' in m:
-                    out.append(('error', 'ASSET_ROLE_POLICY', p, 'role %s is generated; assetRef not allowed' % role))
+                    out.append(('error', 'ASSET_ROLE_POLICY', p, 'role %s is generation-safe (%s); assetRef not allowed' % (role, reg['policy'])))
                 if 'generationBrief' not in m:
                     out.append(('error', 'ASSET_ROLE_POLICY', p, 'role %s requires generationBrief' % role))
             else:
@@ -234,6 +294,97 @@ def r_ASSET_ROLE_POLICY(repo, spec, ctx):
                     out.append(('error', 'ASSET_ROLE_POLICY', p, 'role %s must not be generated (%s)' % (role, reg['policy'])))
                 if m.get('assetRef') not in reg['files']:
                     out.append(('error', 'ASSET_ROLE_POLICY', p, 'assetRef %r is not a registered %s file' % (m.get('assetRef'), role)))
+    return out
+
+
+def r_GENERATION_SAFE_ASSETS(repo, spec, ctx):
+    if mode_of(repo, spec) == 'clone':
+        return []
+    out = []
+    for i, n in enumerate(spec['nodes']):
+        sec = repo.sections.get(n.get('section'))
+        for j, m in enumerate(n.get('media', []) or []):
+            p = 'nodes/%d/media/%d' % (i, j)
+            role = m.get('assetRole')
+            reg = repo.assets.get(role)
+            if reg is None:
+                continue  # schema reports unknown roles
+            if reg['contract'] != 'generation-safe':
+                out.append(('error', 'GENERATION_SAFE_ASSETS', p, 'role %s is clone-only (%s); generation mode must use %s' % (role, reg['sensitivity'], reg['generationSubstitute'])))
+                continue
+            if sec and sec['media'] and role not in sec['media']['generationRoles']:
+                out.append(('error', 'GENERATION_SAFE_ASSETS', p, 'role %s not allowed in %s (generation roles: %s)' % (role, n['section'], sec['media']['generationRoles'])))
+            if 'assetRef' in m:
+                out.append(('error', 'GENERATION_SAFE_ASSETS', p, 'assetRef is not allowed in generation mode (role %s)' % role))
+            if not m.get('generationBrief'):
+                out.append(('error', 'GENERATION_SAFE_ASSETS', p, 'role %s requires generationBrief' % role))
+    return out
+
+
+def r_NO_REAL_ASSET_IN_GENERATION(repo, spec, ctx):
+    if mode_of(repo, spec) == 'clone':
+        return []
+    out = []
+    for i, n in enumerate(spec['nodes']):
+        for key, path, sv in node_strings(n, i):
+            v = sv.strip().split('?')[0]
+            base = re.split(r'[/}]', v)[-1].lower()
+            if v in repo.registered_files or base in repo.registered_basenames:
+                out.append(('error', 'NO_REAL_ASSET_IN_GENERATION', path, '%r is a registered Cradle asset; generation mode must use a generation-safe role with a generationBrief' % sv[:80]))
+    return out
+
+
+def r_NO_REAL_ENTITY_NAMES_IN_GENERATION(repo, spec, ctx):
+    if mode_of(repo, spec) == 'clone':
+        return []
+    exempt = set(repo.denylist['exemptKeys'])
+    out = []
+    for i, n in enumerate(spec['nodes']):
+        for key, path, sv in node_strings(n, i):
+            if key in exempt:
+                continue
+            for group, nm, rx in repo.name_res:
+                if rx.search(sv):
+                    out.append(('error', 'NO_REAL_ENTITY_NAMES_IN_GENERATION', path, 'contains denylisted %s name %r' % (group, nm)))
+                    break
+    return out
+
+
+def r_TOKEN_REFS_RESOLVE(repo, spec, ctx):
+    cats = repo.policy['categories']
+    out = []
+    for i, n in enumerate(spec['nodes']):
+        s = repo.sections.get(n.get('section'))
+        if not s:
+            continue
+        found = []
+        walk_style(s['content'], n.get('content', {}), 'nodes/%d/content' % i, found)
+        for sf, inst, path in found:
+            if not (isinstance(inst, dict) and set(inst) == {'token'} and isinstance(inst['token'], str)):
+                out.append(('error', 'TOKEN_REFS_RESOLVE', path, 'style field must be {"token": "<catalog id>"}, got %s' % json.dumps(inst)[:80]))
+                continue
+            tid = inst['token']
+            t = repo.catalog.get(tid)
+            if t is None:
+                out.append(('error', 'TOKEN_REFS_RESOLVE', path, 'token %r is not in tokens/llm/token-catalog.json' % tid))
+            elif not cats.get(t['category'], {}).get('pageSpecReferenceable'):
+                out.append(('error', 'TOKEN_REFS_RESOLVE', path, 'token %r has category %s, which a PageSpec may not reference' % (tid, t['category'])))
+            elif t['category'] not in sf['categories'] or not any(tid.startswith(p_) for p_ in sf['allowedPrefixes']):
+                out.append(('error', 'TOKEN_REFS_RESOLVE', path, 'token %r (%s) is not allowed here (categories %s, prefixes %s)' % (tid, t['category'], sf['categories'], sf['allowedPrefixes'])))
+    return out
+
+
+def r_NO_RAW_STYLE_LITERALS(repo, spec, ctx):
+    exempt = set(repo.policy['rawLiteralScanExemptKeys']['keys'])
+    out = []
+    for key, path, sv in (x for i, n in enumerate(spec['nodes']) for x in node_strings(n, i)):
+        if key in exempt:
+            continue
+        for pid, rx in repo.raw_patterns.items():
+            m = rx.search(sv)
+            if m:
+                out.append(('error', 'NO_RAW_STYLE_LITERALS', path, 'raw style value %r (%s); use a {"token": id} from token-catalog.json' % (m.group(0), pid)))
+                break
     return out
 
 
@@ -279,6 +430,11 @@ RULES = {
     'ASSET_ROLE_POLICY': r_ASSET_ROLE_POLICY,
     'CMS_SLUG_MATCHES_ROUTE': r_CMS_SLUG_MATCHES_ROUTE,
     'MAX_WORDS': r_MAX_WORDS,
+    'GENERATION_SAFE_ASSETS': r_GENERATION_SAFE_ASSETS,
+    'NO_REAL_ASSET_IN_GENERATION': r_NO_REAL_ASSET_IN_GENERATION,
+    'NO_REAL_ENTITY_NAMES_IN_GENERATION': r_NO_REAL_ENTITY_NAMES_IN_GENERATION,
+    'TOKEN_REFS_RESOLVE': r_TOKEN_REFS_RESOLVE,
+    'NO_RAW_STYLE_LITERALS': r_NO_RAW_STYLE_LITERALS,
 }
 
 

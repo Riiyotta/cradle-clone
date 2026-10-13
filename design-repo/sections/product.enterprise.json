@@ -93,7 +93,11 @@
       "lab-photo",
       "ui-icon"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder",
+      "ui-icon"
+    ]
   },
   "motion": {
     "patterns": [
@@ -131,7 +135,8 @@
     "/assets/enterprise-bg.png",
     "/assets/icon-check.svg"
   ],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "Private. Secure. Yours.",
     "eyebrow": "BUILT FOR ENTERPRISE",
     "ctas": [

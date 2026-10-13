@@ -12,7 +12,15 @@
   ],
   "properties": {
     "pageSpecVersion": {
-      "const": "1.0.0"
+      "const": "1.1.0"
+    },
+    "mode": {
+      "enum": [
+        "generation",
+        "clone"
+      ],
+      "default": "generation",
+      "description": "generation (default when absent): a new page; only generation-safe asset roles, no assetRef, no registered Cradle file, no denylisted brand/customer/person names. clone: exact reproduction of the local Cradle clone; clone-only roles allowed with their registered files."
     },
     "template": {
       "enum": [
@@ -62,8 +70,6 @@
         "brand-mark",
         "customer-logo",
         "ui-screenshot",
-        "hero-blob",
-        "ui-icon",
         "modality-illustration",
         "editorial-cover",
         "video-poster",
@@ -73,7 +79,13 @@
         "social-image",
         "page-graphic",
         "page-image",
-        "placeholder"
+        "hero-blob",
+        "ui-icon",
+        "generated-illustration",
+        "placeholder",
+        "placeholder-logo",
+        "placeholder-avatar",
+        "placeholder-brand-mark"
       ]
     },
     "media": {
@@ -433,7 +445,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "brand-mark"
+                        "brand-mark",
+                        "placeholder-brand-mark"
                       ]
                     }
                   }
@@ -487,7 +500,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "brand-mark"
+                        "brand-mark",
+                        "placeholder-brand-mark"
                       ]
                     }
                   }
@@ -674,10 +688,30 @@
                       "additionalProperties": false,
                       "properties": {
                         "bg": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 8,
-                          "measuredMax": 5
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.testimonial-slide.bg.lime",
+                                "component.testimonial-slide.bg.mint",
+                                "component.testimonial-slide.bg.rose",
+                                "component.testimonial-slide.bg.sky"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.testimonial-slide.bg."
+                            ]
+                          }
                         },
                         "logo": {
                           "type": "string",
@@ -784,7 +818,8 @@
                     "assetRole": {
                       "enum": [
                         "customer-logo",
-                        "ui-icon"
+                        "ui-icon",
+                        "placeholder-logo"
                       ]
                     }
                   }
@@ -1026,7 +1061,9 @@
                       "enum": [
                         "modality-illustration",
                         "video",
-                        "video-poster"
+                        "video-poster",
+                        "generated-illustration",
+                        "placeholder"
                       ]
                     }
                   }
@@ -1065,10 +1102,31 @@
                           "measuredMax": 1
                         },
                         "bg": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 3,
-                          "measuredMax": 1
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "color.modality.antibody",
+                                "color.modality.enzyme",
+                                "color.modality.peptide",
+                                "color.modality.sky400",
+                                "color.modality.vaccine"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "color"
+                            ],
+                            "allowedPrefixes": [
+                              "color.modality."
+                            ]
+                          }
                         },
                         "travel": {
                           "type": "number"
@@ -1207,10 +1265,31 @@
                           "measuredMax": 1
                         },
                         "color": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 3,
-                          "measuredMax": 1
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "color.modality.antibody",
+                                "color.modality.enzyme",
+                                "color.modality.peptide",
+                                "color.modality.sky400",
+                                "color.modality.vaccine"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "color"
+                            ],
+                            "allowedPrefixes": [
+                              "color.modality."
+                            ]
+                          }
                         },
                         "icon": {
                           "type": "string",
@@ -1337,16 +1416,57 @@
                           "measuredMax": 1
                         },
                         "color": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 3,
-                          "measuredMax": 1
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "color.modality.antibody",
+                                "color.modality.enzyme",
+                                "color.modality.peptide",
+                                "color.modality.sky400",
+                                "color.modality.vaccine"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "color"
+                            ],
+                            "allowedPrefixes": [
+                              "color.modality."
+                            ]
+                          }
                         },
                         "hover": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 8,
-                          "measuredMax": 5
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "elevation.glow-antibody-8",
+                                "elevation.glow-dot-antibody",
+                                "elevation.glow-dot-enzyme",
+                                "elevation.glow-enzyme-8"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "elevation"
+                            ],
+                            "allowedPrefixes": [
+                              "elevation.glow-"
+                            ]
+                          }
                         }
                       },
                       "required": [
@@ -1495,7 +1615,8 @@
                     "assetRole": {
                       "enum": [
                         "lab-photo",
-                        "ui-icon"
+                        "ui-icon",
+                        "placeholder"
                       ]
                     }
                   }
@@ -1583,7 +1704,9 @@
                     "assetRole": {
                       "enum": [
                         "lab-photo",
-                        "person-photo"
+                        "person-photo",
+                        "placeholder",
+                        "placeholder-avatar"
                       ]
                     }
                   }
@@ -1743,7 +1866,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "ui-screenshot"
+                        "ui-screenshot",
+                        "placeholder"
                       ]
                     }
                   }
@@ -1835,7 +1959,8 @@
                     "assetRole": {
                       "enum": [
                         "page-image",
-                        "video"
+                        "video",
+                        "placeholder"
                       ]
                     }
                   }
@@ -1907,7 +2032,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "ui-screenshot"
+                        "ui-screenshot",
+                        "placeholder"
                       ]
                     }
                   }
@@ -2011,7 +2137,8 @@
                     "assetRole": {
                       "enum": [
                         "page-image",
-                        "ui-screenshot"
+                        "ui-screenshot",
+                        "placeholder"
                       ]
                     }
                   }
@@ -2146,16 +2273,53 @@
                           "measuredMax": 50
                         },
                         "section": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 6,
-                          "measuredMax": 4
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.feature-row.padding.first",
+                                "component.feature-row.padding.last",
+                                "component.feature-row.padding.middle"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.feature-row.padding."
+                            ]
+                          }
                         },
                         "inner": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 3,
-                          "measuredMax": 1
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.feature-row.inner.pad-left",
+                                "component.feature-row.inner.pad-right"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.feature-row.inner."
+                            ]
+                          }
                         },
                         "imageRight": {
                           "type": "boolean"
@@ -2261,16 +2425,52 @@
                           "measuredMax": 2
                         },
                         "dot": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 4,
-                          "measuredMax": 2
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.teams-card.dot.green",
+                                "component.teams-card.dot.sky"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.teams-card.dot."
+                            ]
+                          }
                         },
                         "labelGradient": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 3,
-                          "measuredMax": 1
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.teams-card.label-gradient.green",
+                                "component.teams-card.label-gradient.sky"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.teams-card.label-gradient."
+                            ]
+                          }
                         },
                         "body": {
                           "type": "string",
@@ -2430,7 +2630,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-graphic"
+                        "page-graphic",
+                        "generated-illustration"
                       ]
                     }
                   }
@@ -2484,10 +2685,43 @@
                           "maxItems": 10
                         },
                         "titleColor": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 3,
-                          "measuredMax": 1
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "color.gray.100",
+                                "color.gray.200",
+                                "color.gray.300",
+                                "color.gray.400",
+                                "color.gray.50",
+                                "color.gray.700",
+                                "color.gray.800",
+                                "color.gray.900",
+                                "color.gray.950",
+                                "semantic.text.link-inline",
+                                "semantic.text.link-inline-hover",
+                                "semantic.text.on-dark",
+                                "semantic.text.on-dark-secondary",
+                                "semantic.text.primary",
+                                "semantic.text.secondary",
+                                "semantic.text.tertiary"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "color"
+                            ],
+                            "allowedPrefixes": [
+                              "color.gray.",
+                              "semantic.text."
+                            ]
+                          }
                         }
                       },
                       "required": [
@@ -2592,7 +2826,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "ui-screenshot"
+                        "ui-screenshot",
+                        "placeholder"
                       ]
                     }
                   }
@@ -2738,11 +2973,37 @@
                     "additionalProperties": false,
                     "properties": {
                       "featureCls": {
-                        "type": "string",
-                        "minLength": 1,
-                        "maxWords": 26,
-                        "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
-                        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 3,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.pipeline-feature.default",
+                                "component.pipeline-feature.inset",
+                                "component.pipeline-feature.narrow",
+                                "component.pipeline-feature.narrow-hairline",
+                                "component.pipeline-feature.narrow-inset"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.pipeline-feature."
+                            ]
+                          }
+                        },
+                        "measuredFrom": "src/components/solutions/solutionData.jsx:59"
                       },
                       "features": {
                         "type": "string",
@@ -2766,11 +3027,28 @@
                         "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
                       },
                       "tileHPhone": {
-                        "type": "string",
-                        "minLength": 1,
-                        "maxWords": 26,
-                        "measuredFrom": "src/components/solutions/PipelineBenefits.jsx:1-67",
-                        "budgetBasis": "site-wide observed max of key \"title\" across harvested section data"
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "token"
+                        ],
+                        "properties": {
+                          "token": {
+                            "type": "string",
+                            "enum": [
+                              "component.pipeline-tile.phone-height.default",
+                              "component.pipeline-tile.phone-height.tall"
+                            ]
+                          }
+                        },
+                        "styleField": {
+                          "categories": [
+                            "component"
+                          ],
+                          "allowedPrefixes": [
+                            "component.pipeline-tile.phone-height."
+                          ]
+                        }
                       },
                       "title": {
                         "type": "string",
@@ -2788,11 +3066,9 @@
                       }
                     },
                     "required": [
-                      "featureCls",
                       "features",
                       "files",
                       "lead",
-                      "tileHPhone",
                       "title",
                       "toggles"
                     ]
@@ -2880,7 +3156,9 @@
                     "assetRole": {
                       "enum": [
                         "modality-illustration",
-                        "page-image"
+                        "page-image",
+                        "generated-illustration",
+                        "placeholder"
                       ]
                     }
                   }
@@ -3108,7 +3386,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "ui-screenshot"
+                        "ui-screenshot",
+                        "placeholder"
                       ]
                     }
                   }
@@ -3178,7 +3457,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "ui-screenshot"
+                        "ui-screenshot",
+                        "placeholder"
                       ]
                     }
                   }
@@ -3229,10 +3509,29 @@
                           "measuredMax": 4
                         },
                         "cls": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 6,
-                          "measuredMax": 4
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.academia-logo.size.medium",
+                                "component.academia-logo.size.narrow",
+                                "component.academia-logo.size.wide"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.academia-logo.size."
+                            ]
+                          }
                         }
                       },
                       "required": [
@@ -4086,10 +4385,29 @@
                           "measuredMax": 1
                         },
                         "cls": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 4,
-                          "measuredMax": 2
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.cta-screen.data",
+                                "component.cta-screen.report",
+                                "component.cta-screen.round"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.cta-screen."
+                            ]
+                          }
                         },
                         "delay": {
                           "type": "number"
@@ -4179,7 +4497,8 @@
                       "enum": [
                         "page-image",
                         "ui-screenshot",
-                        "video"
+                        "video",
+                        "placeholder"
                       ]
                     }
                   }
@@ -4296,7 +4615,8 @@
                     "assetRole": {
                       "enum": [
                         "ui-screenshot",
-                        "video"
+                        "video",
+                        "placeholder"
                       ]
                     }
                   }
@@ -4377,7 +4697,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "person-photo"
+                        "person-photo",
+                        "placeholder-avatar"
                       ]
                     }
                   }
@@ -4799,7 +5120,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-image"
+                        "page-image",
+                        "placeholder"
                       ]
                     }
                   }
@@ -4858,7 +5180,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-image"
+                        "page-image",
+                        "placeholder"
                       ]
                     }
                   }
@@ -4950,7 +5273,8 @@
                     "assetRole": {
                       "enum": [
                         "page-image",
-                        "video"
+                        "video",
+                        "placeholder"
                       ]
                     }
                   }
@@ -5017,7 +5341,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "video"
+                        "video",
+                        "placeholder"
                       ]
                     }
                   }
@@ -5171,7 +5496,39 @@
                           "type": "number"
                         },
                         "radius": {
-                          "type": "number"
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "radius.r-0",
+                                "radius.r-1",
+                                "radius.r-10",
+                                "radius.r-100",
+                                "radius.r-12",
+                                "radius.r-2",
+                                "radius.r-20",
+                                "radius.r-3",
+                                "radius.r-4",
+                                "radius.r-6",
+                                "radius.r-7",
+                                "radius.r-8",
+                                "radius.r-full"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "radius"
+                            ],
+                            "allowedPrefixes": [
+                              "radius."
+                            ]
+                          }
                         },
                         "title": {
                           "type": "string",
@@ -5180,13 +5537,53 @@
                           "measuredMax": 12
                         },
                         "titleCls": {
-                          "type": "string",
-                          "minLength": 1,
-                          "maxWords": 4,
-                          "measuredMax": 2
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.lab-floating-card.title.lg",
+                                "component.lab-floating-card.title.md",
+                                "component.lab-floating-card.title.sm"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.lab-floating-card.title."
+                            ]
+                          }
                         },
                         "gap": {
-                          "type": "number"
+                          "type": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "token"
+                          ],
+                          "properties": {
+                            "token": {
+                              "type": "string",
+                              "enum": [
+                                "component.lab-floating-card.gap.md",
+                                "component.lab-floating-card.gap.sm"
+                              ]
+                            }
+                          },
+                          "styleField": {
+                            "categories": [
+                              "component"
+                            ],
+                            "allowedPrefixes": [
+                              "component.lab-floating-card.gap."
+                            ]
+                          }
                         },
                         "to": {
                           "type": "string",
@@ -5848,7 +6245,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-graphic"
+                        "page-graphic",
+                        "generated-illustration"
                       ]
                     }
                   }
@@ -6124,7 +6522,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "person-photo"
+                        "person-photo",
+                        "placeholder-avatar"
                       ]
                     }
                   }
@@ -6221,7 +6620,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-image"
+                        "page-image",
+                        "placeholder"
                       ]
                     }
                   }
@@ -6395,7 +6795,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-graphic"
+                        "page-graphic",
+                        "generated-illustration"
                       ]
                     }
                   }
@@ -6584,7 +6985,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-graphic"
+                        "page-graphic",
+                        "generated-illustration"
                       ]
                     }
                   }
@@ -6701,7 +7103,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "brand-mark"
+                        "brand-mark",
+                        "placeholder-brand-mark"
                       ]
                     }
                   }
@@ -6790,7 +7193,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "page-image"
+                        "page-image",
+                        "placeholder"
                       ]
                     }
                   }
@@ -7060,7 +7464,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "brand-mark"
+                        "brand-mark",
+                        "placeholder-brand-mark"
                       ]
                     }
                   }
@@ -7107,7 +7512,8 @@
                     "assetRole": {
                       "enum": [
                         "hero-blob",
-                        "page-image"
+                        "page-image",
+                        "placeholder"
                       ]
                     }
                   }
@@ -7163,7 +7569,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "brand-mark"
+                        "brand-mark",
+                        "placeholder-brand-mark"
                       ]
                     }
                   }
@@ -7518,6 +7925,49 @@
           }
         }
       ]
+    }
+  },
+  "if": {
+    "required": [
+      "mode"
+    ],
+    "properties": {
+      "mode": {
+        "const": "clone"
+      }
+    }
+  },
+  "then": {},
+  "else": {
+    "properties": {
+      "nodes": {
+        "items": {
+          "properties": {
+            "media": {
+              "items": {
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "hero-blob",
+                      "ui-icon",
+                      "generated-illustration",
+                      "placeholder",
+                      "placeholder-logo",
+                      "placeholder-avatar",
+                      "placeholder-brand-mark"
+                    ]
+                  }
+                },
+                "not": {
+                  "required": [
+                    "assetRef"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

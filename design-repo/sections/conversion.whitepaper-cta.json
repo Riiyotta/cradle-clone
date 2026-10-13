@@ -83,7 +83,8 @@
     "measuredFrom": "src/components/media/WhitepaperSections.jsx:71-95"
   },
   "literalAssets": [],
-  "exampleContent": {
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {
     "heading": "CRADLE-1 Whitepaper",
     "paragraphs": [
       "The paper covers the complete technical framework — group DPO, diversity-aware ranking, batch-effect handling, ablations — plus full wet-lab protocols and a documented failure case."

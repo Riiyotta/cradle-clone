@@ -21,7 +21,10 @@
       "page-image",
       "ui-screenshot"
     ],
-    "maxItems": 2
+    "maxItems": 2,
+    "generationRoles": [
+      "placeholder"
+    ]
   },
   "motion": {
     "patterns": [
@@ -57,6 +60,7 @@
     "/assets/pages/platform/wetlab-riCniX.png",
     "/assets/ui-data.png"
   ],
-  "exampleContent": {},
+  "cloneExampleContentNote": "Clone-mode reference only: measured source content from the Cradle clone (real copy, customer names, filenames). Never copy it into a generation-mode PageSpec; the validator rejects registered Cradle files and denylisted brand/customer/person names there.",
+  "cloneExampleContent": {},
   "contentBasis": "copy is fixed inside the component or its child components; contract exposes media and motion only"
 }
